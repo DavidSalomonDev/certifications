@@ -1,8 +1,17 @@
 # Práctica de Certificaciones
 
-App web local para practicar exámenes de certificación, hecha con **Next.js (App Router) +
-TypeScript + Tailwind CSS**. Sin login, sin backend: las preguntas se sirven desde archivos JSON
-estáticos y tu progreso se guarda en el `localStorage` del navegador.
+App web para practicar exámenes de certificación (Azure, Google Cloud, ITIL, etc.), hecha con
+**Next.js (App Router) + TypeScript + Tailwind CSS**. Sin login, sin backend: las preguntas se
+sirven desde archivos JSON estáticos y tu progreso se guarda en el `localStorage` del navegador.
+
+**Demo en vivo:** [davidsalomon.dev/certificaciones](https://davidsalomon.dev/certificaciones)
+(redirige a [certifications-alpha.vercel.app](https://certifications-alpha.vercel.app/)).
+
+## Despliegue
+
+El repo está conectado a Vercel: cada push a `main` despliega automáticamente en
+`certifications-alpha.vercel.app`. El dominio `davidsalomon.dev/certificaciones` redirige
+(308 permanente, configurado en `next.config.mjs`) a esa URL de Vercel.
 
 ## Certificaciones incluidas
 
