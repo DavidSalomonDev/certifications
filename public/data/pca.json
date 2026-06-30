@@ -84,7 +84,9 @@
     ],
     "explanation": "It's A. AppEngine spins up new containers automatically according to the load. During peak traffic, HTTP requests originated by the same user could be served by different containers. Given that the variable `sessions` is recreated for each container, it might store different data.\nThe problem here is that this Flask app is stateful. The `sessions` variable is the state of this app. And stateful variables in AppEngine / Cloud Run / Cloud Functions are problematic.\nA solution would be to store the session in some database (e.g. Firestore, Memorystore) and retrieve it from there. This way the app would fetch the session from a single place and would be stateless.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/pca/q4-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -484,7 +486,9 @@
       "https://groups.google.com/forum/#!topic/google-appengine/hZMEkmmObDU",
       "https://www.alpinelinux.org/about/"
     ],
-    "images": [],
+    "images": [
+      "/images/pca/q22-1.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -838,7 +842,9 @@
     ],
     "explanation": "B. Digitally sign all of your JAR files and redeploy your application",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/pca/q38-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2613,7 +2619,9 @@
     ],
     "explanation": "Add two additional NICs to Instance #1 with the following configuration: ¢ NIC1 ג—‹ VPC: VPC #2 ג—‹ SUBNETWORK: subnet #2 ¢ NIC2 ג—‹ VPC: VPC #3 ג—‹ SUBNETWORK: subnet #3 Update firewall rules to enable traffic between instances.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/pca/q120-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4335,7 +4343,9 @@
     ],
     "explanation": "C. Change the filter to metric.label.state = ‘used’. The current filter is set up with multiple AND conditions, which means it's looking for a metric that simultaneously has all these states: 'used', 'buffered', 'cached', and 'slab'. This is logically impossible, as a memory location can't be in multiple states at once. Therefore, the filter will never match any metrics, and the autoscaling policy won't trigger.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/pca/q199-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4764,7 +4774,9 @@
     ],
     "explanation": "Single VPN tunnel limits throughput. Copying 20TB across long distances is a big bottleneck. VPN across internet cannot be relied upon for high performance",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/pca/q222-1.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -4819,7 +4831,12 @@
     "references": [
       "https://cloud.google.com/armor/docs/configure-security-policies#gcloud_11"
     ],
-    "images": [],
+    "images": [
+      "/images/pca/q225-1.jpeg",
+      "/images/pca/q225-2.jpeg",
+      "/images/pca/q225-3.jpeg",
+      "/images/pca/q225-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5518,7 +5535,12 @@
       "https://cloud.google.com/solutions/designing-connected-vehicle-platform#data_ingestion",
       "http://www.eweek.com/big-data-and-analytics/google-touts-value-of-cloud-iot-core-for-analyzing-"
     ],
-    "images": [],
+    "images": [
+      "/images/pca/q257-1.jpeg",
+      "/images/pca/q257-2.jpeg",
+      "/images/pca/q257-3.jpeg",
+      "/images/pca/q257-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
