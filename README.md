@@ -1,8 +1,18 @@
 # Práctica de Certificaciones
 
-App web local para practicar exámenes de certificación (empezando por **AZ‑104**), hecha con
-**Next.js (App Router) + TypeScript + Tailwind CSS**. Sin login, sin backend: las preguntas se
-sirven desde archivos JSON estáticos y tu progreso se guarda en el `localStorage` del navegador.
+App web local para practicar exámenes de certificación, hecha con **Next.js (App Router) +
+TypeScript + Tailwind CSS**. Sin login, sin backend: las preguntas se sirven desde archivos JSON
+estáticos y tu progreso se guarda en el `localStorage` del navegador.
+
+## Certificaciones incluidas
+
+| Certificación | Preguntas jugables | Fuente |
+| --- | --- | --- |
+| AZ‑104: Microsoft Azure Administrator | 425 | CertyIQ |
+| Google Cloud Associate Cloud Engineer | 197 | ExamTopics |
+| ITIL 4 Foundation | 365 | CertyIQ |
+
+Ver [Agregar una certificación nueva](#agregar-una-certificación-nueva) para sumar otra.
 
 ## Funcionalidad
 
@@ -59,9 +69,11 @@ lib/                       # tipos y lógica
   quiz.ts                  # puntuación (isCorrect, computeResults)
   random.ts                # barajado y muestreo sin repetición
 public/data/
-  certifications.json      # registro de certificaciones
-  az104.json               # preguntas de AZ‑104 (generado)
-public/images/az104/       # imágenes opcionales de preguntas
+  certifications.json    # registro de certificaciones
+  az104.json              # preguntas AZ‑104 (generado)
+  gcp-ace.json            # preguntas Google Cloud ACE (generado)
+  itilv4.json             # preguntas ITIL 4 Foundation (generado)
+public/images/<cert>/    # imágenes opcionales de preguntas, por certificación
 scripts/convert.mjs        # convierte source/<cert>.md → public/data/<cert>.json
 source/                    # Markdown/PDF fuente de las preguntas
 ```
@@ -126,13 +138,15 @@ Coloca la imagen en `public/images/<cert>/` y referencia su ruta en `image`, p. 
 
 ## Generar el JSON desde un Markdown
 
-El JSON se puede regenerar desde el Markdown fuente (formato CertyIQ) con:
+El JSON se puede regenerar desde el Markdown fuente con:
 
 ```bash
 npm run convert -- az104
+npm run convert -- gcp-ace
+npm run convert -- itilv4
 ```
 
-Esto lee `source/az104.md`, escribe `public/data/az104.json`, actualiza
+Cada corrida lee `source/<cert>.md`, escribe `public/data/<cert>.json`, actualiza
 `certifications.json` con el conteo jugable e imprime un resumen por tipo.
 
 Si editas las preguntas a mano directamente en el JSON, **no** necesitas correr el script.
@@ -200,3 +214,9 @@ El diseño deja los puntos de extensión aislados:
 
 No hay cuentas ni servidores: todo (preguntas y progreso) vive en tu navegador. Borrar los
 datos del sitio reinicia tu progreso.
+
+---
+
+## Historial de cambios
+
+Ver [CHANGELOG.md](./CHANGELOG.md).
