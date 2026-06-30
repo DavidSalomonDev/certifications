@@ -80,7 +80,7 @@ Registro de certificaciones. Cada entrada:
     "id": "az104",
     "name": "AZ-104: Microsoft Azure Administrator",
     "file": "az104.json",
-    "questionCount": 331,
+    "questionCount": 425,
     "enabled": true
   }
 ]
@@ -154,8 +154,30 @@ Tienes dos caminos:
 **B) Tengo un Markdown fuente**
 
 1. Deja el Markdown en `source/<cert>.md`.
-2. Registra el cert en `CERTS` dentro de `scripts/convert.mjs` (id, nombre legible y archivo).
+2. Registra el cert en `CERTS` dentro de `scripts/convert.mjs` con su `id`, `name`, `source` y
+   `format`.
 3. Corre `npm run convert -- <cert>`.
+
+El conversor soporta dos formatos de volcado (campo `format`):
+
+| `format` | Estructura del Markdown | Ejemplo |
+| --- | --- | --- |
+| `certyiq` | `Question: N` · opciones `A.` · `Answer:` · `Explanation:` · `Reference:` | AZ-104, ITIL 4 |
+| `examtopics` | `Question #N` · opciones `A.` · `Correct Answer:` · `Community vote distribution` | GCP ACE |
+
+(El parser `certyiq` acepta opciones con o sin espacio tras el punto: `A. texto` y `A.texto`.)
+
+Notas del formato **examtopics**:
+
+- Cuando el "Correct Answer" oficial y el voto de la comunidad difieren, se toma **el voto de
+  la comunidad** (suele ser más confiable); el dato oficial se guarda como nota en
+  `explanation`. Cambia esta política en `parseBlockExamTopics()` si prefieres lo contrario.
+- Detecta `(Choose two/three)` para fijar cuántas respuestas son correctas.
+- Recupera preguntas cuyo encabezado `Question #N` se perdió en el OCR (bloques con 2+
+  `Correct Answer:` se vuelven a dividir).
+
+Para un formato nuevo, agrega un par `splitIntoBlocksX` + `parseBlockX` y enchúfalo en el
+dispatch de `main()`.
 
 ---
 

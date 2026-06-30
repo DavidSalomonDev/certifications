@@ -3,7 +3,21 @@
     "id": "az104",
     "name": "AZ-104: Microsoft Azure Administrator",
     "file": "az104.json",
-    "questionCount": 331,
+    "questionCount": 425,
+    "enabled": true
+  },
+  {
+    "id": "gcp-ace",
+    "name": "Google Cloud Associate Cloud Engineer",
+    "file": "gcp-ace.json",
+    "questionCount": 197,
+    "enabled": true
+  },
+  {
+    "id": "itilv4",
+    "name": "ITIL 4 Foundation",
+    "file": "itilv4.json",
+    "questionCount": 365,
     "enabled": true
   }
 ]

@@ -23,12 +23,25 @@ const SOURCE_DIR = join(ROOT, "source");
 const DATA_DIR = join(ROOT, "public", "data");
 
 // Registro de certificaciones conocidas. El "name" es lo que ve el usuario.
+// "format" elige el parser: "certyiq" (Question:/Answer:/Explanation:) o
+// "examtopics" (Question #N/Correct Answer/Community vote distribution).
 const CERTS = {
   az104: {
     name: "AZ-104: Microsoft Azure Administrator",
     source: "az104.md",
+    format: "certyiq",
   },
-  // az900: { name: "AZ-900: Azure Fundamentals", source: "az900.md" },
+  "gcp-ace": {
+    name: "Google Cloud Associate Cloud Engineer",
+    source: "gcp-ace.md",
+    format: "examtopics",
+  },
+  itilv4: {
+    name: "ITIL 4 Foundation",
+    source: "itilv4.md",
+    format: "certyiq",
+  },
+  // az900: { name: "AZ-900: Azure Fundamentals", source: "az900.md", format: "certyiq" },
 };
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -54,7 +67,8 @@ function splitIntoBlocks(text) {
   return blocks;
 }
 
-const isOption = (line) => line.match(/^([A-Z])\.\s+(.*)$/);
+// Acepta "A. texto" y también "A.texto" (algunos volcados omiten el espacio).
+const isOption = (line) => line.match(/^([A-Z])\.\s*(\S.*)$/);
 const isAnswer = (line) => line.match(/^Answer:\s*(.*)$/i);
 const isExplanation = (line) => line.match(/^Explanation:\s*(.*)$/i);
 const isReference = (line) => line.match(/^References?:\s*(.*)$/i);
@@ -196,6 +210,225 @@ function parseBlock(certId, block) {
   };
 }
 
+// ===================== Formato ExamTopics =====================
+
+/** Divide en bloques usando las cabeceras "Question #N ...". */
+function splitIntoBlocksExamTopics(text) {
+  const lines = text.split(/\r?\n/);
+  const blocks = [];
+  let current = null;
+  const qHeader = /^Question #(\d+)\b/;
+  for (const line of lines) {
+    const m = line.match(qHeader);
+    if (m) {
+      if (current) blocks.push(current);
+      current = { number: Number(m[1]), lines: [] };
+    } else if (current) {
+      current.lines.push(line);
+    }
+  }
+  if (current) blocks.push(current);
+  return blocks;
+}
+
+/**
+ * A veces el OCR pierde la cabecera "Question #N" y dos preguntas quedan
+ * fusionadas en un bloque (se detecta por tener 2+ "Correct Answer:"). Aquí
+ * re-dividimos: tras una respuesta y su cola (voto/referencia/ruido), la primera
+ * línea de prosa nueva inicia la siguiente pregunta. Los números perdidos se
+ * recuperan como base+1, base+2, … (las cabeceras perdidas son consecutivas).
+ */
+function resplitMergedBlocks(blocks) {
+  const isAnswerLine = (l) => /^Correct Answer:/i.test(l);
+  const isTail = (l) =>
+    isETVote(l) ||
+    isETNoise(l) ||
+    /^References?:/i.test(l) ||
+    /^https?:\/\/\S+$/.test(l) ||
+    isAnswerLine(l);
+
+  const result = [];
+  for (const block of blocks) {
+    // Solo re-dividimos si hay 2+ "Correct Answer:" (señal fiable de fusión).
+    const answerCount = block.lines.filter((l) => isAnswerLine(l.trim())).length;
+    if (answerCount < 2) {
+      result.push(block);
+      continue;
+    }
+    const subs = [[]];
+    let seenAnswer = false;
+    for (const raw of block.lines) {
+      const l = raw.trim();
+      const cur = subs[subs.length - 1];
+      if (seenAnswer && l && !isTail(l)) {
+        subs.push([raw]); // empieza una nueva pregunta
+        seenAnswer = false;
+      } else {
+        cur.push(raw);
+        if (isAnswerLine(l)) seenAnswer = true;
+      }
+    }
+    subs.forEach((lines, i) =>
+      result.push({ number: block.number + i, lines }),
+    );
+  }
+  return result;
+}
+
+// Ruido típico del volcado de ExamTopics que debe descartarse.
+const ET_NOISE = [
+  /^\d{1,2}\/\d{1,2}\/\d{2,4},/, // "10/9/22, 7:19 PM ..." cabecera de página
+  /examtopics\.com/i, // pies de página con URL malformada
+  /^Topic \d+/i,
+  /^=?XAMTOPICS/i,
+  /Custom View Settings/i,
+  /Expert Verified/i,
+  /^Most Voted/i,
+  /^Community vote distribution/i,
+];
+const isETNoise = (l) => ET_NOISE.some((re) => re.test(l));
+// Línea de voto comunitario: "C (100%)", "B (94%) 6%", "BD (50%) ...".
+const isETVote = (l) => /^[A-Z]{1,3}\s*\(\d+%\)/.test(l.trim());
+
+/** Letras iniciales de un voto/respuesta: "B (94%)" -> "B"; "BD (50%)" -> "BD". */
+function leadingLetters(raw) {
+  const m = (raw || "").trim().match(/^([A-Z]{1,4})/);
+  return m ? [...new Set(m[1].split(""))] : [];
+}
+
+/** Parsea un bloque ExamTopics a una pregunta normalizada. */
+function parseBlockExamTopics(certId, block) {
+  const questionLines = [];
+  const options = [];
+  let correctRaw = "";
+  let communityRaw = "";
+  const references = [];
+
+  let state = "question"; // question -> options -> answer/reference
+  let expected = "A"; // siguiente letra de opción esperada
+
+  for (const rawLine of block.lines) {
+    const line = rawLine.trim();
+    if (!line) continue;
+
+    // Captura el primer voto comunitario y descarta el resto del ruido.
+    if (isETVote(line)) {
+      if (!communityRaw) communityRaw = line;
+      continue;
+    }
+    if (isETNoise(line)) continue;
+
+    const ans = line.match(/^Correct Answer:\s*(.+)$/i);
+    if (ans) {
+      correctRaw = ans[1];
+      state = "answer";
+      continue;
+    }
+    if (/^References?:/i.test(line)) {
+      state = "reference";
+      continue;
+    }
+
+    // URLs (referencias) en cualquier punto tras la respuesta.
+    const urls = line.match(/https?:\/\/[^\s)]+/g);
+    if (state === "reference" || state === "answer") {
+      if (urls) references.push(...urls);
+      continue;
+    }
+
+    // Detección de opciones: la letra debe ser la siguiente esperada
+    // (admite "A.0.0.0.0/0" sin espacio tras el punto).
+    const opt = line.match(/^([A-Z])[.)]\s*(.+)$/);
+    if (opt && opt[1] === expected) {
+      options.push(opt[2].trim());
+      expected = LETTERS[LETTERS.indexOf(expected) + 1];
+      state = "options";
+      continue;
+    }
+
+    if (state === "options") {
+      options[options.length - 1] += " " + line; // continuación de opción
+    } else {
+      questionLines.push(line); // texto de la pregunta
+    }
+  }
+
+  // Respuesta: preferimos el voto de la comunidad cuando es válido; si no, el
+  // "Correct Answer" oficial de ExamTopics.
+  const correctLetters = parseAnswerLetters(correctRaw);
+  const communityLetters = leadingLetters(communityRaw);
+  const toIdx = (letters) =>
+    letters
+      .map((ch) => LETTERS.indexOf(ch))
+      .filter((i) => i >= 0 && i < options.length)
+      .sort((a, b) => a - b);
+
+  const communityIdx = toIdx(communityLetters);
+  const officialIdx = toIdx(correctLetters);
+
+  // "(Choose two/three)" fija cuántas respuestas se esperan.
+  const qText = questionLines.join(" ");
+  const chooseMatch = qText.match(/choose\s+(two|three|2|3)/i);
+  const expectedCount = chooseMatch
+    ? /three|3/i.test(chooseMatch[1])
+      ? 3
+      : 2
+    : null;
+
+  let answer;
+  let useCommunity;
+  if (expectedCount) {
+    // Preferimos la fuente que dé exactamente el número esperado (comunidad antes).
+    if (communityIdx.length === expectedCount) {
+      answer = communityIdx;
+      useCommunity = true;
+    } else if (officialIdx.length === expectedCount) {
+      answer = officialIdx;
+      useCommunity = false;
+    } else {
+      answer = communityIdx.length ? communityIdx : officialIdx;
+      useCommunity = communityIdx.length > 0;
+    }
+  } else {
+    // Respuesta única (caso habitual): voto de la comunidad si es válido.
+    useCommunity =
+      communityIdx.length > 0 && communityIdx.length === communityLetters.length;
+    answer = useCommunity ? communityIdx : officialIdx;
+  }
+
+  // Sin explicación en la fuente: sintetizamos una nota con el voto y la
+  // respuesta oficial cuando difieren (da contexto al estudiar).
+  const explLines = [];
+  if (communityRaw) explLines.push(`Voto de la comunidad: ${communityRaw}.`);
+  if (
+    correctLetters.length &&
+    correctLetters.join("") !== (useCommunity ? communityLetters : correctLetters).join("")
+  ) {
+    explLines.push(`Respuesta marcada por ExamTopics: ${correctLetters.join("")}.`);
+  } else if (correctLetters.length && !communityRaw) {
+    explLines.push(`Respuesta marcada por ExamTopics: ${correctLetters.join("")}.`);
+  }
+  const explanation = explLines.join("\n");
+
+  const allValid = answer.length > 0;
+  let type;
+  if (options.length < 2 || !allValid) type = "complex";
+  else if (answer.length === 1) type = "single";
+  else type = "multiple";
+
+  return {
+    id: `${certId}-${block.number}`,
+    question: reflow(questionLines).trim(),
+    options,
+    answer,
+    explanation,
+    references: [...new Set(references)],
+    image: null,
+    type,
+    topic: null,
+  };
+}
+
 /** Actualiza (o crea) public/data/certifications.json con el conteo jugable. */
 function updateRegistry(certId, name, playableCount) {
   const registryPath = join(DATA_DIR, "certifications.json");
@@ -241,8 +474,13 @@ function main() {
   }
 
   const text = readFileSync(sourcePath, "utf8");
-  const blocks = splitIntoBlocks(text);
-  const questions = blocks.map((b) => parseBlock(certId, b));
+  const format = cfg.format ?? "certyiq";
+  const questions =
+    format === "examtopics"
+      ? resplitMergedBlocks(splitIntoBlocksExamTopics(text)).map((b) =>
+          parseBlockExamTopics(certId, b),
+        )
+      : splitIntoBlocks(text).map((b) => parseBlock(certId, b));
 
   // Sanidad: ids únicos.
   const ids = new Set();
