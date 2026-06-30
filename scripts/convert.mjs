@@ -41,6 +41,16 @@ const CERTS = {
     source: "itilv4.md",
     format: "certyiq",
   },
+  "az-700": {
+    name: "AZ-700: Designing and Implementing Microsoft Azure Networking Solutions",
+    source: "az-700.md",
+    format: "certyiq",
+  },
+  pca: {
+    name: "Google Professional Cloud Architect",
+    source: "pca.md",
+    format: "certyiq",
+  },
   // az900: { name: "AZ-900: Azure Fundamentals", source: "az900.md", format: "certyiq" },
 };
 

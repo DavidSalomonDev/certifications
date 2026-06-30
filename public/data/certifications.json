@@ -19,5 +19,19 @@
     "file": "itilv4.json",
     "questionCount": 365,
     "enabled": true
+  },
+  {
+    "id": "az-700",
+    "name": "AZ-700: Designing and Implementing Microsoft Azure Networking Solutions",
+    "file": "az-700.json",
+    "questionCount": 181,
+    "enabled": true
+  },
+  {
+    "id": "pca",
+    "name": "Google Professional Cloud Architect",
+    "file": "pca.json",
+    "questionCount": 382,
+    "enabled": true
   }
 ]
