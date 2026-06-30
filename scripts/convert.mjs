@@ -214,7 +214,7 @@ function parseBlock(certId, block) {
     answer,
     explanation,
     references: [...new Set(references)],
-    image: null,
+    images: [],
     type,
     topic: null,
   };
@@ -433,7 +433,7 @@ function parseBlockExamTopics(certId, block) {
     answer,
     explanation,
     references: [...new Set(references)],
-    image: null,
+    images: [],
     type,
     topic: null,
   };
@@ -491,6 +491,29 @@ function main() {
           parseBlockExamTopics(certId, b),
         )
       : splitIntoBlocks(text).map((b) => parseBlock(certId, b));
+
+  // Imágenes (exhibits/diagramas) extraídas del PDF por scripts/extract_images.py.
+  // El mapa source/<cert>.images.json es opcional y editable a mano:
+  //   { "10": ["q10-1.jpeg", ...] }  ->  /images/<cert>/q10-1.jpeg
+  const imagesMapPath = join(SOURCE_DIR, `${certId}.images.json`);
+  if (existsSync(imagesMapPath)) {
+    let imagesMap = {};
+    try {
+      imagesMap = JSON.parse(readFileSync(imagesMapPath, "utf8"));
+    } catch {
+      console.warn(`⚠ No se pudo leer ${certId}.images.json; se ignora.`);
+    }
+    let withImages = 0;
+    for (const q of questions) {
+      const num = q.id.slice(certId.length + 1); // "az-700-10" -> "10"
+      const files = imagesMap[num];
+      if (files && files.length) {
+        q.images = files.map((f) => `/images/${certId}/${f}`);
+        withImages++;
+      }
+    }
+    console.log(`   • con imágenes: ${withImages} preguntas`);
+  }
 
   // Sanidad: ids únicos.
   const ids = new Set();

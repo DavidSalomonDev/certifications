@@ -15,7 +15,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -33,7 +33,7 @@
     ],
     "explanation": "Voto de la comunidad: B (94%) 6%.\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -53,7 +53,7 @@
     "references": [
       "https://cloud.google.com/sql/docs/mysql/backup-recovery/restore"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -71,7 +71,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -91,7 +91,7 @@
     "references": [
       "https://medium.com/google-cloud/kubernetes-engine-kubectl-config-b6270d2b656¢"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -111,7 +111,7 @@
     "references": [
       "https://cloud.google.com/storage/docs/storage-classes#nearline"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -131,7 +131,7 @@
     "references": [
       "https://www.whizlabs.com/blog/google-cloud-interview-questions/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -149,7 +149,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -169,7 +169,7 @@
     "references": [
       "https://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -189,7 +189,7 @@
     "references": [
       "https://cloud.google.com/sdk/gcloud/reference/iam/roles/copy"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -209,7 +209,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instances/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -229,7 +229,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -249,7 +249,7 @@
     "references": [
       "https://cloud.google.com/solutions/using-jenkins-for-distributed-builds-on-compute-engine"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -269,7 +269,7 @@
     "references": [
       "https://cloud.google.com/sdk/gcloud/reference/deployment-manager/deployments/update"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -289,7 +289,7 @@
     "references": [
       "https://cloud.google.com/bigquery/docs/estimate-costs"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -307,7 +307,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -325,7 +325,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -343,7 +343,7 @@
     ],
     "explanation": "Voto de la comunidad: B (79%) A (21%).\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -363,7 +363,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -383,7 +383,7 @@
     "references": [
       "https://medium.com/falafel-software/sql-server-in-the-google-cloud-a17e8a1f11ce"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -401,7 +401,7 @@
     ],
     "explanation": "Voto de la comunidad: A (89%) 11%.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -421,7 +421,7 @@
     "references": [
       "https://cloud.google.com/deployment-manager/docs/deployments/updating-deployments"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -441,7 +441,7 @@
     "references": [
       "https://cloud.google.com/solutions/correlating-time-series-dataflow"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -459,7 +459,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -479,7 +479,7 @@
     "references": [
       "https://cloud.google.com/iam/docs/roles-audit-logging"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -497,7 +497,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -515,7 +515,7 @@
     ],
     "explanation": "Voto de la comunidad: A (64%) B (36%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -533,7 +533,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -551,7 +551,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -569,7 +569,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -587,7 +587,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -605,7 +605,7 @@
     ],
     "explanation": "Voto de la comunidad: C (79%) D (21%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -623,7 +623,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -641,7 +641,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -659,7 +659,7 @@
     ],
     "explanation": "Voto de la comunidad: B (70%) A (27%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -677,7 +677,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -695,7 +695,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -713,7 +713,7 @@
     ],
     "explanation": "Voto de la comunidad: B (95%) 5%.\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -731,7 +731,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -751,7 +751,7 @@
     "references": [
       "https://cloud.google.com/load-balancing/docs/https/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -769,7 +769,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -787,7 +787,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -805,7 +805,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -823,7 +823,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -843,7 +843,7 @@
     "references": [
       "https://medium.com/google-cloud/app-engine-project-cleanup-9647296e796a"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -863,7 +863,7 @@
     "references": [
       "https://cloud.google.com/endpoints/docs/openapi/troubleshoot-aeflex-deployment"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -881,7 +881,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -899,7 +899,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -917,7 +917,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -935,7 +935,7 @@
     ],
     "explanation": "Voto de la comunidad: A (80%) B (20%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -955,7 +955,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -975,7 +975,7 @@
     "references": [
       "https://cloud.google.com/bigquery/docs/cloud-sql-federated-queries"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -993,7 +993,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1011,7 +1011,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1029,7 +1029,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1047,7 +1047,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1065,7 +1065,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1083,7 +1083,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1101,7 +1101,7 @@
     ],
     "explanation": "Voto de la comunidad: C (54%) A (45%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1119,7 +1119,7 @@
     ],
     "explanation": "Respuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1139,7 +1139,7 @@
     "references": [
       "https://cloud.google.com/logging/docs/audit/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1157,7 +1157,7 @@
     ],
     "explanation": "Voto de la comunidad: A (86%) 14%.\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1175,7 +1175,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1193,7 +1193,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1211,7 +1211,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1231,7 +1231,7 @@
     "references": [
       "https://cloud.google.com/resource-manager/docs/migrating-projects-billing"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1249,7 +1249,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1267,7 +1267,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1287,7 +1287,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1307,7 +1307,7 @@
     "references": [
       "https://cloud.google.com/vision/automl/docs/before-you-begin"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1325,7 +1325,7 @@
     ],
     "explanation": "Voto de la comunidad: A (83%) R (17%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1345,7 +1345,7 @@
     "references": [
       "https://cloud.google.com/run/docs/gke/troubleshooting"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1363,7 +1363,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1383,7 +1383,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1401,7 +1401,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1419,7 +1419,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1439,7 +1439,7 @@
     "references": [
       "https://cloud.google.com/products/calculator#tab=container"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1459,7 +1459,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1477,7 +1477,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1497,7 +1497,7 @@
     "references": [
       "https://cloud.google.com/resource-manager/docs/access-control-proj"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1515,7 +1515,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1533,7 +1533,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1553,7 +1553,7 @@
     "references": [
       "https://cloud.google.com/resource-manager/docs/creating-managing-organization"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1571,7 +1571,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1589,7 +1589,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1607,7 +1607,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1625,7 +1625,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1643,7 +1643,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1661,7 +1661,7 @@
     ],
     "explanation": "Voto de la comunidad: A(91%) 9%.\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1681,7 +1681,7 @@
     "references": [
       "https://cloud.google.com/storage/docs/managing-lifecycles"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1699,7 +1699,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1717,7 +1717,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1735,7 +1735,7 @@
     ],
     "explanation": "Respuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1753,7 +1753,7 @@
     ],
     "explanation": "Voto de la comunidad: B (61%) D (39%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1771,7 +1771,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1791,7 +1791,7 @@
     ],
     "explanation": "Voto de la comunidad: D (50%) BE (50%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "multiple",
     "topic": null
   },
@@ -1811,7 +1811,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/sandbox/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1829,7 +1829,7 @@
     ],
     "explanation": "Voto de la comunidad: D (75%) C (25%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1847,7 +1847,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1865,7 +1865,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1883,7 +1883,7 @@
     ],
     "explanation": "Voto de la comunidad: D (70%) C (30%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1901,7 +1901,7 @@
     ],
     "explanation": "Voto de la comunidad: D (67%) A (33%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1919,7 +1919,7 @@
     ],
     "explanation": "Voto de la comunidad: D (55%) C (45%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1937,7 +1937,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1955,7 +1955,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1973,7 +1973,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -1993,7 +1993,7 @@
     "references": [
       "https://cloud.google.com/storage/archival"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2013,7 +2013,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/how-to/gpus"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2033,7 +2033,7 @@
     "references": [
       "https://cloud.google.com/solutions/federating-gcp-with-active-directory-introduction"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2051,7 +2051,7 @@
     ],
     "explanation": "Respuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2069,7 +2069,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2087,7 +2087,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2105,7 +2105,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2125,7 +2125,7 @@
     "references": [
       "https://cloud.google.com/blog/products/gcp/best-practices-for-working-with-google-cloud-audit-logging"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2143,7 +2143,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2163,7 +2163,7 @@
     "references": [
       "https://cloud.google.com/blog/products/gcp/best-practices-for-working-with-google-cloud-audit-logging"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2181,7 +2181,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2199,7 +2199,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2219,7 +2219,7 @@
     "references": [
       "https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2237,7 +2237,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2257,7 +2257,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2275,7 +2275,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2293,7 +2293,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2311,7 +2311,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2329,7 +2329,7 @@
     ],
     "explanation": "Voto de la comunidad: C (78%) 11% 11%.\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2347,7 +2347,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2367,7 +2367,7 @@
     "references": [
       "https://cloud.google.com/load-balancing/docs/ssl"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2387,7 +2387,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/disks/performance"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2405,7 +2405,7 @@
     ],
     "explanation": "Voto de la comunidad: A (52%) C (48%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2425,7 +2425,7 @@
     "references": [
       "https://cloud.google.com/bigquery/docs/access-control"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2445,7 +2445,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instances/create-start-instance"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2463,7 +2463,7 @@
     ],
     "explanation": "Voto de la comunidad: D (57%) B (35%) 9%.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2483,7 +2483,7 @@
     "references": [
       "https://cloud.google.com/billing/docs/onboarding-checklist"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2503,7 +2503,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2521,7 +2521,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2541,7 +2541,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/tutorials/migrating-node-pool"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2561,7 +2561,7 @@
     "references": [
       "https://cloud.google.com/solutions/jenkins-on-kubernetes-engine"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2581,7 +2581,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/gcloud-compute"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2599,7 +2599,7 @@
     ],
     "explanation": "Voto de la comunidad: D (88%) 13%.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2617,7 +2617,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2637,7 +2637,7 @@
     "references": [
       "https://cloud.google.com/billing/docs/how-to/visualize-data"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2657,7 +2657,7 @@
     "references": [
       "https://cloud.google.com/vpc"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2675,7 +2675,7 @@
     ],
     "explanation": "Voto de la comunidad: B (55%) A (45%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2693,7 +2693,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2711,7 +2711,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2729,7 +2729,7 @@
     ],
     "explanation": "Voto de la comunidad: D (70%) B (30%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2747,7 +2747,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2767,7 +2767,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2785,7 +2785,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2805,7 +2805,7 @@
     "references": [
       "https://cloud.google.com/compute/vm-instance-pricing"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2823,7 +2823,7 @@
     ],
     "explanation": "Voto de la comunidad: A (75%) D (25%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2843,7 +2843,7 @@
     "references": [
       "https://cloud.google.com/vpc/docs/firewalls"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2861,7 +2861,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2881,7 +2881,7 @@
     "references": [
       "https://books.google.com.pk/books?"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2901,7 +2901,7 @@
     "references": [
       "https://cloud.google.com/storage/docs/audit-logs"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2921,7 +2921,7 @@
     "references": [
       "https://cloud.google.com/billing/docs/how-to/budgets"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2941,7 +2941,7 @@
     "references": [
       "https://googlecloudplatform.uservoice.com/forums/302595-compute-engine/"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2959,7 +2959,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -2979,7 +2979,7 @@
     ],
     "explanation": "Voto de la comunidad: AB (100%).\nRespuesta marcada por ExamTopics: AE.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "multiple",
     "topic": null
   },
@@ -2999,7 +2999,7 @@
     "references": [
       "https://cloud.google.com/deployment-manager/docs/fundamentals"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3019,7 +3019,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/access"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3037,7 +3037,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3055,7 +3055,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3073,7 +3073,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3091,7 +3091,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3109,7 +3109,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3129,7 +3129,7 @@
     "references": [
       "https://cloud.google.com/solutions/connecting-securely"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3147,7 +3147,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3167,7 +3167,7 @@
     "references": [
       "https://cloud.google.com/storage/docs/audit-logging"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3187,7 +3187,7 @@
     "references": [
       "https://cloud.google.com/sdk/docs/authorizing"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3205,7 +3205,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3225,7 +3225,7 @@
     "references": [
       "https://cloud.google.com/logging/docs/view/advanced-queries"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3245,7 +3245,7 @@
     "references": [
       "https://cloud.google.com/solutions/best-practices-compute-engine-region-selection"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3265,7 +3265,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/disks/local-ssd"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3283,7 +3283,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3301,7 +3301,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3319,7 +3319,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3337,7 +3337,7 @@
     ],
     "explanation": "Voto de la comunidad: D (100%).\nRespuesta marcada por ExamTopics: C.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3355,7 +3355,7 @@
     ],
     "explanation": "Voto de la comunidad: A (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3375,7 +3375,7 @@
     "references": [
       "https://cloud.google.com/spanner/docs/instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3395,7 +3395,7 @@
     "references": [
       "https://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/gcp-info/gcp-info2/LaunchVM."
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3413,7 +3413,7 @@
     ],
     "explanation": "Voto de la comunidad: C (83%) A (17%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3433,7 +3433,7 @@
     "references": [
       "https://cloud.google.com/compute/docs/access/service-accounts"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3451,7 +3451,7 @@
     ],
     "explanation": "Voto de la comunidad: D (53%) B (47%).\nRespuesta marcada por ExamTopics: B.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3471,7 +3471,7 @@
     "references": [
       "https://cloud.google.com/appengine/docs/admin-api/migrating-splitting-traffic"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3491,7 +3491,7 @@
     "references": [
       "https://support.google.com/cloudidentity/answer/7332836?hl=en"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3511,7 +3511,7 @@
     "references": [
       "https://cloud.google.com/spanner/docs/instances"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3531,7 +3531,7 @@
     "references": [
       "https://cloud.google.com/spanner/docs/transactions"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3551,7 +3551,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#gcloud-config"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3569,7 +3569,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3587,7 +3587,7 @@
     ],
     "explanation": "Voto de la comunidad: B (64%) C (27%) 9%.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3607,7 +3607,7 @@
     "references": [
       "https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app"
     ],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3625,7 +3625,7 @@
     ],
     "explanation": "Voto de la comunidad: C (75%) D (25%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3643,7 +3643,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3661,7 +3661,7 @@
     ],
     "explanation": "Voto de la comunidad: C (100%).\nRespuesta marcada por ExamTopics: D.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3679,7 +3679,7 @@
     ],
     "explanation": "Voto de la comunidad: B (100%).",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   },
@@ -3697,7 +3697,7 @@
     ],
     "explanation": "Respuesta marcada por ExamTopics: A.",
     "references": [],
-    "image": null,
+    "images": [],
     "type": "single",
     "topic": null
   }

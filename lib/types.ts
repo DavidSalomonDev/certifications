@@ -12,8 +12,12 @@ export interface Question {
   answer: number[];
   explanation: string;
   references: string[];
-  /** Ruta a imagen estática (p. ej. "/images/az104/q123.png") o null. */
-  image: string | null;
+  /**
+   * Rutas a imágenes estáticas de la pregunta (exhibits/diagramas), p. ej.
+   * ["/images/az-700/q10-1.jpeg", ...]. Vacío si la pregunta no tiene imagen.
+   * Se muestran al final del enunciado.
+   */
+  images: string[];
   type: QuestionType;
   /** Tema/categoría. Reservado para clasificación futura. */
   topic: string | null;

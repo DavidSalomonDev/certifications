@@ -20,6 +20,8 @@ El repo está conectado a Vercel: cada push a `main` despliega automáticamente 
 | AZ‑104: Microsoft Azure Administrator | 425 | CertyIQ |
 | Google Cloud Associate Cloud Engineer | 197 | ExamTopics |
 | ITIL 4 Foundation | 365 | CertyIQ |
+| AZ‑700: Designing and Implementing Microsoft Azure Networking Solutions | 181 | CertyIQ |
+| Google Professional Cloud Architect | 382 | CertyIQ |
 
 Ver [Agregar una certificación nueva](#agregar-una-certificación-nueva) para sumar otra.
 
@@ -79,12 +81,15 @@ lib/                       # tipos y lógica
   random.ts                # barajado y muestreo sin repetición
 public/data/
   certifications.json    # registro de certificaciones
-  az104.json              # preguntas AZ‑104 (generado)
-  gcp-ace.json            # preguntas Google Cloud ACE (generado)
-  itilv4.json             # preguntas ITIL 4 Foundation (generado)
-public/images/<cert>/    # imágenes opcionales de preguntas, por certificación
-scripts/convert.mjs        # convierte source/<cert>.md → public/data/<cert>.json
-source/                    # Markdown/PDF fuente de las preguntas
+  <cert>.json             # preguntas de cada cert (generado), p. ej. az104.json, az-700.json
+public/images/<cert>/    # imágenes de preguntas, por certificación (generado)
+scripts/
+  convert.mjs              # convierte source/<cert>.md → public/data/<cert>.json
+  extract_images.py        # extrae imágenes del PDF → public/images/ + source/<cert>.images.json
+source/
+  <cert>.md                # Markdown fuente de las preguntas
+  <cert>.pdf               # PDF fuente (solo para extraer imágenes)
+  <cert>.images.json       # mapa pregunta→imágenes (generado por extract_images.py, editable)
 ```
 
 ---
@@ -119,7 +124,7 @@ Array de preguntas. Cada pregunta:
   "answer": [2],                   // ÍNDICES (0-based) de las opciones correctas
   "explanation": "Por qué la respuesta es correcta…",
   "references": ["https://…"],     // enlaces (puede ir vacío)
-  "image": null,                   // "/images/az104/q123.png" o null
+  "images": [],                    // rutas a imágenes de la pregunta (1 o varias) o vacío
   "type": "single",               // "single" | "multiple" | "complex"
   "topic": null                    // categoría/tema (reservado para el futuro)
 }
@@ -133,15 +138,25 @@ Notas:
 - **`type`**:
   - `single` — una sola respuesta correcta (radio buttons).
   - `multiple` — varias respuestas correctas (checkboxes).
-  - `complex` — preguntas HOTSPOT/DRAG‑DROP que dependen de imágenes/tablas. **Se excluyen del
-    pool jugable** hasta que tengan su imagen. Quedan guardadas en el JSON para no perderlas.
+  - `complex` — preguntas HOTSPOT/DRAG‑DROP/case‑study que no se pueden responder con opción
+    múltiple. **Se excluyen del pool jugable**, aunque tengan imágenes. Quedan guardadas en el
+    JSON para no perderlas.
 - El **pool jugable** = preguntas con `type` `single` o `multiple` (ver `getPool()` en
   `lib/questions.ts`).
 
 ### Imágenes de preguntas
 
-Coloca la imagen en `public/images/<cert>/` y referencia su ruta en `image`, p. ej.
-`"image": "/images/az104/q200.png"`. La pregunta la mostrará automáticamente.
+Muchas preguntas (diagramas de red, tablas, exhibits de case study, HOTSPOT/DRAG‑DROP) traen
+imágenes. El campo `images` de cada pregunta es un array de rutas; se muestran apiladas al final
+del enunciado, antes de las opciones. Puede tener 0, 1 o muchas imágenes.
+
+Dos formas de poblarlo:
+
+- **Automática (recomendada)**: extraer las imágenes del PDF con `scripts/extract_images.py`
+  (ver [Extraer imágenes desde el PDF](#extraer-imágenes-desde-el-pdf)). Es el camino normal para
+  los volcados de CertyIQ.
+- **Manual**: coloca la imagen en `public/images/<cert>/` y añade su ruta al array, p. ej.
+  `"images": ["/images/az104/q200.png"]`. Útil para correcciones puntuales.
 
 ---
 
@@ -162,6 +177,86 @@ Si editas las preguntas a mano directamente en el JSON, **no** necesitas correr 
 
 ---
 
+## Extraer imágenes desde el PDF
+
+Los volcados de CertyIQ traen un PDF con los diagramas/exhibits de cada pregunta.
+`scripts/extract_images.py` los extrae y los asocia automáticamente a su pregunta.
+
+### Requisitos
+
+Python 3 + [PyMuPDF](https://pymupdf.readthedocs.io/):
+
+```bash
+python -m pip install PyMuPDF
+```
+
+### Uso
+
+Deja el PDF en `source/<cert>.pdf` y corre:
+
+```bash
+python scripts/extract_images.py <cert>      # p. ej. az-700
+npm run convert -- <cert>                     # vuelca las imágenes al JSON
+```
+
+El primer comando genera las imágenes y el mapa; el segundo las incorpora a
+`public/data/<cert>.json`. **Siempre hay que correr `convert` después** para que la app las vea.
+
+### Qué hace (y por qué funciona)
+
+El PDF no dice qué imagen pertenece a qué pregunta, así que el script lo infiere:
+
+1. **Descarta la plantilla.** El volcado repite en cada página el marco/fondo/logo de CertyIQ.
+   Se filtran por: ancho de origen `535`/`557` px (las columnas del marco), contenido que aparece
+   en **≥ 8 páginas** (logos/fondos), y tamaños mínimos (lado < 40 px o área < 60×60).
+2. **Asocia por orden de lectura.** Recorre cada página de arriba hacia abajo y asigna cada imagen
+   a la última cabecera `Question: N` que la precede. Las imágenes "se derraman" a páginas
+   siguientes sin cabecera y siguen perteneciendo a la misma pregunta.
+3. **Corta en `Explanation:`.** Las imágenes posteriores al marcador de explicación (los
+   screenshots paso a paso del portal) se descartan: solo nos interesa el exhibit de la pregunta y,
+   en HOTSPOT, la imagen de la respuesta resaltada (que va **antes** de `Explanation:`).
+   - Las preguntas **case study** no tienen marcador `Explanation:`, así que conservan **todos**
+     sus exhibits — que es lo correcto, porque el caso describe todo un entorno.
+4. **Deduplica** imágenes idénticas dentro de una misma pregunta (una imagen alta partida entre dos
+   páginas aparece dos veces; se guarda una sola vez).
+
+### Salidas
+
+- `public/images/<cert>/q<N>-<i>.<ext>` — los bytes nativos de cada imagen (sin recodificar).
+  `<N>` es el número de pregunta, `<i>` el orden dentro de la pregunta.
+- `source/<cert>.images.json` — el mapa `{ "10": ["q10-1.jpeg", ...] }`. **Es editable a mano.**
+
+### Afinar a mano
+
+La heurística acierta en la gran mayoría, pero puede colar una imagen de más (una franja pequeña)
+o dejar una de menos. Como `source/<cert>.images.json` es texto plano, edítalo directamente
+(quita/reordena nombres de archivo) y vuelve a correr **solo** `npm run convert -- <cert>`.
+No hace falta reextraer ni tocar Python.
+
+### Para una certificación nueva: revisa los filtros
+
+Los umbrales están al inicio de `scripts/extract_images.py`:
+
+```python
+TEMPLATE_WIDTHS   = {535, 557}   # anchos del marco de página (¡específico del PDF!)
+TEMPLATE_MIN_PAGES = 8           # mismo contenido en ≥N páginas = plantilla
+MIN_DIM = 40                     # lado mínimo en px
+MIN_AREA = 60 * 60               # área mínima en px
+```
+
+`TEMPLATE_WIDTHS` es lo más sensible: `{535, 557}` son los anchos del marco del PDF de **az‑700**.
+Otro PDF puede usar otros anchos. Si en una cert nueva ves muchas imágenes basura o, al revés,
+faltan diagramas, inspecciona primero el PDF: lista los anchos de imagen más repetidos por página
+(con PyMuPDF: `doc[p].get_images()` + `doc.extract_image(xref)`) e identifica cuáles son el marco.
+Ajusta `TEMPLATE_WIDTHS` y vuelve a extraer. Tras extraer, abre la app en modo random y revisa unas
+cuantas preguntas con imagen para validar el resultado.
+
+> Nota: las preguntas `complex` (HOTSPOT/DRAG/case‑study) reciben imágenes pero **siguen fuera del
+> pool jugable** porque no se responden con opción múltiple. Las imágenes benefician hoy a las
+> preguntas `single`/`multiple` que referencian un exhibit.
+
+---
+
 ## Agregar una certificación nueva
 
 Tienes dos caminos:
@@ -179,7 +274,9 @@ Tienes dos caminos:
 1. Deja el Markdown en `source/<cert>.md`.
 2. Registra el cert en `CERTS` dentro de `scripts/convert.mjs` con su `id`, `name`, `source` y
    `format`.
-3. Corre `npm run convert -- <cert>`.
+3. (Opcional) Si tienes el PDF y quieres las imágenes, deja `source/<cert>.pdf` y corre
+   `python scripts/extract_images.py <cert>` (ver [Extraer imágenes desde el PDF](#extraer-imágenes-desde-el-pdf)).
+4. Corre `npm run convert -- <cert>`.
 
 El conversor soporta dos formatos de volcado (campo `format`):
 
