@@ -1,0 +1,9 @@
+[
+  {
+    "id": "az104",
+    "name": "AZ-104: Microsoft Azure Administrator",
+    "file": "az104.json",
+    "questionCount": 331,
+    "enabled": true
+  }
+]
