@@ -354,7 +354,10 @@
     "answer": [],
     "explanation": "1. An Azure Key Vault: you can store the administrative password in an Azure Key Vault, which provides secure storage and management of cryptographic keys, certificates, and secrets. Storing the password in a Key Vault ensures that it is not stored in plain text and provides an additional layer of security to protect the password.\n2. An access policy: You should create an access policy to control access to the Key Vault secrets. An access policy specifies who can perform operations on the secrets stored in the Key Vault. You can grant permissions to users, applications, and services to access the Key Vault and its secrets, and you can specify the level of access that they have. By creating an access policy, you can control who has access to the administrative password and ensure that it is used only by authorized entities.\nTherefore, to achieve your goal, you should create an Azure Key Vault to store the administrative password, and an access policy to control access to the Key Vault secrets.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q20-1.jpeg",
+      "/images/az104/q20-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -406,7 +409,10 @@
     "answer": [],
     "explanation": "Hyper-V site Why: In Azure Site Recovery (ASR), a Hyper-V site is a logical container object created in your Azure portal workspace. It is used to group, track, and organize your on-premises Hyper-V host hypervisors or clusters before downloading and registering the provider agent software onto them.\nAzure Recovery Services Vault.\nWhy: This is the core storage management entity within Azure that houses replication telemetry, coordinates backup policies, orchestrates failover routines, and manages all recovery checkpoints for target physical or virtual machines.\nReplication policy Why: You cannot protect a workload without defining its orchestration bounds. A Replication policy dictates key variables like recovery point retention history timescales, app-consistent snapshot frequency, and tracking synchronization intervals.\nIncorrect Answer Storage account Why: While a target storage account or managed disks receive the actual block data payloads during synchronization, it is no longer created as a dedicated standalone tracking object within the initial infrastructure pairing phase in the portal's vault onboarding guide (ASR modern deployments streamline and create managed replica targets directly).\nAzure Traffic Manager instance Why: This is a DNS-level traffic load-balancing application routing solution. It handles client failover web routing after an outage occurs, but it plays no role in replicating VM disks or managing background recovery steps.\nEndpoint Why: General network gateways or web connection endpoints are lower-level network interface constructs.\nThey are not distinct standalone resources configured directly during the core site preparation lifecycle.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q23-1.jpeg",
+      "/images/az104/q23-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -740,7 +746,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replicatio"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q41-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -751,7 +759,10 @@
     "answer": [],
     "explanation": "Network Contributor on LB1 Network Contributor on LB1: The Network Contributor role allows a user to fully manage Azure networking resources (including load balancers, virtual networks, and network interfaces). Since the objective is strictly to modify LB1 (by adding a backend pool configuration asset), assigning this role at the resource scope (on LB1) grants the exact administrative permissions needed while adhering to the Principle of Least Privilege Incorrect Answer Network Contributor on RG1: While this role provides the necessary permissions to modify LB1, assigning it at the resource group level (RG1) grants excessive, unneeded permissions over every other unrelated network asset inside that resource group (such as firewalls, virtual networks, and public IPs).\nContributor on LB1: This is a broader general resource role. While it can modify the load balancer, it also permits actions outside of networking scopes (like resource-level access management hooks and non- networking configurations) making it less specific than Network Contributor.\nOwner on LB1: This role provides full control over the resource, including the ability to delete the load balancer and manage Role-Based Access Control (RBAC) permissions for other users. This violates the least privilege requirement.\nNetwork Contributor on LB2 Network Contributor role on LB1 and LB2 is the correct answer. With this role user can add create a backend address without actually adding the actual IP addresses. Network contributor can also create and modify health probe.\nIf the user wants to add address to backend pools (eg: IPs from a VNet or entire subnet) then a Network Contributor role is required at the resource group level (or atleast on VNet) Incorrect Answer Network Contributor on RG1: This option creates security over-provisioning by giving full network control over the entire resource group container rather than isolating the administrator's access to the specific load balancer requiring configuration.\nContributor on LB2 / Owner on LB2: As explained above, general Contributor introduces unnecessary overhead, and Owner introduces high-risk authorization management capabilities (*/write and */delete) that are totally unnecessary for setting up a standard diagnostic health check probe.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q42-1.jpeg",
+      "/images/az104/q42-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -806,7 +817,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory/governance/create-access-review"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q45-1.jpeg",
+      "/images/az104/q45-2.jpeg",
+      "/images/az104/q45-3.jpeg",
+      "/images/az104/q45-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -820,7 +836,13 @@
       "https://docs.microsoft.com/en-us/azure/governance/management-groups/overview",
       "https://docs.microsoft.com/en-us/azure/governance/management-groups/manage#moving-management-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q46-1.jpeg",
+      "/images/az104/q46-2.jpeg",
+      "/images/az104/q46-3.jpeg",
+      "/images/az104/q46-4.jpeg",
+      "/images/az104/q46-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -838,7 +860,9 @@
     ],
     "explanation": "You are prevented from creating Azure SQL servers anywhere in Subscription 1 with the exception of ContosoRG1 B is correct option , as current policy prevents creation of sql servers in sub1 , but due to exclusion , only inside ContosoRG1 , you can create sql servers.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q47-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -851,7 +875,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q48-1.jpeg",
+      "/images/az104/q48-2.jpeg",
+      "/images/az104/q48-3.jpeg",
+      "/images/az104/q48-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -871,7 +900,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q49-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -984,7 +1015,13 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q55-1.jpeg",
+      "/images/az104/q55-2.jpeg",
+      "/images/az104/q55-3.jpeg",
+      "/images/az104/q55-4.jpeg",
+      "/images/az104/q55-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1005,7 +1042,9 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?",
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal#before-you-start"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q56-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1113,7 +1152,10 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags",
       "https://docs.microsoft.com/en-us/azure/billing/billing-getting-started"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q62-1.jpeg",
+      "/images/az104/q62-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1148,7 +1190,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/architecture/resiliency/recovery-loss-azure-region"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q64-1.jpeg",
+      "/images/az104/q64-2.jpeg",
+      "/images/az104/q64-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1168,7 +1214,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q65-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1182,7 +1230,10 @@
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles",
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q66-1.jpeg",
+      "/images/az104/q66-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1240,7 +1291,10 @@
       "https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/app-based-mfa",
       "https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q69-1.jpeg",
+      "/images/az104/q69-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1294,7 +1348,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/sccm/core/clients/manage/collections/create-collections"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q72-1.jpeg",
+      "/images/az104/q72-2.jpeg",
+      "/images/az104/q72-3.jpeg",
+      "/images/az104/q72-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1307,7 +1366,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q73-1.jpeg",
+      "/images/az104/q73-2.jpeg",
+      "/images/az104/q73-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1393,7 +1456,12 @@
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin",
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q78-1.jpeg",
+      "/images/az104/q78-2.jpeg",
+      "/images/az104/q78-3.jpeg",
+      "/images/az104/q78-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1435,7 +1503,9 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-delete-vault#before-you-start"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q80-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1468,7 +1538,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/dns/dns-web-sites-custom-domain"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q82-1.jpeg",
+      "/images/az104/q82-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1523,7 +1596,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-files-identity-ad-ds-assign-permissions?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q85-1.jpeg",
+      "/images/az104/q85-2.jpeg",
+      "/images/az104/q85-3.jpeg",
+      "/images/az104/q85-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1537,7 +1615,11 @@
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles",
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q86-1.jpeg",
+      "/images/az104/q86-2.jpeg",
+      "/images/az104/q86-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1551,7 +1633,11 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json",
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q87-1.jpeg",
+      "/images/az104/q87-2.jpeg",
+      "/images/az104/q87-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1585,7 +1671,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q89-1.jpeg",
+      "/images/az104/q89-2.jpeg",
+      "/images/az104/q89-3.jpeg",
+      "/images/az104/q89-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1657,7 +1748,11 @@
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#virtual-machine-contributor",
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q93-1.jpeg",
+      "/images/az104/q93-2.jpeg",
+      "/images/az104/q93-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1694,7 +1789,11 @@
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles",
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q95-1.jpeg",
+      "/images/az104/q95-2.jpeg",
+      "/images/az104/q95-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1745,7 +1844,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q98-1.jpeg",
+      "/images/az104/q98-2.jpeg",
+      "/images/az104/q98-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1761,7 +1864,9 @@
     ],
     "explanation": "After User1 creates a new Azure Active Directory tenant named external.contoso.onmicrosoft.com, User-1 becomes owner and Global Administrator of external.contoso.onmicrosoft.com.\nBUT User-2 doesn't have any authorization in new tenant. User-2's Global Administrator Role applies to contoso.onmicrosoft.com NOT for external.contoso.onmicrosoft.com.\nSO User-1 can not instruct User2 to create the user accounts.\nMAYBE that can be done after User-1 assigns Global Administrator or User Access Administrator Role to User-2.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q99-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1779,7 +1884,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q100-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1797,7 +1904,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-users-to-azure-ad"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q101-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1837,7 +1946,9 @@
     ],
     "explanation": "Upload blob data to storageacct1234: User1 has been assigned the “Storage Blob Data Contributor” role for the storage account named storageacct1234. This role allows them to upload data to blob containers within that storage account.\nView blob data in storageacct1234: Additionally, User1 has the “Reader” role at the Resource group (inherited) scope. While this role doesn’t provide read permissions to data in Azure Storage, it does allow User1 to view storage account resources, including blob containers. Therefore, User1 can view blob data within the storageacct1234 storage account.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q103-1.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -1902,7 +2013,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q107-1.jpeg",
+      "/images/az104/q107-2.jpeg",
+      "/images/az104/q107-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1913,7 +2028,10 @@
     "answer": [],
     "explanation": "Reader and Data Access\":\n\"Lets you view everything but will not let you delete or create a storage account or contained resource. It will also allow read/write access to all data contained in a storage account via access to storage account keys.\" \"Owner\" is needed to manage permissions, as \"User Access Administrator\" is not offered as an option.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q108-1.jpeg",
+      "/images/az104/q108-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1950,7 +2068,10 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/licensing-group-advanced"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q110-1.jpeg",
+      "/images/az104/q110-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -1963,7 +2084,12 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/active-directory/governance/entitlement-management-external-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q111-1.jpeg",
+      "/images/az104/q111-2.jpeg",
+      "/images/az104/q111-3.jpeg",
+      "/images/az104/q111-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -1992,7 +2118,13 @@
     "answer": [],
     "explanation": "1. No, role assignments do not automatically propagate to nested groups in Azure. Azure Role-Based Access Control (RBAC) does not support the automatic inheritance of role assignments for nested groups.\n2. No, a Microsoft 365 group cannot be a member of a security group in Azure AD. Microsoft 365 groups (formerly known as Office 365 groups) are designed primarily for collaboration purposes and integrate with tools like Outlook, Teams, SharePoint, and others. They are different from security groups, which are used for managing permissions to resources within Azure and other Microsoft services.\n3.Yes, a Microsoft 365 group can be assigned as the owner of a resource group in Azure. In Azure Role-Based Access Control (RBAC), you can assign roles, including the \"Owner\" role, to users, security groups, or Microsoft 365 groups.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q113-1.jpeg",
+      "/images/az104/q113-2.jpeg",
+      "/images/az104/q113-3.jpeg",
+      "/images/az104/q113-4.jpeg",
+      "/images/az104/q113-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2028,7 +2160,9 @@
     ],
     "explanation": "Private endpoints are used to provide secure and private connectivity from a virtual network to Azure storage.\nWhen you configure a private endpoint, a private IP address is assigned to the storage account within the virtual network. All traffic to the storage account goes over the Microsoft backbone network, rather than over the public internet, providing increased security and reliability. By configuring a private endpoint for the storage account in this scenario, you can ensure that all the traffic from VM1 to storage1 travels across the Microsoft backbone network.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q115-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2041,7 +2175,12 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=network-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q116-1.jpeg",
+      "/images/az104/q116-2.jpeg",
+      "/images/az104/q116-3.jpeg",
+      "/images/az104/q116-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2074,7 +2213,10 @@
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-",
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q118-1.jpeg",
+      "/images/az104/q118-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2092,7 +2234,9 @@
     ],
     "explanation": "A.Enable identity-based data access for the file shares in storage1.\nEnabling identity-based data access for file shares is a prerequisite for assigning roles like the Storage File Data SMB Share Contributor role. Without enabling this feature, Azure AD authentication and authorization for accessing file shares would not be possible.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q119-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2121,7 +2265,13 @@
     "answer": [],
     "explanation": "YNN 1) Y, You can assign users MS Defender for Cloud Apps on a per user basis.\n2) N, You cannot remove the P2 license as User1 is in Group1.\n3) N, nested group assignments don't work",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q121-1.jpeg",
+      "/images/az104/q121-2.jpeg",
+      "/images/az104/q121-3.jpeg",
+      "/images/az104/q121-4.jpeg",
+      "/images/az104/q121-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2132,7 +2282,11 @@
     "answer": [],
     "explanation": "JobTitle :User1 and User3 only.\nThis means only User1 and User3 are associated with the job title, excluding User2.\nUsageLocation :User1, User2, and User3.\nThis means all three users (User1, User2, and User3) are associated with the UsageLocation field.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q122-1.jpeg",
+      "/images/az104/q122-2.jpeg",
+      "/images/az104/q122-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2224,7 +2378,10 @@
     "answer": [],
     "explanation": "Blob Storage Selection:\nThe selected option is \"Azure AD and shared access signatures (SAS)\".\nThis means both Azure Active Directory (Azure AD) authentication and SAS tokens can be used to access the blob storage.\nAzure AD provides identity-based authentication, while SAS tokens provide temporary, delegated access.\nFile Storage Selection:\nThe selected option is \"Shared access signatures (SAS) only\".\nThis indicates that only SAS tokens can be used to access the file storage, and Azure AD authentication is not enabled for this resource.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q127-1.jpeg",
+      "/images/az104/q127-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2235,7 +2392,10 @@
     "answer": [],
     "explanation": "Identities Section (Mail) The Identities field shows \"mail\", indicating that the user is authenticated using their email identity.\nThis means the external user is using their email-based authentication (possibly via Microsoft, Google, or another identity provider) to access the organization's resources.\nB2B Collaboration In the bottom right, the tag \"B2B collaboration\" is visible.\nB2B collaboration is a feature in Azure AD that allows organizations to securely share applications and services with users from other organizations.\nExternal users are typically added via guest invitations and can use their existing credentials from their home organization to sign in.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q128-1.jpeg",
+      "/images/az104/q128-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2253,7 +2413,9 @@
     ],
     "explanation": "Storage Blob Data Contributor.\nThis role specifically grants permissions to read, write, and delete blobs in Azure Storage containers.\nIt does not allow managing the storage account settings but provides full control over the stored data, which is exactly what is required in the question.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q129-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2290,7 +2452,9 @@
     ],
     "explanation": "B. Group1 and Group3 only.\nAzure AD licenses can be assigned to user accounts. When you want to assign licenses to a group, the intention is to assign those licenses to the members of the group.\nYou can assign licenses to Microsoft 365 groups and security groups, but not to mail-enabled security groups.\nFurthermore, the group should be security-enabled to get the licenses assigned.\nFrom the given list:\nGroup1: Security group (Security Enabled) - You can assign licenses.\nGroup2: Mail-enabled security group (Security Enabled) - You cannot assign licenses to mail-enabled security groups.\nGroup3: Microsoft 365 group (Security Enabled) - You can assign licenses.\nGroup4: Microsoft 365 group (Security Disabled) - You cannot assign licenses to security-disabled groups.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q131-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2303,7 +2467,10 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-dynamic-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q132-1.jpeg",
+      "/images/az104/q132-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2316,7 +2483,10 @@
     "references": [
       "https://aad.portal.azure.com"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q133-1.jpeg",
+      "/images/az104/q133-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2330,7 +2500,14 @@
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/conditions-format",
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q134-1.jpeg",
+      "/images/az104/q134-2.jpeg",
+      "/images/az104/q134-3.jpeg",
+      "/images/az104/q134-4.jpeg",
+      "/images/az104/q134-5.jpeg",
+      "/images/az104/q134-6.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2359,7 +2536,11 @@
     "answer": [],
     "explanation": "No No Yes I run the ARM template in a lab environment. Before go to the explanation, it's valid to say that there are some errors in the script format and I have to fix it to run successfully.1- It's N, because it creates 4 Resource Groups and not 3 Resource Groups (RGS0, RGS1, RGroup4 and ResGrp8);1.1: The Resource Group named with \"[concat('RGS', copyIndex())]\", creates RGS0 and RGS1;1.2: The Resource Group named with \"[concat('ResGrp', '8')]\", creates ResGrp8;1.3: The Resource Group named with \"[concat('RGroup', length(parameters('obj1')))]\", creates RGroup4 (As we can see, obj1 parameter has a length of 4 'propA', 'propB', 'propC' and 'propD');2 - It's N, because it doesn't create a resourcer group named RGroup5;3 - It's Y, because all resource groups were created in the East US Azure Region.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q136-1.jpeg",
+      "/images/az104/q136-2.jpeg",
+      "/images/az104/q136-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2379,7 +2560,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q137-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2399,7 +2582,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q138-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2417,7 +2602,9 @@
     ],
     "explanation": "B: service endpoints.\nService endpoints allow you to secure Azure service resources to your virtual network by extending the identity of your VNet to the service. By doing this, the traffic from your virtual machine (VM1) to the storage account (Storage1) remains within the Microsoft backbone network, rather than traversing the public internet.\nThis ensures secure and fast traffic between your VM and storage account.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q139-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2435,7 +2622,9 @@
     ],
     "explanation": "The correct answer is: C. Sub1You can add Admin1 as a co-administrator to the Sub1 subscription.You cannot add Admin1 as a co-administrator to the RG1 resource group, MG1 management group, or VM1 virtual machine.Co-administrators have full access to all resources in a subscription, including the ability to create, read, update, and delete resources.To add Admin1 as a co-administrator to Sub1:In the Azure portal, navigate to Sub1.Click Access control (IAM).Click Assign role.Select the Co-Administrator role.Select Admin1 in the Select drop-down list.Click Assign.Once the role has been assigned, Admin1 will have full access to all resources in Sub1.Note: Co-administrators can only be assigned at the subscription scope. You cannot assign co-administrators to resource groups, management groups, or virtual machines.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q140-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2446,7 +2635,12 @@
     "answer": [],
     "explanation": "Users = User1, User2, User3, User4 (can delete all users whether a license is assigned directly or via inheritance from a group membership) Groups = Group 2 and Group 4 only. (Groups with active license assignments cannot be deleted. You get an error)",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q141-1.jpeg",
+      "/images/az104/q141-2.jpeg",
+      "/images/az104/q141-3.jpeg",
+      "/images/az104/q141-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2466,7 +2660,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q142-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2477,7 +2673,13 @@
     "answer": [],
     "explanation": "YES: user 1 is contributor to the scope MG2, which is linked to sub3 and contains RG3 and VM1. contributor role can resize vm in its scope.\nNO: User2 is storage account contributor to the storage1 scope only not RG1.\nYES: User3 is user access admin to the scope tenant root group that contains all the subscriptions and therefore sub3 that contains RG3, so he can assign roles to any users and to user1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q143-1.jpeg",
+      "/images/az104/q143-2.jpeg",
+      "/images/az104/q143-3.jpeg",
+      "/images/az104/q143-4.jpeg",
+      "/images/az104/q143-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2495,7 +2697,9 @@
     ],
     "explanation": "B: private endpoints.\nPrivate endpoints enable you to connect to Azure services privately over a private IP address within your virtual network. By setting up a private endpoint for your storage account (Storage1), all traffic from VM1 to the storage account will travel through the private IP address within the Azure network, ensuring that the traffic remains on the Microsoft backbone network and does not traverse the public internet.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q144-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2554,7 +2758,9 @@
     ],
     "explanation": "Group1 and Group2: These groups can be configured with SSPR settings. By enabling SSPR for these groups, all members within the groups will have the ability to reset their passwords.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q147-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2565,7 +2771,11 @@
     "answer": [],
     "explanation": "1- Create a group naming policy: This is the first step to establish the framework for naming groups.\n2- Set Add prefix to Attribute: This step specifies that the prefix will be an attribute rather than a static string.\n3- Set Select type to Department: Finally, you specify that the 'Department' attribute will be used as the prefix.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q148-1.jpeg",
+      "/images/az104/q148-2.jpeg",
+      "/images/az104/q148-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2576,7 +2786,12 @@
     "answer": [],
     "explanation": "Users: \"User1, User2, User3, and User4\" This selection implies that all four users are included in the specified operation (e.g., assignment, permission, access control).\nThis might be relevant in scenarios where multiple users need permissions or access in a system like Microsoft Entra ID (Azure AD).\nGroups: \"Group1 and Group3 only\" This selection indicates that the chosen operation applies only to Group1 and Group3.\nOther groups (e.g., Group2, Group4) are not included in this selection.\nThis is useful in cases like role assignments, access policies, or security group filtering.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q149-1.jpeg",
+      "/images/az104/q149-2.jpeg",
+      "/images/az104/q149-3.jpeg",
+      "/images/az104/q149-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2587,7 +2802,11 @@
     "answer": [],
     "explanation": "Create a: Managed identity.\nA Managed Identity is an Azure feature that provides an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources.\nIt eliminates the need to manually manage credentials, improving security.\nUse the secret from: Vault1, Vault2, or Vault3.\nThis implies that the system or service has access to secrets stored in multiple Azure Key Vaults (Vault1, Vault2, or Vault3).\nAzure Key Vault is a cloud service for securely storing and accessing secrets, such as API keys, passwords, and certificates.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q150-1.jpeg",
+      "/images/az104/q150-2.jpeg",
+      "/images/az104/q150-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2637,7 +2856,18 @@
     "answer": [],
     "explanation": "Admin1 (Global Admin) can assign Attribute1 to Group1: No Global Administrators do not have permissions to read, define, or assign custom security attributes by default1.\nAdmin2 (Attribute Definition Admin) can assign Attribute1 to User1: No The Attribute Definition Admin role can define and manage attribute definitions but cannot assign attributes to users or groups1.\nAdmin3 (Attribute Assignment Admin) can assign Attribute1 to Group2: No",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q153-1.jpeg",
+      "/images/az104/q153-2.jpeg",
+      "/images/az104/q153-3.jpeg",
+      "/images/az104/q153-4.jpeg",
+      "/images/az104/q153-5.jpeg",
+      "/images/az104/q153-6.jpeg",
+      "/images/az104/q153-7.jpeg",
+      "/images/az104/q153-8.jpeg",
+      "/images/az104/q153-9.jpeg",
+      "/images/az104/q153-10.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2655,7 +2885,10 @@
     ],
     "explanation": "A: User1 only.\nMicrosoft Fabric licenses are assigned to individual user accounts, not to groups. When you purchase a Microsoft Fabric license, you can assign it directly to a specific user, like User1, who will then have access to the services provided by the license.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q154-1.jpeg",
+      "/images/az104/q154-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2693,7 +2926,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-requirements"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q156-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2706,7 +2941,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-account-options"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q157-1.jpeg",
+      "/images/az104/q157-2.jpeg",
+      "/images/az104/q157-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2726,7 +2965,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/import-export/storage-import-export-requirements#supported-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q158-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2739,7 +2980,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-auth"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q159-1.jpeg",
+      "/images/az104/q159-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2753,7 +2997,10 @@
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-grs",
       "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q160-1.jpeg",
+      "/images/az104/q160-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2776,7 +3023,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q161-1.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -2787,7 +3036,12 @@
     "answer": [],
     "explanation": "1. An administrator can move VNET1 to RG2 : Yes.\nVirtual Networks (VNETs) in Azure can be moved from one Resource Group (RG) to another, provided that:\nThe move follows Azure’s resource move constraints.\nThe administrator has sufficient permissions (like Owner or Contributor).\nThere are no dependencies preventing the move.\nSince \"Yes\" is selected, this indicates that the move is possible.\n2. The state of VM1 changed to deallocated :No.\nA Virtual Machine (VM) in Azure enters a deallocated state when:\nIt is explicitly stopped using Azure PowerShell, CLI, or Portal.\nIt is not assigned to a running resource group.\nIf \"No\" is selected, it implies that:\nThe VM has not been deallocated.\nIt might still be in a stopped (but allocated) state.\nIt could still be consuming resources, meaning billing continues.\n3. An administrator can modify the address space of VNET2:No In Azure Virtual Networks (VNETs):\nThe address space can be modified only if there are no subnet dependencies.\nIf subnets already exist and are in use, modifying the address space is restricted.\nSince \"No\" is selected, it suggests that:\nThe VNET has existing subnets or dependencies preventing modifications.\nThe administrator cannot change the address space directly.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q162-1.jpeg",
+      "/images/az104/q162-2.jpeg",
+      "/images/az104/q162-3.jpeg",
+      "/images/az104/q162-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2800,7 +3054,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-service"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q163-1.jpeg",
+      "/images/az104/q163-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2814,7 +3071,12 @@
       "https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-",
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q164-1.jpeg",
+      "/images/az104/q164-2.jpeg",
+      "/images/az104/q164-3.jpeg",
+      "/images/az104/q164-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2827,7 +3089,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q165-1.jpeg",
+      "/images/az104/q165-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2841,7 +3106,10 @@
       "https://mystorageaccount.blob.core.windows.net/vmimages'",
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-make"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q166-1.jpeg",
+      "/images/az104/q166-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2854,7 +3122,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/learn/modules/extend-share-capacity-with-azure-file-sync/2-what-azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q167-1.jpeg",
+      "/images/az104/q167-2.jpeg",
+      "/images/az104/q167-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2868,7 +3140,11 @@
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows",
       "https://azure.microsoft.com/en-us/blog/azure-backup-now-supports-storage-accounts-secured-with-azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q168-1.jpeg",
+      "/images/az104/q168-2.jpeg",
+      "/images/az104/q168-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2881,7 +3157,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-planning"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q169-1.jpeg",
+      "/images/az104/q169-2.jpeg",
+      "/images/az104/q169-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2901,7 +3181,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-zrs"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q170-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -2937,7 +3219,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q172-1.jpeg",
+      "/images/az104/q172-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -2951,7 +3236,10 @@
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q173-1.jpeg",
+      "/images/az104/q173-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3007,7 +3295,11 @@
       "https://docs.microsoft.com/bs-cyrl-ba/azure/backup/backup-create-rs-vault",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q176-1.jpeg",
+      "/images/az104/q176-2.jpeg",
+      "/images/az104/q176-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3041,7 +3333,11 @@
       "https://azure.microsoft.com/en-us/blog/data-series-introducing-locally-redundant-storage-for-windows-",
       "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q178-1.jpeg",
+      "/images/az104/q178-2.jpeg",
+      "/images/az104/q178-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3073,7 +3369,10 @@
     "answer": [],
     "explanation": "1. Blob Storage:\nCorrect Answer: Azure Active Directory (Azure AD) and shared access signatures (SAS) only.\nBlob Storage in Azure Storage Accounts can be accessed using:\nAzure Active Directory (Azure AD) - Role-based access control (RBAC) can be used for authentication.\nShared Access Signatures (SAS) - Temporary, token-based access to storage resources.\nAccess Keys (storage account keys) are not required when using Azure AD authentication.\n2. File Storage:\nCorrect Answer: Shared access signatures (SAS) only.\nAzure File Storage supports:\nSAS Tokens for controlled access.\nAzure AD DS (Domain Services) for authentication when using SMB (Server Message Block) protocol.\nAzure AD authentication for direct access to Azure Files is not yet fully supported for all scenarios, meaning SAS remains the preferred method.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q180-1.jpeg",
+      "/images/az104/q180-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3145,7 +3444,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q184-1.jpeg",
+      "/images/az104/q184-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3158,7 +3460,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q185-1.jpeg",
+      "/images/az104/q185-2.jpeg",
+      "/images/az104/q185-3.jpeg",
+      "/images/az104/q185-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3171,7 +3478,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/backup/configure-reports#1-create-a-log-analytics-workspace-or-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q186-1.jpeg",
+      "/images/az104/q186-2.jpeg",
+      "/images/az104/q186-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3186,7 +3497,11 @@
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-create-premium-fileshare?tabs=azure-",
       "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q187-1.jpeg",
+      "/images/az104/q187-2.jpeg",
+      "/images/az104/q187-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3202,7 +3517,11 @@
       "https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows",
       "https://docs.microsoft.com/en-us/answers/questions/40741/sas-key-for-unc-path.html"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q188-1.jpeg",
+      "/images/az104/q188-2.jpeg",
+      "/images/az104/q188-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3259,7 +3578,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts?tabs=azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q191-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -3313,7 +3634,11 @@
       "https://docs.microsoft.com/en-",
       "https://docs.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q194-1.jpeg",
+      "/images/az104/q194-2.jpeg",
+      "/images/az104/q194-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3333,7 +3658,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#download-azcopy"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q195-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -3364,7 +3691,12 @@
     "answer": [],
     "explanation": "1) On October 10, you can read Dep1File1.docx: \"No\" 2) On October 10, you can read File2.docx: \"Yes\" 3) On October 10, you can read File3.docx: \"Yes\" Cool Storage can be read immediately, but archived one needs to first be rehydrated.\nUsage scenarios for the cool access tier include:\nShort-term data backup and disaster recovery.\nOlder data sets that aren't used frequently, but are expected to be available for immediate access.\nLarge data sets that need to be stored in a cost-effective way while other data is being gathered for processing.\nTo learn how to move a blob to the hot or cool tier, see Set a blob's access tier.\nData in the cool tier has slightly lower availability, but offers the same high durability, retrieval latency, and throughput characteristics as the hot tier. For data in the cool tier, slightly lower availability and higher access costs may be acceptable trade-offs for lower overall storage costs, as compared to the hot tier. For more information, see SLA for storage.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q197-1.jpeg",
+      "/images/az104/q197-2.jpeg",
+      "/images/az104/q197-3.jpeg",
+      "/images/az104/q197-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3399,7 +3731,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q199-1.jpeg",
+      "/images/az104/q199-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3454,7 +3789,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q202-1.jpeg",
+      "/images/az104/q202-2.jpeg",
+      "/images/az104/q202-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3485,7 +3824,12 @@
     "answer": [],
     "explanation": "No No No On June 6, File1 will be in archive because File1 is in container 1, and rule 1 applies 3 days after june 1.\nOn June 1, File2 will still be in Hot tier because File2 is in container2, Rule3 and Rule4 havent hit yet.\nOn June 16, File2 will be deleted because Rule3 applies 10 days after June 1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q204-1.jpeg",
+      "/images/az104/q204-2.jpeg",
+      "/images/az104/q204-3.jpeg",
+      "/images/az104/q204-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3496,7 +3840,11 @@
     "answer": [],
     "explanation": "No No Yes deleteRetentionPolicy is 7 days, so can not be restored after 7 days. Means, backup is deleted after 7 days.\nallowBlobPublicAccess is true, so anyone can access the blob, not just on Azure.\nkind is Standard_LRS, so 3 local copies are stored.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q205-1.jpeg",
+      "/images/az104/q205-2.jpeg",
+      "/images/az104/q205-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3528,7 +3876,10 @@
     "answer": [],
     "explanation": "tierToArchive and prefixMatch - tierToArchive because it's the lowest cost tier, and doesnt say anyhting about needing to read data after 90 days. However, rehydration costs will occur if they did need to read it.\n- prefixMatch because we only want the blob in the container1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q207-1.jpeg",
+      "/images/az104/q207-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3539,7 +3890,10 @@
     "answer": [],
     "explanation": "1. Create a Recovery Services vault: This is the first step to set up a backup solution in Azure. The Recovery Services vault will store the backup data.\n2. Set Replication to Zone redundant storage (ZRS): This ensures that the backup data is replicated across three availability zones in the primary region, providing high availability and durability.\n3. For VM1, create a backup policy and configure the backup: This step involves creating a backup policy that defines the schedule and retention of the backups, and then applying this policy to VM1 to start the backup process.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q208-1.jpeg",
+      "/images/az104/q208-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3578,7 +3932,10 @@
     ],
     "explanation": "Azure Storage Explorer cannot be used to create a storage account. It is a tool designed to manage and interact with existing Azure storage accounts and their associated resources, such as blobs, files, queues, and tables. However, it does not have the functionality to create storage accounts.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q210-1.jpeg",
+      "/images/az104/q210-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -3589,7 +3946,10 @@
     "answer": [],
     "explanation": "1.Access Control (IAM).\nLocated under the \"Diagnose and solve problems\" section.\nIAM (Identity and Access Management) allows role-based access control (RBAC) for managing permissions to the storage account.\n2.Geo-replication.\nFound under \"Data management\" settings.\nThis feature is used for replicating storage account data across different Azure regions to ensure high availability and disaster recovery.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q211-1.jpeg",
+      "/images/az104/q211-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3621,7 +3981,12 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q213-1.jpeg",
+      "/images/az104/q213-2.jpeg",
+      "/images/az104/q213-3.jpeg",
+      "/images/az104/q213-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3632,7 +3997,11 @@
     "answer": [],
     "explanation": "Max stored access policies: 3, because max total of stored access policy is 5 and we already have 2, so additional 3 available.\nMax immutable blob storage: 1, because max total of immutable blob storage policy is 2 - one Legal hold policy and one Time-based retention policy. We already have one, so additional 1 available.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q214-1.jpeg",
+      "/images/az104/q214-2.jpeg",
+      "/images/az104/q214-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3670,7 +4039,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q216-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -3684,7 +4055,11 @@
       "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview",
       "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q217-1.jpeg",
+      "/images/az104/q217-2.jpeg",
+      "/images/az104/q217-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3717,7 +4092,10 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview#rule-actions"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q219-1.jpeg",
+      "/images/az104/q219-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3810,7 +4188,13 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/aks/configure-kubenet"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q224-1.jpeg",
+      "/images/az104/q224-2.jpeg",
+      "/images/az104/q224-3.jpeg",
+      "/images/az104/q224-4.jpeg",
+      "/images/az104/q224-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3839,7 +4223,11 @@
     "answer": [],
     "explanation": "1. Default Routing Tier The default routing tier influences how network traffic is managed and priced.\nChoosing an appropriate routing tier helps reduce egress (outbound) data transfer costs.\nSome tiers optimize data delivery based on cost-efficient paths, ensuring lower expenses for accessing resources.\nOften used in cloud environments like Microsoft Azure or Google Cloud, where routing options affect data transfer pricing.\n2. Enable Support for Customer-Managed Keys.\nCustomer-managed keys (CMKs) allow users to control encryption keys rather than relying on provider- managed encryption.\nOrganizations needing higher security and compliance (such as GDPR, HIPAA) can enforce their own key management policies.\nProvides enhanced security by ensuring that only authorized users can access or decrypt stored data.\nThis setting is usually modifiable after the initial creation of a storage account or database in cloud platforms.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q226-1.jpeg",
+      "/images/az104/q226-2.jpeg",
+      "/images/az104/q226-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3850,7 +4238,10 @@
     "answer": [],
     "explanation": "Key: RSA.\nRSA is an asymmetric cryptographic algorithm widely used for secure data transmission.\nIt relies on the mathematical difficulty of factoring large prime numbers.\nRSA is commonly used for encryption, digital signatures, and key exchange in secure communication protocols.\nBit Length :4096 The bit length determines the security strength of the RSA key.\nA 4096-bit RSA key is considered highly secure for most applications, as it provides strong resistance against brute-force attacks.\nLonger key lengths increase security but also require more computational power for encryption and decryption.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q227-1.jpeg",
+      "/images/az104/q227-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3901,7 +4292,10 @@
     "answer": [],
     "explanation": "1. Perform All Actions on a Virtual Network \"Microsoft.Network/virtualNetworks/*\" The asterisk (*) is a wildcard, which means full access to all operations on virtual networks.\nThis permission includes:\nCreating, updating, and deleting virtual networks.\nManaging subnets, peerings, and network configurations.\nThis is typically assigned to network administrators who need complete control over Azure Virtual Networks.\n2. View the Configuration Data of a Storage Account \"Microsoft.Storage/storageAccounts/read\" This permission allows users to view (but not modify) the configuration and properties of a storage account.\nThis does not grant access to read/write data inside the storage account (such as blobs or files).\nIt is useful for auditors, monitoring teams, or read-only users who need to check storage settings without making changes.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q230-1.jpeg",
+      "/images/az104/q230-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3932,7 +4326,10 @@
     "answer": [],
     "explanation": "Storage type: Premium SDD that uses zone-redundant storage (ZRS) Host-caching: Read-only Rationale ZRS replicates to different locations Host caching: Write cache stores information in memory, no host, no memory, no dataRedundancy options for Azure managed disks - Azure Virtual Machines | Microsoft LearnEnable and configure Azure VM disk cache with the Azure portal - Training | Microsoft Learn",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q232-1.jpeg",
+      "/images/az104/q232-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -3983,7 +4380,10 @@
     "answer": [],
     "explanation": "Allowed resource types: Object (you want users to access a specific blob by name).\nAllowed permissions: Read (to allow downloading).",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q235-1.jpeg",
+      "/images/az104/q235-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4033,7 +4433,11 @@
     "answer": [],
     "explanation": "A blob snapshot automatically moves to the Cool access tier after 15 days.\nYes .\nIncorrect Selection: Blob snapshots do not automatically move between tiers.\nIf an organization sets a Lifecycle Management policy, blobs can move to the Cool tier, but the minimum retention period is 30 days, not 15.\nA blob version in container2 automatically moves to the Archive access tier after 30 days.\nNo.\nCorrect Selection: Blob versions do not automatically move unless a Lifecycle Policy is configured.\nIf a Lifecycle Policy exists, blobs can be moved to Archive after a set period, but this is not the default behavior.\nA rehydrated version automatically moves to the Archive access tier after 30 days.\nNo.\nCorrect Selection: Rehydrated blobs do not automatically move back to Archive.\nOnce a blob is rehydrated from Archive (moved to Hot/Cool), it stays there until a new policy moves it back to Archive.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q238-1.jpeg",
+      "/images/az104/q238-2.jpeg",
+      "/images/az104/q238-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4054,7 +4458,9 @@
       "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#supported-storage-account-",
       "https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal#replication-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q239-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4073,7 +4479,9 @@
     ],
     "explanation": "D: Device1, Device2, and Device3 only.\nAzure Storage Explorer is compatible with Windows, macOS, and Linux operating systems, which correspond to Device1, Device2, and Device3 in this context. Device4 does not meet the requirements for Azure Storage Explorer.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q240-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4084,7 +4492,11 @@
     "answer": [],
     "explanation": "1. Minimum Number of Copies of the Storage Account.\nThe selected value in the dropdown is 3.\nThis likely refers to Locally Redundant Storage (LRS), which keeps three copies of the data within a single Azure region.\nOther redundancy options include:\nZRS (Zone Redundant Storage): Distributes copies across three availability zones.\nGRS (Geo-Redundant Storage): Replicates data across different regions.\nThus, selecting 3 is correct in this context as it aligns with Azure's replication methods.\n2. Reducing the Cost of Infrequently Accessed Data The selected value is \"Access tier (default)\".\nAzure Storage offers different access tiers:\nHot Tier: Optimized for frequently accessed data.\nCool Tier: Suitable for infrequently accessed data, offering lower storage costs but higher access costs.\nArchive Tier: Used for long-term data storage at the lowest cost but with high retrieval latency.\nTo reduce costs for infrequently accessed data, moving data from Hot to Cool or Archive tiers is the correct approach.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q241-1.jpeg",
+      "/images/az104/q241-2.jpeg",
+      "/images/az104/q241-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4095,7 +4507,10 @@
     "answer": [],
     "explanation": "1. Blob Types Selection.\nThe \"blobTypes\" field defines the type of Azure Blob Storage objects to filter.\nThe selected option \"blockBlob\" is one of the three possible blob types:\nAppend Blob: Used for logging and append-only scenarios.\nBlock Blob :The most commonly used blob type for storing general-purpose files.\nPage Blob: Used for Azure Virtual Machine disks.\nSince Block Blob is the most commonly used for general storage, selecting this makes sense.\n2. Prefix Match \"prefixMatch\" is used to filter blobs within a specific path or folder inside a container.\nThe selected option \"container1/finance\" means that only blobs inside the \"finance\" subdirectory of \"container1\" will be processed.\nThe other option \"container1/*\" would include all blobs within container1, but this is more restrictive.\nSince \"container1/finance\" is selected, it means the rule applies only to that specific subdirectory.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q242-1.jpeg",
+      "/images/az104/q242-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4109,7 +4524,10 @@
       "https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas#specify-the-",
       "https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas#specify-permissions"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q243-1.jpeg",
+      "/images/az104/q243-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4120,7 +4538,12 @@
     "answer": [],
     "explanation": "On June 6, File 1 will be stored in the Cool access tier: NO Rule 1 applies and File 1 will be in archive storage.\nOn June 7, File 2 will be stored in the Cool access tier: YES - Rule 5 applies to all files due to the lack of a prefix, and File 2 will be in cool storage.\nOn June 16, File 2 will be stored in the Archive access tier: NO -Rule 3 applies and File 2 will be deleted.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q244-1.jpeg",
+      "/images/az104/q244-2.jpeg",
+      "/images/az104/q244-3.jpeg",
+      "/images/az104/q244-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4131,7 +4554,13 @@
     "answer": [],
     "explanation": "1-Yes: Public Access is enabled for blob 2- No: Azure Storage Account Contributor role can't access the file share 3- No: Access Key is disabled on the storage account",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q245-1.jpeg",
+      "/images/az104/q245-2.jpeg",
+      "/images/az104/q245-3.jpeg",
+      "/images/az104/q245-4.jpeg",
+      "/images/az104/q245-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4142,7 +4571,13 @@
     "answer": [],
     "explanation": "No - User1 does not have access to any Azure resources since it is not synced to Entra AD, even if AD is configured as the authentication source.\nYes - User2 has access to to the storage account since it is a cloud-synced user, and AD is configured as the authentication source for storage2024.\nNo - User2 can't access the content in Share3 since AD isn't configured as a source for storage2025.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q246-1.jpeg",
+      "/images/az104/q246-2.jpeg",
+      "/images/az104/q246-3.jpeg",
+      "/images/az104/q246-4.jpeg",
+      "/images/az104/q246-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4153,7 +4588,12 @@
     "answer": [],
     "explanation": "No - User 1 is in organizational unit 2, but OU2 isn't configured to sync from the AD DS domain to the Entra Tenant.\nYes - User2 is in the OU1 domain which IS synced to the Entra tenant No - User3 has not been granted access either as an authenticated user or through an authenticated group.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q247-1.jpeg",
+      "/images/az104/q247-2.jpeg",
+      "/images/az104/q247-3.jpeg",
+      "/images/az104/q247-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4172,7 +4612,9 @@
     ],
     "explanation": "Storage1 only : This storage account might be in a region that supports ZRS and is of a type that is compatible with ZRS.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q248-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4218,7 +4660,18 @@
     "answer": [],
     "explanation": "Stored Access Policies :2 Stored access policies provide additional control over shared access signatures (SAS) by defining a set of restrictions that apply to multiple SAS tokens. Instead of defining permissions and expiration for each SAS token individually, you can link multiple SAS tokens to a single stored access policy. This allows:\nCentralized management of SAS permissions.\nThe ability to revoke access by deleting or modifying the policy instead of each individual SAS token.\nEasier enforcement of security best practices.\nIn the given image, the number of stored access policies is set to 2 meaning the Azure storage account allows up to two stored access policies to be created.\nImmutable Blob Storage Policies:1.\nImmutable blob storage policies are used to protect data from being modified or deleted for a specified retention period. Azure provides two types of immutable policies:\nTime-based retention – Ensures data cannot be modified until a set duration expires.\nLegal hold – Prevents modification indefinitely until the hold is lifted.\nIn the image, the number of immutable blob storage policies is set to 1 meaning only one immutable storage policy is allowed.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q251-1.jpeg",
+      "/images/az104/q251-2.jpeg",
+      "/images/az104/q251-3.jpeg",
+      "/images/az104/q251-4.jpeg",
+      "/images/az104/q251-5.jpeg",
+      "/images/az104/q251-6.jpeg",
+      "/images/az104/q251-7.jpeg",
+      "/images/az104/q251-8.jpeg",
+      "/images/az104/q251-9.jpeg",
+      "/images/az104/q251-10.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4239,7 +4692,16 @@
       "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-windows",
       "https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-linux?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q252-1.jpeg",
+      "/images/az104/q252-2.jpeg",
+      "/images/az104/q252-3.jpeg",
+      "/images/az104/q252-4.jpeg",
+      "/images/az104/q252-5.jpeg",
+      "/images/az104/q252-6.jpeg",
+      "/images/az104/q252-7.jpeg",
+      "/images/az104/q252-8.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4258,7 +4720,16 @@
     ],
     "explanation": "cont1: The container in storage1 with a hierarchical namespace is specifically designed to organize content efficiently.\nshare1 and share2: Both are file shares in storage2 and are not restricted by the hierarchical namespace feature. They can still be used to organize content effectively.\nUsing all three (cont1, share1, and share2) allows for a comprehensive organization strategy across different storage types, adhering to the planned changes and technical requirements.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q253-1.jpeg",
+      "/images/az104/q253-2.jpeg",
+      "/images/az104/q253-3.jpeg",
+      "/images/az104/q253-4.jpeg",
+      "/images/az104/q253-5.jpeg",
+      "/images/az104/q253-6.jpeg",
+      "/images/az104/q253-7.jpeg",
+      "/images/az104/q253-8.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4344,7 +4815,11 @@
       "https://blogs.technet.microsoft.com/canitpro/2014/06/16/step-by-step-move-a-vm-to-a-different-vnet-on-",
       "https://4sysops.com/archives/move-an-azure-vm-to-another-virtual-network-vnet/#migrate-an-azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q258-1.jpeg",
+      "/images/az104/q258-2.jpeg",
+      "/images/az104/q258-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4378,7 +4853,12 @@
       "https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?pivots=platform-linux",
       "https://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage#"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q260-1.jpeg",
+      "/images/az104/q260-2.jpeg",
+      "/images/az104/q260-3.jpeg",
+      "/images/az104/q260-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4393,7 +4873,11 @@
       "https://docs.microsoft.com/en-us/azure/azure-monitor/platform/autoscale-best-practices",
       "https://docs.microsoft.com/en-us/azure/azure-monitor/platform/autoscale-common-scale-patterns"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q261-1.jpeg",
+      "/images/az104/q261-2.jpeg",
+      "/images/az104/q261-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4428,7 +4912,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q263-1.jpeg",
+      "/images/az104/q263-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4439,7 +4926,10 @@
     "answer": [],
     "explanation": "Step 1: Upload a configuration to Azure Automation State Configuration.\nImport the configuration into the Automation account.\nStep 2: Compile a configuration into a node configuration.\nA DSC configuration defining that state must be compiled into one or more node configurations (MOF document), and placed on the Automation DSC Pull Server.\nStep 3: Check the compliance status of the node.\nStep 1: Create and upload a configuration to Azure Automation Step 2: Compile a configuration into a node configuration Step 3: Register a VM to be managed by State Configuration Step 4: Specify configuration mode settings Step 5: Assign a node configuration to a managed node Step 6: Check the compliance status of a managed node",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q264-1.jpeg",
+      "/images/az104/q264-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4456,7 +4946,10 @@
     ],
     "explanation": "You can change the location in resources. Parameters used to define the value of some variables to be able to use in different places in the template resources.\nResources are used only for complicated expressions. In any case, RM will only deploy from resources. In case the value is not mentioned directly, then it will check parameters if it is specified in the resources.\nBased on this question, the value of location is defined directly in resources. so you change the resources location value",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q265-1.jpeg",
+      "/images/az104/q265-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4605,7 +5098,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q273-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4623,7 +5118,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q274-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4641,7 +5138,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q275-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4654,7 +5153,13 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quota"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q276-1.jpeg",
+      "/images/az104/q276-2.jpeg",
+      "/images/az104/q276-3.jpeg",
+      "/images/az104/q276-4.jpeg",
+      "/images/az104/q276-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4667,7 +5172,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q277-1.jpeg",
+      "/images/az104/q277-2.jpeg",
+      "/images/az104/q277-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4685,7 +5194,9 @@
     ],
     "explanation": "A.131.107.2.1.\nIn Kubernetes when we expose apps we either expose them though Ingress using a single front-end loadbalancer IP, or we expose them using Services like NodePort or LoadBalancer.\nBased on the provided scenario we should map the DNS entry to the Load Balancer Front End Ip and expose applications using Ingress.\nTo be able to access applications on kubernetes , you need a application Load Balancer created by Azure which have public ip.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q278-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4717,7 +5228,11 @@
     "answer": [],
     "explanation": "Internet Users Connectivity to the Contain Can connect to the container from any device.\nIn Azure Container Instances (ACI) or Docker containers running in the cloud, containers are typically exposed using public IP addresses or DNS names.\nIf networking and firewall rules allow, internet users can connect from any device (Windows, Linux, macOS, mobile, etc.).\nThe other options (\"cannot connect\" or \"only from Windows devices\") are incorrect because:\nContainers are platform-independent and do not require a specific OS to access them.\nIf proper network and firewall configurations are applied, users can connect.\nIIS Failure Recovery in the Container The container will restart automatically.\nIn Azure Container Instances (ACI), Kubernetes, or Docker, a container restart policy can be set to automatically restart a container if it fails.\nBy default, Azure Container Instances use a restart policy such as:\nAlways (default) → Ensures the container restarts if it crashes.\nOnFailure → Restarts only if the container exits with a failure code.\nNever → The container does not restart.\nSince IIS runs inside the container, if it crashes, the container itself is restarted automatically, provided the correct restart policy is configured.\nThe other options (\"only restart manually\" or \"must be redeployed\") are incorrect because:\nContainers typically do not require manual intervention for restarts.\nRedeployment is not needed unless the container image itself is faulty.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q280-1.jpeg",
+      "/images/az104/q280-2.jpeg",
+      "/images/az104/q280-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4757,7 +5272,9 @@
     ],
     "explanation": "A. Swap the slots.\nOnce the update is successfully tested in the test slot, you swap the slots.\nSwapping the slots promotes the tested version from webapp1-test to webapp1-prod without downtime.\nThis ensures a smooth transition and minimizes the risk of deploying untested changes.\nD. Deploy the update to webapp1-test, and then test the update.\nIn Azure App Service, deployment slots allow you to deploy an update to a staging/test slot without affecting the live production environment.\nThe update should first be deployed to webapp1-test to verify that it works correctly.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q282-1.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -4820,7 +5337,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/app-service/overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q285-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4834,7 +5353,12 @@
       "https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-",
       "https://docs.microsoft.com/en-gb/azure/cost-management-billing/costs/tutorial-acm-create-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q286-1.jpeg",
+      "/images/az104/q286-2.jpeg",
+      "/images/az104/q286-3.jpeg",
+      "/images/az104/q286-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4870,7 +5394,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q288-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4891,7 +5417,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q289-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -4905,7 +5433,12 @@
       "https://docs.microsoft.com/en-us/azure/app-service/manage-move-across-regions",
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/app-service-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q290-1.jpeg",
+      "/images/az104/q290-2.jpeg",
+      "/images/az104/q290-3.jpeg",
+      "/images/az104/q290-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4916,7 +5449,10 @@
     "answer": [],
     "explanation": "1 ) Tags assigned to RG1: \"'tag1': 'value1' only\" 2) Tags assigned to storage1: \"'tag2': 'value2' and 'tag3': 'value3' only\" The Resource Group already existed before the Policy was created. And the policy is for resources only not resource groups.\nThe storage account was created with tag3 and then gets appended the tag2 because the policy.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q291-1.jpeg",
+      "/images/az104/q291-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4929,7 +5465,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-rate-limiting"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q292-1.jpeg",
+      "/images/az104/q292-2.jpeg",
+      "/images/az104/q292-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -4950,7 +5490,10 @@
     "references": [
       "https://docs.microsoft.com/bs-cyrl-ba/azure/backup/backup-create-rs-vault"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q293-1.jpeg",
+      "/images/az104/q293-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5008,7 +5551,9 @@
     "references": [
       "https://azure.microsoft.com/en-us/blog/introducing-proximity-placement-groups/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q296-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5095,7 +5640,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/security-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q301-1.jpeg",
+      "/images/az104/q301-2.jpeg",
+      "/images/az104/q301-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5186,7 +5735,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/aks/configure-kubenet"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q306-1.jpeg",
+      "/images/az104/q306-2.jpeg",
+      "/images/az104/q306-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5200,7 +5753,12 @@
       "https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-autoscale-performance-schedule",
       "https://docs.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-understanding-settings"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q307-1.jpeg",
+      "/images/az104/q307-2.jpeg",
+      "/images/az104/q307-3.jpeg",
+      "/images/az104/q307-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5241,7 +5799,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q309-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5256,7 +5816,11 @@
       "https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-",
       "https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-upgrade-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q310-1.jpeg",
+      "/images/az104/q310-2.jpeg",
+      "/images/az104/q310-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5276,7 +5840,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q311-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5296,7 +5862,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q312-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5310,7 +5878,10 @@
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm",
       "https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/backup/backup-azure-restore-files-from-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q313-1.jpeg",
+      "/images/az104/q313-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5362,7 +5933,10 @@
       "https://www.itprotoday.com/microsoft-azure/check-if-azure-region-supports-2-or-3-fault-domains-managed-",
       "https://github.com/Azure/acs-engine/issues/1030"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q316-1.jpeg",
+      "/images/az104/q316-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5394,7 +5968,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q318-1.jpeg",
+      "/images/az104/q318-2.jpeg",
+      "/images/az104/q318-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5412,7 +5990,9 @@
     ],
     "explanation": "A. West US, Central US, or East US Azure supports Linux App Service plans in a variety of regions, and West US, Central US, and East US are among those regions that commonly support Linux-based App Service plans. you can deploy ASP5 in any of these three locations.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q319-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5448,7 +6028,11 @@
       "https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvm?view=azps-7.0.0",
       "https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q321-1.jpeg",
+      "/images/az104/q321-2.jpeg",
+      "/images/az104/q321-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5523,7 +6107,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-windows-server"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q325-1.jpeg",
+      "/images/az104/q325-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5537,7 +6124,10 @@
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/copy-properties#syntax",
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/copy-properties#property-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q326-1.jpeg",
+      "/images/az104/q326-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5555,7 +6145,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q327-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5573,7 +6165,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q328-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5591,7 +6185,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q329-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5611,7 +6207,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azdeployment?view=azps-9.7.0"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q330-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5624,7 +6222,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/app-service/manage-backup"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q331-1.jpeg",
+      "/images/az104/q331-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5657,7 +6258,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/active-directory-domain-services/join-windows-vm-template"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q333-1.jpeg",
+      "/images/az104/q333-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5677,7 +6281,9 @@
     "references": [
       "https://azure.microsoft.com/en-us/blog/introducing-proximity-placement-groups/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q334-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5691,7 +6297,11 @@
       "https://learn.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli",
       "https://learn.microsoft.com/en-us/azure/aks/learn/quick-windows-container-deploy-cli"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q335-1.jpeg",
+      "/images/az104/q335-2.jpeg",
+      "/images/az104/q335-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5705,7 +6315,10 @@
       "https://learn.microsoft.com/en-us/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-update",
       "https://learn.microsoft.com/en-us/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-update-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q336-1.jpeg",
+      "/images/az104/q336-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5716,7 +6329,12 @@
     "answer": [],
     "explanation": "Yes : The 4 resources created are the RG1 resource group + the 3 storage accounts No: the location of the storage accounts is defined by the parameter \"location\" in the \"resources\" item that has the value of the Resource Group (stated by the \"resourceGroup().location\" function that returns the location of the resource group RG1 which is in Central US) Yes: the names of the storages account have the prefix given by the copyIndex() function in \"name\": \" [concat(copyIndex(),'storage',uniqueString(resourceGroup().id))]\", which starts at the position 0",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q337-1.jpeg",
+      "/images/az104/q337-2.jpeg",
+      "/images/az104/q337-3.jpeg",
+      "/images/az104/q337-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5747,7 +6365,10 @@
     "references": [
       "https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q339-1.jpeg",
+      "/images/az104/q339-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5758,7 +6379,12 @@
     "answer": [],
     "explanation": "After CPU usage has reached 80 percent for 15 minutes, [answer choice] will be running.\n2 instances.\nThis indicates that autoscaling is enabled, and when CPU utilization exceeds 80% for 15 minutes, the system scales out by adding an additional instance.\nIf initially only one instance was running, then scaling up will increase the total count to 2 instances.\nThis is a common threshold-based scaling policy used in cloud environments to optimize performance and availability.\nOnce the first scale-out instance is created, the minimum time before an additional instance is created will be [answer choice].\n15 minutes.\nThe scale-out cooldown period determines how long the system waits before adding another instance after the first scale-out.\nA 15-minute delay ensures the system does not aggressively add new instances too quickly, preventing unnecessary costs and system instability.\nThis setting is useful in preventing rapid oscillations in scaling activity.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q340-1.jpeg",
+      "/images/az104/q340-2.jpeg",
+      "/images/az104/q340-3.jpeg",
+      "/images/az104/q340-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5778,7 +6404,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-container-groups"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q341-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5820,7 +6448,9 @@
       "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/configure-public-ip-firewall",
       "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#at-a-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q343-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5831,7 +6461,10 @@
     "answer": [],
     "explanation": "resourceId.\nresourceId is used to dynamically retrieve the ID of an existing resource.\nEnsures the VM references the correct network interface (NIC).\nresourceId dynamically retrieves the ID of an existing network interface (NIC).\nimageReference.\nimageReference defines the OS image for the VM.\nimageReference ensures the VM uses the correct Windows Server 2019 OS image.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q344-1.jpeg",
+      "/images/az104/q344-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5842,7 +6475,10 @@
     "answer": [],
     "explanation": "Pricing Plan: Standard.\nRecord Type: TXT.\nWebApp1 must be able to verify a custom domain name of app.contoso.com. All paid tiers (Basic, Standard, Premium, Isolated) allow for custom domains.\nWebApp1 must be able to automatically scale up to eight instances. Auto-scaling is a feature that is available in the Standard, Premium, and Isolated tiers. It is not available in the Basic tier, which allows you to manually scale up to 3 instances.\nCosts and administrative effort must be minimized.\nPricing Plan: Given these requirements, the best option is the \"Standard\" tier. It offers both auto-scaling and custom domains, while being less expensive than the Premium or Isolated tiers. The Basic tier does not support auto-scaling, and the Free and Shared tiers do not support custom domains or auto-scaling.\nFor verifying a custom domain, Azure uses a CNAME or TXT record. The A record cannot be used for domain verification",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q345-1.jpeg",
+      "/images/az104/q345-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5855,7 +6491,13 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries?tabs=azure-cli#how-do-i-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q346-1.jpeg",
+      "/images/az104/q346-2.jpeg",
+      "/images/az104/q346-3.jpeg",
+      "/images/az104/q346-4.jpeg",
+      "/images/az104/q346-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5875,7 +6517,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/app-service/overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q347-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5888,7 +6532,13 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-subscription?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q348-1.jpeg",
+      "/images/az104/q348-2.jpeg",
+      "/images/az104/q348-3.jpeg",
+      "/images/az104/q348-4.jpeg",
+      "/images/az104/q348-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5906,7 +6556,9 @@
     ],
     "explanation": "Start at 2 instances, after 15 min, > 70%, then +1 instance Cooling 5 mins, still >70%, then +1 instance Cooling 5 mins, still > 70%, then +1 instance Cooling 5 mins, still >70%, since max 5 instances, keep 5 instances only.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q349-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5917,7 +6569,11 @@
     "answer": [],
     "explanation": "Azure Container Instances only.\nACI is a serverless container service that allows you to run containers without managing the underlying infrastructure.\nIt is ideal for short-lived tasks or scenarios where you need to quickly deploy containers.\nAzure Container Apps only.\nACA is a fully managed serverless platform for running containerized applications.\nIt is designed for microservices and modern applications, offering features like auto-scaling and integration with Dapr (Distributed Application Runtime).",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q350-1.jpeg",
+      "/images/az104/q350-2.jpeg",
+      "/images/az104/q350-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -5959,7 +6615,9 @@
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-dependency",
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q352-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -5980,7 +6638,9 @@
       "https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment?",
       "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-subscription?"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q353-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6009,7 +6669,11 @@
     "answer": [],
     "explanation": "Yes No Yes The deployment creates 3 RGs called RG0, RG1, RG2 as the index is 0-based.\nYou can deploy to RG1 as the lock is delete.\nYou can't deploy to RG2 as the lock is read-only, hence it can't be modified.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q355-1.jpeg",
+      "/images/az104/q355-2.jpeg",
+      "/images/az104/q355-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6027,7 +6691,9 @@
     ],
     "explanation": "C. Proximity1 only.\nProximity1 is chosen because it ensures that the VMs in VMSS1 are co-located physically, maximizing performance and minimizing latency. Using multiple PPGs (options B and D) would spread the VMs across different physical locations, increasing latency and reducing the benefits of proximity placement.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q356-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6038,7 +6704,13 @@
     "answer": [],
     "explanation": "webapp1 can communicate with vm2: Yes webapp1 is integrated with vnet1 and vnet1 is peered with vnet2, which vm2 is connected to. So, webapp1 can communicate with vm2.\nnsg1 controls inbound traffic to webapp1: No nsg1 is associated with subnet1, not directly with webapp1. It controls the inbound traffic to the subnet1, not to the webapp1.\nwebapp2 can communicate with vm1: Yes webapp2 is deployed to subnet2 and subnet2 is in vnet2. vnet2 is peered with vnet1, which vm1 is connected to. So, webapp2 can communicate with vm1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q357-1.jpeg",
+      "/images/az104/q357-2.jpeg",
+      "/images/az104/q357-3.jpeg",
+      "/images/az104/q357-4.jpeg",
+      "/images/az104/q357-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6059,7 +6731,10 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-machines/backup-recovery"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q358-1.jpeg",
+      "/images/az104/q358-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6106,7 +6781,11 @@
     "answer": [],
     "explanation": "ContReg1, ContReg2, and ContReg3.\nThis option indicates that ACR Tasks are applicable to all three container registries.\nContReg1 only.\nThis option suggests that private endpoints are configured only for ContReg1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q361-1.jpeg",
+      "/images/az104/q361-2.jpeg",
+      "/images/az104/q361-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6142,7 +6821,9 @@
     ],
     "explanation": "Answer is C.\nThe resources allocated to Group1 is 5 CPUs Option D must be wrong. It is because the resource limit of a container instance must be greater than or equal to the mandatory resource request property. The resource limit of container 2 must be 3 or greater.\nOption B is wrong as well. The maximum resource limit you can set for a container instance is the total resources allocated to the group. Thus, maximum request limit of container2 is 5. Also, Resource limit of container2 is 4. Container2 could use up to 4 CPUs that will negatively impact container1. Increase it 6 CPUs will make the situation even worse.\nOption A can not stop container2 use up to 4 CPUs.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q363-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6172,7 +6853,10 @@
     "answer": [],
     "explanation": "Provision a new container registry: az.acr create.\nThis is the correct command to create a new Azure Container Registry.\nAdd image1 to the registry: docker push.\n​This is the correct command to push a Docker image to a registry.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q365-1.jpeg",
+      "/images/az104/q365-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6258,7 +6942,16 @@
     ],
     "explanation": "D.Cert3 or Cert4 only.\nCert3 and Cert4 likely meet the specific technical requirements for WebApp1, such as being issued by a trusted CA, having valid expiration dates, and being configured for the appropriate domain.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q370-1.jpeg",
+      "/images/az104/q370-2.jpeg",
+      "/images/az104/q370-3.jpeg",
+      "/images/az104/q370-4.jpeg",
+      "/images/az104/q370-5.jpeg",
+      "/images/az104/q370-6.jpeg",
+      "/images/az104/q370-7.jpeg",
+      "/images/az104/q370-8.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6324,7 +7017,16 @@
     ],
     "explanation": "D. Set-AzVMDiskEncryptionExtension and Key1.\nTo meet the technical requirements for the KEK (Key Encryption Key) in Azure VM Disk Encryption, you need to use the Set-AzVMDiskEncryptionExtension cmdlet. This cmdlet enables Azure Disk Encryption (ADE), which supports encrypting both OS and data disks using Azure Key Vault keys.\nSet-AzVMDiskEncryptionExtension: This is the correct cmdlet for enabling encryption on a VM using Azure Disk Encryption.\nKey1: This likely refers to the Key Encryption Key (KEK), which is used to further protect the encryption keys stored in Azure Key Vault.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q374-1.jpeg",
+      "/images/az104/q374-2.jpeg",
+      "/images/az104/q374-3.jpeg",
+      "/images/az104/q374-4.jpeg",
+      "/images/az104/q374-5.jpeg",
+      "/images/az104/q374-6.jpeg",
+      "/images/az104/q374-7.jpeg",
+      "/images/az104/q374-8.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6337,7 +7039,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q375-1.jpeg",
+      "/images/az104/q375-2.jpeg",
+      "/images/az104/q375-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6368,7 +7074,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface-addresses"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q377-1.jpeg",
+      "/images/az104/q377-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6386,7 +7095,10 @@
     ],
     "explanation": "A. a frontend IP address.\nBefore you can create inbound NAT rules on Azure Load Balancer (LB1), you need to have a frontend IP address. The frontend IP is the public or private IP address that receives incoming traffic before forwarding it based on NAT rules.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q378-1.jpeg",
+      "/images/az104/q378-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6400,7 +7112,11 @@
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-overview",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q379-1.jpeg",
+      "/images/az104/q379-2.jpeg",
+      "/images/az104/q379-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6414,7 +7130,10 @@
       "https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace",
       "https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-diagnostics"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q380-1.jpeg",
+      "/images/az104/q380-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6435,7 +7154,9 @@
       "https://docs.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks-portal",
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq#vnet-peering"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q381-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6490,7 +7211,12 @@
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-autoregistration",
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q384-1.jpeg",
+      "/images/az104/q384-2.jpeg",
+      "/images/az104/q384-3.jpeg",
+      "/images/az104/q384-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6511,7 +7237,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q385-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6524,7 +7252,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q386-1.jpeg",
+      "/images/az104/q386-2.jpeg",
+      "/images/az104/q386-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6538,7 +7270,12 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources",
       "https://docs.microsoft.com/en-us/azure/virtual-network/move-across-regions-publicip-powershell"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q387-1.jpeg",
+      "/images/az104/q387-2.jpeg",
+      "/images/az104/q387-3.jpeg",
+      "/images/az104/q387-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6576,7 +7313,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q389-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6661,7 +7400,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/office365/enterprise/designing-networking-for-microsoft-azure-iaas"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q394-1.jpeg",
+      "/images/az104/q394-2.jpeg",
+      "/images/az104/q394-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6679,7 +7422,9 @@
     ],
     "explanation": "NSGs can be associated to subnets, individual VMs (classic), or individual network interfaces (NIC) attached to VMs (Resource Manager). You can associate zero, or one, NSG(s) to each VNet subnet and NIC in a virtual machine. The same NSG can be associated to as many subnets and NICs as you choose. So, you can create 1 NSG and associate it with all 3 Subnets. - Allow web requests from internet to VM3, VM4, VM5 and VM 6: You need to add an inbound rule to allow Internet TCP 80 to VM3, VM4, VM5 and VM6 static IP addresses. - Allow all connections between VM1 & VM2: You do not need an NSG as communication in the same VNet is allowed by default, without even configuring NSG. - Allow remote desktop to VM1: You need to add an inbound rule to allow RDP 3389 in VM1’s static IP address . - Prevent all other network traffic to VNET1: You do not need to configure any NSG as the there is explicit deny rule (DenyAllInbound) in every NSG.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q395-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6699,7 +7444,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/governance/policy/samples/not-allowed-resource-types"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q396-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6754,7 +7501,12 @@
       "https://docs.microsoft.com/en-us/azure/load-balancer/skus",
       "https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q399-1.jpeg",
+      "/images/az104/q399-2.jpeg",
+      "/images/az104/q399-3.jpeg",
+      "/images/az104/q399-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6767,7 +7519,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q400-1.jpeg",
+      "/images/az104/q400-2.jpeg",
+      "/images/az104/q400-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6778,7 +7534,10 @@
     "answer": [],
     "explanation": "1 - Create a Gateway subnet. You need the subnet in place first before you can associate a VPN gateway with it, which is what is created next.\n2 - Create a VPN gateway. Associate the VPN gateway with the gateway subnet you created (there are other steps but for the sake of what is available for answers, the prem side is now configured) Now for the premice side.\n3. Create a local gateway. You need the local gateway in order to complete the tunnel, 4.then you can create a VPN connection",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q401-1.jpeg",
+      "/images/az104/q401-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6798,7 +7557,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q402-1.jpeg",
+      "/images/az104/q402-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6841,7 +7603,10 @@
       "https://docs.microsoft.com/en-us/azure/site-recovery/move-azure-vms-avset-azone",
       "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-portal-availability-zone"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q404-1.jpeg",
+      "/images/az104/q404-2.jpeg"
+    ],
     "type": "multiple",
     "topic": null
   },
@@ -6854,7 +7619,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q405-1.jpeg",
+      "/images/az104/q405-2.jpeg",
+      "/images/az104/q405-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6868,7 +7637,13 @@
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview",
       "https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-peering-gateway-transit"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q406-1.jpeg",
+      "/images/az104/q406-2.jpeg",
+      "/images/az104/q406-3.jpeg",
+      "/images/az104/q406-4.jpeg",
+      "/images/az104/q406-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -6944,7 +7719,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/security-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q410-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6965,7 +7742,10 @@
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview",
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q411-1.jpeg",
+      "/images/az104/q411-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -6978,7 +7758,14 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q412-1.jpeg",
+      "/images/az104/q412-2.jpeg",
+      "/images/az104/q412-3.jpeg",
+      "/images/az104/q412-4.jpeg",
+      "/images/az104/q412-5.jpeg",
+      "/images/az104/q412-6.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7019,7 +7806,9 @@
       "https://tutorialsdojo.com/network-security-group-nsg-vs-application-security-group",
       "https://docs.microsoft.com/en-us/azure/virtual-network/security-overview#application-security-groups"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q414-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7053,7 +7842,11 @@
     "references": [
       "https://blog.kloud.com.au/2018/10/19/address-space-maintenance-with-vnet-peering/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q416-1.jpeg",
+      "/images/az104/q416-2.jpeg",
+      "/images/az104/q416-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7067,7 +7860,13 @@
       "https://docs.microsoft.com/en-us/azure/load-balancer/skus",
       "https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q417-1.jpeg",
+      "/images/az104/q417-2.jpeg",
+      "/images/az104/q417-3.jpeg",
+      "/images/az104/q417-4.jpeg",
+      "/images/az104/q417-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7080,7 +7879,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q418-1.jpeg",
+      "/images/az104/q418-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7100,7 +7902,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q419-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7118,7 +7922,10 @@
     ],
     "explanation": "Adatum.com is a public DNS zone. The Internet top level domain DNS servers need to know which DNS servers to direct DNS queries for adatum.com to. You configure this by configuring the name servers for adatum.com at the domain registrar.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q420-1.jpeg",
+      "/images/az104/q420-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7131,7 +7938,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q421-1.jpeg",
+      "/images/az104/q421-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7144,7 +7954,13 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq#name-resolution-dns"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q422-1.jpeg",
+      "/images/az104/q422-2.jpeg",
+      "/images/az104/q422-3.jpeg",
+      "/images/az104/q422-4.jpeg",
+      "/images/az104/q422-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7158,7 +7974,12 @@
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
       "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q423-1.jpeg",
+      "/images/az104/q423-2.jpeg",
+      "/images/az104/q423-3.jpeg",
+      "/images/az104/q423-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7176,7 +7997,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q424-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7194,7 +8017,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q425-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7212,7 +8037,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q426-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7250,7 +8077,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q428-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7282,7 +8111,13 @@
       "https://azure.microsoft.com/en-us/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-",
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q430-1.jpeg",
+      "/images/az104/q430-2.jpeg",
+      "/images/az104/q430-3.jpeg",
+      "/images/az104/q430-4.jpeg",
+      "/images/az104/q430-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7300,7 +8135,9 @@
     "references": [
       "https://fastreroute.com/azure-network-security-groups-explained/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q431-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7318,7 +8155,9 @@
     "references": [
       "https://fastreroute.com/azure-network-security-groups-explained/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q432-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7336,7 +8175,9 @@
     "references": [
       "https://fastreroute.com/azure-network-security-groups-explained/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q433-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7390,7 +8231,9 @@
     ],
     "explanation": "You can only attach virtual machines that have a standard SKU public IP configuration or no public IP configuration. All IP configurations must be on the same virtual network.\nALso, VMs do not have to be powered on when adding them to a backend pool.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q436-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7441,7 +8284,11 @@
     "references": [
       "https://www.petri.com/comparing-basic-standard-azure-load-balancers"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q439-1.jpeg",
+      "/images/az104/q439-2.jpeg",
+      "/images/az104/q439-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7454,7 +8301,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-highlyavailable"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q440-1.jpeg",
+      "/images/az104/q440-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7472,7 +8322,9 @@
     ],
     "explanation": "D. vm1.internal.cloudapp.net In Azure, when performing a reverse DNS lookup for a private IP address within a virtual network (VNet), Azure assigns an internal Fully Qualified Domain Name (FQDN) in the format:\n<vm-name>.internal.cloudapp.net Since VM1 has the private IP 10.0.0.4, when VM2 performs a reverse DNS lookup, it will return:\nvm1.internal.cloudapp.net",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q441-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7488,7 +8340,9 @@
     ],
     "explanation": "B. No To allow connections to App1 from 131.107.100.50 over TCP port 443, you need to create an inbound security rule that specifically allows traffic from the IP address 131.107.100.50 to port 443.\nThe given solution allows traffic from \"AzureLoadBalancer\" as the source. However, this only permits traffic originating from Azure's internal load balancer health probes, not from external public IP addresses like 131.107.100.50.\nYou create an inbound security rule that allows any traffic from the AzureLoadBalancer source and has a PRIORITY of 150.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q442-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7525,7 +8379,12 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q444-1.jpeg",
+      "/images/az104/q444-2.jpeg",
+      "/images/az104/q444-3.jpeg",
+      "/images/az104/q444-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7539,7 +8398,13 @@
       "https://docs.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q445-1.jpeg",
+      "/images/az104/q445-2.jpeg",
+      "/images/az104/q445-3.jpeg",
+      "/images/az104/q445-4.jpeg",
+      "/images/az104/q445-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7553,7 +8418,10 @@
       "https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#subnet",
       "https://medium.com/charot/deploy-azure-bastion-preview-using-an-arm-template-15e3010767d6"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q446-1.jpeg",
+      "/images/az104/q446-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7618,7 +8486,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-standard-public-zone-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q450-1.jpeg",
+      "/images/az104/q450-2.jpeg",
+      "/images/az104/q450-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7655,7 +8527,9 @@
       "https://msazure.club/addendum-of-azure-load-balancer-and-nsg-rules/",
       "https://fastreroute.com/azure-network-security-groups-explained/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q452-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7666,7 +8540,10 @@
     "answer": [],
     "explanation": "Create a Virtual WAN resource.\nThis is the first step in setting up Azure Virtual WAN, which acts as a centralized networking service for connectivity.\nCreate a virtual hub.\nA Virtual Hub is required within Virtual WAN to facilitate connections between VPNs, ExpressRoute, and Virtual Networks.\nCreate VPN sites.\nIn Azure Virtual WAN, VPN sites represent on-premises locations that connect to Azure via Site-to-Site VPN.\nConnect the VPN sites to the hub.\nOnce VPN sites are created, they need to be connected to the Virtual Hub to enable communication between on-premises networks and Azure.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q453-1.jpeg",
+      "/images/az104/q453-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7677,7 +8554,15 @@
     "answer": [],
     "explanation": "No: Server2 uses Server1 for DNS. Server1 has no host2.contoso.com record for 131.107.50.50. It would work if VNET1 hat a virtual network link to the private zone contoso.com.\nYes: Server2 uses Server1 for DNS. Server1 has a host1.contoso.com record for 131.107.10.15 No: Server3 uses 10.10.0.4 as DNS (inherited from VNET2). 10.10.0.4 (Server1) has no record for host2.contoso.com. The virtual network link for the private zone contoso.com on VNET2 won't be used since the DNS from VNET1 is set on VNET2. VNET1 DNS is not aware of the private zone contoso.com. It would work if VNET1 had a virtual network link to the private zone contoso.com.\nKey: Server1 considers itself authoritive for contoso.com (its a Primary DNS zone) If it doesn't have a record, that's game over man Server2 gets a DNS server of Server 1 (NIC2 is hard set to Server1's IP) Server2 can not resolve host2.contoso.com as Server1 has no record for it Server2 resolve host1.contoso.com as 131.107.10.15 as that's Server1's record for it Server3 (NIC3) inherits from it VNET (VNET2) which is also Server1 Server3 resolves host2.contoso.com the same as Server2 with NO resolution",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q454-1.jpeg",
+      "/images/az104/q454-2.jpeg",
+      "/images/az104/q454-3.jpeg",
+      "/images/az104/q454-4.jpeg",
+      "/images/az104/q454-5.jpeg",
+      "/images/az104/q454-6.jpeg",
+      "/images/az104/q454-7.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7698,7 +8583,9 @@
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering#requirements-and-",
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q455-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7723,7 +8610,10 @@
       "https://support.google.com/a/answer/2716800?",
       "https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q456-1.jpeg",
+      "/images/az104/q456-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7736,7 +8626,12 @@
     "references": [
       "https://www.thomasmaurer.ch/2019/09/how-to-enable-ping-icmp-echo-on-an-azure-vm/"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q457-1.jpeg",
+      "/images/az104/q457-2.jpeg",
+      "/images/az104/q457-3.jpeg",
+      "/images/az104/q457-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7794,7 +8689,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q460-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -7826,7 +8723,11 @@
     "answer": [],
     "explanation": "Box 1: 10.0.0.0/16 Address prefix destination-> Vnet 1 (Address space of Vnet1) Box 2: Virtual appliance Next hop type VM1 ->Virtual Appliance. You can specify IP address of VM 1 when configuring next hop as Virtual appliance.\nBox 3: Gateway Subnet Assigned to This route is to be followed by Gateway Subnet for the incoming traffic. You can associate routing table to the Subnet from Rout Table -> subnet ->Associate.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q462-1.jpeg",
+      "/images/az104/q462-2.jpeg",
+      "/images/az104/q462-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7857,7 +8758,11 @@
     "answer": [],
     "explanation": "No: VM1 has default rules which denies any port open for inbound rules Yes: VM2 has custom rule allowing RDP port Yes: VM1 and VM2 are in the same Vnet. by default, communication are allowed",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q464-1.jpeg",
+      "/images/az104/q464-2.jpeg",
+      "/images/az104/q464-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7910,7 +8815,14 @@
     "answer": [],
     "explanation": "Box 1: Yes - VM1 is in VNET1. In VNET1 Server1 resolves to 131.107.3.3 Box 2: No - VM2 is in VNET2. VNET2 uses custom DNS server 192.168.05 Box 3: Yes.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q467-1.jpeg",
+      "/images/az104/q467-2.jpeg",
+      "/images/az104/q467-3.jpeg",
+      "/images/az104/q467-4.jpeg",
+      "/images/az104/q467-5.jpeg",
+      "/images/az104/q467-6.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7924,7 +8836,12 @@
       "https://docs.microsoft.com/en-us/azure/dns/dns-zones-records",
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q468-1.jpeg",
+      "/images/az104/q468-2.jpeg",
+      "/images/az104/q468-3.jpeg",
+      "/images/az104/q468-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7957,7 +8874,14 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/security-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q470-1.jpeg",
+      "/images/az104/q470-2.jpeg",
+      "/images/az104/q470-3.jpeg",
+      "/images/az104/q470-4.jpeg",
+      "/images/az104/q470-5.jpeg",
+      "/images/az104/q470-6.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -7971,7 +8895,13 @@
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview",
       "https://www.quora.com/What-is-IP-forwarding"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q471-1.jpeg",
+      "/images/az104/q471-2.jpeg",
+      "/images/az104/q471-3.jpeg",
+      "/images/az104/q471-4.jpeg",
+      "/images/az104/q471-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8030,7 +8960,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q474-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8071,7 +9003,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-network-mapping"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q476-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8158,7 +9092,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q481-1.jpeg",
+      "/images/az104/q481-2.jpeg",
+      "/images/az104/q481-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8197,7 +9135,9 @@
     ],
     "explanation": "VNET1 only.\nNo idea why people are saying option E as the question clearly states that \"You need to deploy an Azure firewall named AF1 to RG1 in the West US\", so RG1 in the West US region means the correct answer is C(VNET1).\nAn Azure Firewall can protect a VNet in the same resource group, but it cannot directly protect a VNet in a different resource group. This is because an Azure Firewall is deployed in a VNet and filters traffic entering and exiting that VNet. It cannot interact with resources in other resource groups.\nIf you need to protect a VNet in a different resource group, you can use one of the following workarounds:\nVNet peering Azure Virtual WAN VPN",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q483-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8217,7 +9157,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/network-watcher/connection-monitor-create-using-portal#before-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q484-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8228,7 +9170,11 @@
     "answer": [],
     "explanation": "NO, NO, NO.\nBox 1: instead of \"netname\" there should be the value of netname variable Box 2: I don't see Resource Group mentioned anywhere in the template Box 3: I don't see parameters being referred anywhere in the template, only variables are referred, e.g. \"sku\" variable.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q485-1.jpeg",
+      "/images/az104/q485-2.jpeg",
+      "/images/az104/q485-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8284,7 +9230,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/app-service/network-secure-outbound-traffic-azure-firewall"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q488-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8303,7 +9251,9 @@
     ],
     "explanation": "Bastion provides secure RDP and SSH connectivity to all of the VMs in the virtual network in which it is provisioned. Using Azure Bastion protects your virtual machines from exposing RDP/SSH ports to the outside world, while still providing secure access using RDP/SSH.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q489-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8361,7 +9311,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#instanceWhen"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q492-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8390,7 +9342,11 @@
     "answer": [],
     "explanation": "1.Upgrade Bastion1 to the Standard SKU.\nAzure Bastion offers two SKUs: Basic and Standard.\nNative Client Support is available only in the Standard SKU, so you must upgrade Bastion1 if it's running on the Basic SKU.\nThis is a mandatory prerequisite before enabling Native Client Support.\n2. From Bastion 1,Select Native Client Support.\nAfter upgrading, you must enable Native Client Support in the Azure Bastion settings.\nThis allows users to connect using tools like mstsc.exe (Microsoft's RDP client) instead of the browser-based Azure portal.\n3. From Azure CLI on Device1,run az network bastion rdp.\nOnce Native Client Support is enabled, you can connect using Azure CLI with the following command:\nsh Copy Edit az network bastion rdp --name Bastion1 --resource-group MyResourceGroup --target-ip VM-IP-Address This command starts an RDP connection to the target VM using Azure Bastion and the native RDP client (mstsc.exe).",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q494-1.jpeg",
+      "/images/az104/q494-2.jpeg",
+      "/images/az104/q494-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8427,7 +9383,9 @@
     ],
     "explanation": "A. IP1 only.\nAzure Bastion requires a Standard SKU public IP address, and the public IP address must be static and regional.\nLooking at the provided table:\nIP1: Standard SKU, regional, static (meets all the requirements for Azure Bastion Basic SKU).\nIP2: Standard SKU, global, static (global tier is not supported for Bastion, only regional tier is allowed).",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q496-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8481,7 +9439,9 @@
     ],
     "explanation": "When you move a virtual machine from one subscription to another, you need to ensure that all the dependent resources are also moved along with it.In the given scenario, VM1 is associated with the resources Disk1 (OS Disk), NetInt1 (Network Interface), and VNet1 (Virtual Network), and the storage account named storage1 is not associated with VM1.Therefore, to move VM1 to Sub2, you need to move the following resources:VM1: This is the virtual machine that you want to move to Sub2.Disk1: This is the OS disk for VM1, and it contains the operating system and boot files.NetInt1: This is the network interface that is attached to VM1 and provides connectivity to the virtual network.VNet1: This is the virtual network that is associated with VM1, and it provides the network connectivity to the virtual machine.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q499-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8607,7 +9567,9 @@
     ],
     "explanation": "A. Yes Creating an inbound security rule that allows any traffic from the Azure Load Balancer source with a priority of 150 will enable the connections to App1 from the Load Balancer, which is necessary for routing traffic to VM2. Since the Load Balancer forwards traffic to the VMs, this rule will help ensure that connections over TCP port 443 from the specified IP address can be established successfully.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q506-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8627,7 +9589,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview\"Virtual"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q507-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8645,7 +9609,9 @@
     ],
     "explanation": "B. Start VM1.\nDesired State Configuration (DSC) is a feature of Windows PowerShell that enables you to manage and configure systems in a consistent way. To use DSC, the virtual machine (VM1 in this case) needs to be running.\nIf the VM is not started, you cannot apply any DSC configurations to it.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q508-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8656,7 +9622,12 @@
     "answer": [],
     "explanation": "VNet3 only: Indicates that only VNet3 should be used for the configuration.\n/23: This subnet mask allows for 512 IP addresses. It is suitable for medium-sized networks.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q509-1.jpeg",
+      "/images/az104/q509-2.jpeg",
+      "/images/az104/q509-3.jpeg",
+      "/images/az104/q509-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8674,7 +9645,9 @@
     ],
     "explanation": "Answer : 1.\nAzure Bastion and VNet peering can be used together.\nWhen VNet peering is configured, you don’t have to deploy Azure Bastion in each peered VNet. This means if you have an Azure Bastion host configured in one virtual network (VNet), it can be used to connect to VMs deployed in a peered VNet without deploying an additional bastion host.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q510-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8685,7 +9658,13 @@
     "answer": [],
     "explanation": "The Remote Desktop Connection client (mstsc.exe) can be used to connect to VM1 through Bastion1.\nNo Azure Bastion provides secure and seamless RDP (Remote Desktop Protocol) connectivity to your VMs directly from the Azure portal. If VM1 is configured to allow RDP connections and Bastion1 is properly set up, you can use the Remote Desktop Connection client (mstsc.exe) to connect to VM1 through Bastion1. This method leverages Bastion's secure tunnel to establish the connection without exposing the VM to the public internet.\nThe Azure portal can use SSH to connect to VM2 through Bastion1.\nYes Azure Bastion also supports SSH (Secure Shell) connections. If VM2 is configured to allow SSH connections and Bastion1 is set up correctly, you can use the Azure portal to initiate an SSH session to VM2 through Bastion1. This provides a secure way to manage your VM using command-line tools without needing a public IP address on the VM.\nThe Azure portal can be used to connect to VM3 through Bastion1.\nNo Azure Bastion allows you to connect to VMs directly from the Azure portal using either RDP or SSH, depending on the VM's configuration. If VM3 is set up to allow connections through Bastion1, you can use the Azure portal to connect to VM3 using the appropriate protocol (RDP or SSH). This simplifies the process of accessing your VMs securely without the need for additional client software.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q511-1.jpeg",
+      "/images/az104/q511-2.jpeg",
+      "/images/az104/q511-3.jpeg",
+      "/images/az104/q511-4.jpeg",
+      "/images/az104/q511-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8698,7 +9677,13 @@
     "references": [
       "https://learn.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q512-1.jpeg",
+      "/images/az104/q512-2.jpeg",
+      "/images/az104/q512-3.jpeg",
+      "/images/az104/q512-4.jpeg",
+      "/images/az104/q512-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8747,7 +9732,13 @@
     "answer": [],
     "explanation": "NYN is a correct answer.\nStatement 1: From VM1, server1.contoso.com resolves to 131.107.3.3.\nVM1 in VNET1 uses the Azure-provided DNS, which does not reference the DNS records on VM4.\nResult: No.\nStatement 2: From VM2, server1.contoso.com resolves to 131.107.3.3.\nVM2 in VNET2 uses a custom DNS (192.168.0.5), which points to VM4's DNS server.\nVM4's DNS contains a record for server1.contoso.com resolving to 131.107.3.3.\nResult: Yes.\nStatement 3: From VM3, server2.contoso.com resolves to 131.107.2.4.\nVM3 in VNET3 uses a custom DNS (192.168.0.5), which points to VM4's DNS server.\nVM4's DNS contains a record for server2.contoso.com, but it resolves to 131.107.3.4, not 131.107.2.4.\nResult: No.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q515-1.jpeg",
+      "/images/az104/q515-2.jpeg",
+      "/images/az104/q515-3.jpeg",
+      "/images/az104/q515-4.jpeg",
+      "/images/az104/q515-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8758,7 +9749,10 @@
     "answer": [],
     "explanation": "Virtual Network (VNet).\nA virtual network in Azure is a logically isolated section of the Azure cloud where you can launch and manage Azure resources. It allows you to securely connect Azure resources to each other, the internet, and on- premises networks. Key features include subnets, network security groups (NSGs), and custom DNS settings.\nNetwork Interface (NIC).\nA network interface in Azure is a communication link between a virtual machine (VM) and a virtual network. It allows the VM to interact with other resources within the same VNet, other VNets, and external networks.\nEach VM can have one or more network interfaces, each with its own private IP address and associated configurations.\nVirtual Machine (VM).\nA virtual machine in Azure is a scalable, on-demand computing resource provided by Microsoft. VMs can run various operating systems and applications, and they can be customized with different sizes, storage options, and networking configurations. VMs are commonly used for hosting applications, development and testing environments, and more.\nAzure Monitor Extension.\nThe Azure Monitor extension is a tool that collects and analyzes telemetry data from Azure resources, including VMs. It provides insights into the performance, availability, and health of your applications and infrastructure. The extension can be installed on VMs to gather metrics, logs, and other diagnostic data, which can be used for monitoring, alerting, and troubleshooting.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q516-1.jpeg",
+      "/images/az104/q516-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8794,7 +9788,10 @@
     ],
     "explanation": "B (VM1 and VM2) because Bastion is deployed to VNEt1, which is peered with VNet2.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q518-1.jpeg",
+      "/images/az104/q518-2.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8843,7 +9840,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/bastion/configuration-settingshttps://learn.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q521-1.jpeg",
+      "/images/az104/q521-2.jpeg",
+      "/images/az104/q521-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8864,7 +9865,9 @@
       "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview",
       "https://learn.microsoft.com/en-us/azure/expressroute/virtual-network-connectivity-guidance"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q522-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8882,7 +9885,9 @@
     ],
     "explanation": "C:VNet3 and VNet4 only.\nVNet3 and VNet4 only (Option C) suggests that these virtual networks are compatible with VNet1 for peering, while the other VNets (VNet2) may have some constraints or conflicts that prevent successful peering with VNet1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q523-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8922,7 +9927,9 @@
       "https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-iaas",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q525-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8933,7 +9940,11 @@
     "answer": [],
     "explanation": "Box 1: 10 years - The yearly backup point occurs to 1 March and its retention period is 10 years.\nBox 2: 36 months - The monthly backup point occurs on the 1 of every month and its retention period is 36 months.\nst",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q526-1.jpeg",
+      "/images/az104/q526-2.jpeg",
+      "/images/az104/q526-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8953,7 +9964,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replicatio"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q527-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8964,7 +9977,12 @@
     "answer": [],
     "explanation": "You can define only one activity log signal per alert rule. To alert on more signals, create another alert rule.\nBox 1: 4 You need 1 alert rule per 1 signal (1xIngress, 1xEgress, 1xDelete storage account, 1xRestore blob ranges).\nBox 2: 3 You need 3 Action Groups (1xUser1 and User3, 1xUser1 only, 1xUser1 User2 and User3). Check ‘Users to notify’ column.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q528-1.jpeg",
+      "/images/az104/q528-2.jpeg",
+      "/images/az104/q528-3.jpeg",
+      "/images/az104/q528-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -8984,7 +10002,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups#email-azure-resource-manager"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q529-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -8997,7 +10017,11 @@
     "references": [
       "https://social.technet.microsoft.com/Forums/en-US/854ab6ae-79aa-4bad-ac65-471c4d422e94/daily-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q530-1.jpeg",
+      "/images/az104/q530-2.jpeg",
+      "/images/az104/q530-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9010,7 +10034,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-monitor/app/azure-web-apps"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q531-1.jpeg",
+      "/images/az104/q531-2.jpeg",
+      "/images/az104/q531-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9044,7 +10072,13 @@
       "https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr#prerequisites",
       "https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#user-administrator"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q533-1.jpeg",
+      "/images/az104/q533-2.jpeg",
+      "/images/az104/q533-3.jpeg",
+      "/images/az104/q533-4.jpeg",
+      "/images/az104/q533-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9078,7 +10112,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/app-service/manage-backup?tabs=portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q535-1.jpeg",
+      "/images/az104/q535-2.jpeg",
+      "/images/az104/q535-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9092,7 +10130,11 @@
       "https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy",
       "https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-sspr-deployment"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q536-1.jpeg",
+      "/images/az104/q536-2.jpeg",
+      "/images/az104/q536-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9110,7 +10152,9 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-users-to-azure-ad"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q537-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -9144,7 +10188,11 @@
       "https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-troubleshoot",
       "https://azure.microsoft.com/en-us/overview/scaling-out-vs-scaling-up"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q539-1.jpeg",
+      "/images/az104/q539-2.jpeg",
+      "/images/az104/q539-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9159,7 +10207,10 @@
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy",
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-automation#restore-files-from-an-azure-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q540-1.jpeg",
+      "/images/az104/q540-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9172,7 +10223,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q541-1.jpeg",
+      "/images/az104/q541-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9263,7 +10317,10 @@
     "references": [
       "https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto/query/tutorial.md"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q546-1.jpeg",
+      "/images/az104/q546-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9294,7 +10351,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-rule-azure-monitor-agent"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q548-1.jpeg",
+      "/images/az104/q548-2.jpeg",
+      "/images/az104/q548-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9305,7 +10366,11 @@
     "answer": [],
     "explanation": "Box1: Owner of VM1 - User1 andUser3 are.\nBox2 : Create VM in RG1 - User1 and User4.\nUser1 - Owner of the subscription. (He can manage any resources in the subscription.) User 2 - Owner of RG2(He can manage any resources in the RG2.) User 3 - Owner of a single VM that is VM1.(he can manage VM1 only) User 4 - Contributor of RG1.(He can manage everything in RG1, even he can delete VMs in RG1. But cannot change RABC)",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q549-1.jpeg",
+      "/images/az104/q549-2.jpeg",
+      "/images/az104/q549-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9318,7 +10383,11 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#virtual-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q550-1.jpeg",
+      "/images/az104/q550-2.jpeg",
+      "/images/az104/q550-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9331,7 +10400,12 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview#default-security-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q551-1.jpeg",
+      "/images/az104/q551-2.jpeg",
+      "/images/az104/q551-3.jpeg",
+      "/images/az104/q551-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9364,7 +10438,13 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#virtual-machine-contributor"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q553-1.jpeg",
+      "/images/az104/q553-2.jpeg",
+      "/images/az104/q553-3.jpeg",
+      "/images/az104/q553-4.jpeg",
+      "/images/az104/q553-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9393,7 +10473,10 @@
     "answer": [],
     "explanation": "1. Create an Azure Backup Vault.\nThis refers to creating a Recovery Services vault specifically for Azure Backup. The steps are the same as creating a Recovery Services vault.\n2. Create a Backup Policy and Configure the Backup.\nPurpose: A backup policy defines how often backups are taken and how long they are retained. Configuring the backup involves applying this policy to specific resources (e.g., VMs, databases).\nSteps:\nGo to the Recovery Services vault.\nCreate a new backup policy or use an existing one.\nAssign the policy to the resources you want to back up.\n3. Configure a Managed Identity.\nPurpose: A managed identity is used to grant the Recovery Services vault the necessary permissions to access and back up resources.\nSteps:\nEnable a system-assigned or user-assigned managed identity for the resource (e.g., a VM).\nAssign the managed identity the appropriate role (e.g., Backup Contributor) in the Recovery Services vault.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q555-1.jpeg",
+      "/images/az104/q555-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9469,7 +10552,9 @@
     ],
     "explanation": "To minimize costs, you should use the storage account that is in the same region as the web app that you are backing up. In this case, the web app is in the West US region, so you should use storage2.\nAzure Blob storage is generally considered to be the more cost-effective option for storing backups of a web app.\nAzure Blob storage has several different storage tiers, including Hot, Cool, and Archive, each with different pricing models. The Cool storage tier is designed for infrequent access data and has the lowest storage costs.\nThis makes it the most cost-effective option for storing backups of a web app.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q559-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -9482,7 +10567,12 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log-schema#administrative-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q560-1.jpeg",
+      "/images/az104/q560-2.jpeg",
+      "/images/az104/q560-3.jpeg",
+      "/images/az104/q560-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9520,7 +10610,9 @@
     "references": [
       "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q562-1.jpeg"
+    ],
     "type": "single",
     "topic": null
   },
@@ -9569,7 +10661,11 @@
     "answer": [],
     "explanation": "YES - \"alert is listed\" does not mean a notification in my understanding therefore yes NO- The date is within suppression rule boundaries therefore email will be suppressed YES - The date is outside suppression rule boundaries",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q565-1.jpeg",
+      "/images/az104/q565-2.jpeg",
+      "/images/az104/q565-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9697,7 +10793,11 @@
     "answer": [],
     "explanation": "For Alert1: can be changed to New or Acknowledged.\nThis implies that Alert1 is in a state that allows it to be modified either back to New or to Acknowledged.\nThe other available choices indicate that some alerts may only be changed to \"New,\" \"Acknowledged,\" or may not be changeable at all.\nFor Alert2: can be changed to Acknowledged or Closed.\nThis means Alert2 is in a state where it can transition to either Acknowledged (indicating recognition of the alert) or Closed (indicating resolution or dismissal of the alert).\nThe other choices suggest some alerts may only transition to \"Acknowledged\" or \"Closed\" individually, or not at all.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q572-1.jpeg",
+      "/images/az104/q572-2.jpeg",
+      "/images/az104/q572-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9710,7 +10810,11 @@
     "references": [
       "https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q573-1.jpeg",
+      "/images/az104/q573-2.jpeg",
+      "/images/az104/q573-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9721,7 +10825,13 @@
     "answer": [],
     "explanation": "1.VM1 can be backed up by using Policy1.\nThe Yes option is selected.\nThis means that Policy1 is applicable to VM1, allowing it to be backed up successfully.\n2.VM2 can be backed up by using Policy3.\nThe No option is selected.\nThis indicates that Policy3 does not apply to VM2, meaning VM2 cannot be backed up using this policy.\n3.VM2 can be backed up by using Policy2.\nThe Yes option is selected.\nThis confirms that Policy2 is applicable to VM2, allowing it to be backed up successfully.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q574-1.jpeg",
+      "/images/az104/q574-2.jpeg",
+      "/images/az104/q574-3.jpeg",
+      "/images/az104/q574-4.jpeg",
+      "/images/az104/q574-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9752,7 +10862,12 @@
     "answer": [],
     "explanation": "1.cont1 (Container 1) Backup1 only.\nThis means that cont1 is configured to be backed up using Backup1 and is not using Recovery1.\n2.share1 (File Share 1) Recovery1 only.\nThis means that share1 is configured for recovery under Recovery1 but is not backed up using Backup1.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q576-1.jpeg",
+      "/images/az104/q576-2.jpeg",
+      "/images/az104/q576-3.jpeg",
+      "/images/az104/q576-4.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9882,7 +10997,13 @@
     "answer": [],
     "explanation": "No, because the Microsoft.Storage service endpoint is configured for Subnet1, which VM1 is connected to, but the policy shown is specifically for contoso101. There is no indication that VM1 can access contoso102.\nVM2 can access contoso101.\nNo, because VM2 is connected to Subnet2, and the Microsoft.Storage service endpoint is only configured for Subnet1, not Subnet2. Therefore, VM2 cannot access contoso101.\nVM2 uses a private IP address to access Azure AD.\nYes, because the Microsoft.AzureActiveDirectory service endpoint is enabled for Subnet2, where VM2 is connected. This allows VM2 to access Azure AD using a private IP.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q583-1.jpeg",
+      "/images/az104/q583-2.jpeg",
+      "/images/az104/q583-3.jpeg",
+      "/images/az104/q583-4.jpeg",
+      "/images/az104/q583-5.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9931,7 +11052,10 @@
     "answer": [],
     "explanation": "Box 1: Selected - Only selected users should be able to join devices Box 2: Yes - Ensure that when users join devices to Azure Active Directory (Azure AD), the users use a mobile phone to verify their identity.\n_______________________________________________________________________ Case Study Description Contoso Ltd Overview Contoso, Ltd. is a manufacturing company that has offices worldwide. Contoso works with partner organizations to bring products to market.\nContoso products are manufactured by using blueprint files that the company authors and maintains.\nExisting Environment Currently, Contoso uses multiple types of servers for business operations, including the following:\n✑ File servers ✑ Domain controllers ✑ Microsoft SQL Server servers Your network contains an Active Directory forest named contoso.com. All servers and client computers are joined to Active Directory.\nYou have a public-facing application named App1.\nApp1 is comprised of the following three tiers:\n✑ A SQL database ✑ A web front end ✑ A processing middle tier Each tier is comprised of five virtual machines. Users access the web front end by using HTTPS only.\nRequirements Planned Changes Contoso plans to implement the following changes to the infrastructure:\n- Move all the tiers of App1 to Azure.\n- Move the existing product blueprint files to Azure Blob storage.\n- Create a hybrid directory to support an upcoming Microsoft Office 365 migration project.\nTechnical Requirements Contoso must meet the following technical requirements:\n✑ Move all the virtual machines for App1 to Azure.\n✑ Minimize the number of open ports between the App1 tiers.\n✑ Ensure that all the virtual machines for App1 are protected by backups.\n✑ Copy the blueprint files to Azure over the Internet.\n✑ Ensure that the blueprint files are stored in the archive storage tier.\n✑ Ensure that partner access to the blueprint files is secured and temporary.\n✑ Prevent user passwords or hashes of passwords from being stored in Azure.\n✑ Use unmanaged standard storage for the hard disks of the virtual machines.\n✑ Ensure that when users join devices to Azure Active Directory (Azure AD), the users use a mobile phone to verify their identity.\nMinimize administrative effort whenever possible.\nUser Requirements Contoso identifies the following requirements for users:\n✑ Ensure that only users who are part of a group named Pilot can join devices to Azure AD.\n✑ Designate a new user named Admin1 as the service administrator of the Azure subscription.\n✑ Admin1 must receive email alerts regarding service outages.\n✑ Ensure that a new user named User3 can create network objects for the Azure subscription.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q586-1.jpeg",
+      "/images/az104/q586-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9965,7 +11089,10 @@
       "https://docs.microsoft.com/en-us/azure/backup/backup-create-rs-vault",
       "https://docs.microsoft.com/en-"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q588-1.jpeg",
+      "/images/az104/q588-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9980,7 +11107,10 @@
       "https://learn.microsoft.com/en-us/azure/azure-",
       "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-log"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q589-1.jpeg",
+      "/images/az104/q589-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -9993,7 +11123,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/governance/policy/overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q590-1.jpeg",
+      "/images/az104/q590-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10064,7 +11197,10 @@
     "answer": [],
     "explanation": "Box 1: Yes - Contoso is moving the existing product blueprint files to Azure Blob storage.\nUse unmanaged standard storage for the hard disks of the virtual machines. We use Page Blobs for these.\nBox 2: No - Box 3: No _______________________________________________________________________ Case Study Description Contoso Ltd Overview Contoso, Ltd. is a manufacturing company that has offices worldwide. Contoso works with partner organizations to bring products to market.\nContoso products are manufactured by using blueprint files that the company authors and maintains.\nExisting Environment Currently, Contoso uses multiple types of servers for business operations, including the following:\n✑ File servers ✑ Domain controllers ✑ Microsoft SQL Server servers Your network contains an Active Directory forest named contoso.com. All servers and client computers are joined to Active Directory.\nYou have a public-facing application named App1.\nApp1 is comprised of the following three tiers:\n✑ A SQL database ✑ A web front end ✑ A processing middle tier Each tier is comprised of five virtual machines. Users access the web front end by using HTTPS only.\nRequirements Planned Changes Contoso plans to implement the following changes to the infrastructure:\n- Move all the tiers of App1 to Azure.\n- Move the existing product blueprint files to Azure Blob storage.\n- Create a hybrid directory to support an upcoming Microsoft Office 365 migration project.\nTechnical Requirements Contoso must meet the following technical requirements:\n✑ Move all the virtual machines for App1 to Azure.\n✑ Minimize the number of open ports between the App1 tiers.\n✑ Ensure that all the virtual machines for App1 are protected by backups.\n✑ Copy the blueprint files to Azure over the Internet.\n✑ Ensure that the blueprint files are stored in the archive storage tier.\n✑ Ensure that partner access to the blueprint files is secured and temporary.\n✑ Prevent user passwords or hashes of passwords from being stored in Azure.\n✑ Use unmanaged standard storage for the hard disks of the virtual machines.\n✑ Ensure that when users join devices to Azure Active Directory (Azure AD), the users use a mobile phone to verify their identity.\nMinimize administrative effort whenever possible.\nUser Requirements Contoso identifies the following requirements for users:\n✑ Ensure that only users who are part of a group named Pilot can join devices to Azure AD.\n✑ Designate a new user named Admin1 as the service administrator of the Azure subscription.\n✑ Admin1 must receive email alerts regarding service outages.\n✑ Ensure that a new user named User3 can create network objects for the Azure subscription.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q594-1.jpeg",
+      "/images/az104/q594-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10078,7 +11214,10 @@
       "https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers",
       "https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q595-1.jpeg",
+      "/images/az104/q595-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10091,7 +11230,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q596-1.jpeg",
+      "/images/az104/q596-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10163,7 +11305,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/vpn"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q600-1.jpeg",
+      "/images/az104/q600-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10176,7 +11321,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-tier/n-tier-sql-server"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q601-1.jpeg",
+      "/images/az104/q601-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10207,7 +11355,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q603-1.jpeg",
+      "/images/az104/q603-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10280,7 +11431,10 @@
     "references": [
       "https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions-list?tabs=roles"
     ],
-    "images": [],
+    "images": [
+      "/images/az104/q607-1.jpeg",
+      "/images/az104/q607-2.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
@@ -10329,7 +11483,11 @@
     "answer": [],
     "explanation": "Statement 1: The name of the virtual network will be the same as the location of the resource group.\n❌ No. The virtual network name is hardcoded as 'VNET1', which is a string literal. The location is set to resourceGroup().location (e.g., 'eastus', 'westus'). A string like 'VNET1' cannot equal a location string like 'eastus'. Therefore, this statement is false.\nStatement 2: Both subnet objects will be provisioned successfully.\n✅ Yes. Although the statement says \"both\" but the template defines three subnets, all three are valid:\nSubnet-1 with 10.0.0.0/24 is within 10.0.0.0/16 Subnet-2 with 10.0.1.0/24 is within 10.0.0.0/16 Subnet-3 with 10.0.2.0/24 is within 10.0.0.0/16 There are no overlapping address ranges, and all properties are correctly formatted. The deployment will succeed for all subnets.\nStatement 3: Deploying this Bicep file will error out with an error message.\n❌ No. The Bicep file is syntactically correct. It uses valid resource type (Microsoft.Network/virtualNetworks@2022-01-01), valid properties, and correct parameter referencing. There are no missing dependencies, circular references, or invalid values. The deployment will complete successfully without errors.",
     "references": [],
-    "images": [],
+    "images": [
+      "/images/az104/q610-1.jpeg",
+      "/images/az104/q610-2.jpeg",
+      "/images/az104/q610-3.jpeg"
+    ],
     "type": "complex",
     "topic": null
   },
