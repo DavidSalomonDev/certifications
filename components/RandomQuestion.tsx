@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Question } from "@/lib/types";
 import { loadQuestionsById, getPool } from "@/lib/questions";
+import { useLanguage } from "@/lib/language";
 import { loadRandomHistory, saveRandomHistory } from "@/lib/storage";
 import { isCorrect } from "@/lib/quiz";
 import { pickOne } from "@/lib/random";
@@ -13,6 +14,7 @@ import ExplanationBox from "./ExplanationBox";
 
 /** Modo "pregunta random": una pregunta a la vez con feedback inmediato. */
 export default function RandomQuestion({ certId }: { certId: string }) {
+  const { lang, mounted } = useLanguage();
   const [pool, setPool] = useState<Question[]>([]);
   const [current, setCurrent] = useState<Question | null>(null);
   const [history, setHistory] = useState<string[]>([]);
@@ -21,6 +23,12 @@ export default function RandomQuestion({ certId }: { certId: string }) {
   const [wasReset, setWasReset] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Id de la pregunta actual, para re-mapearla al mismo id al cambiar de idioma.
+  const currentIdRef = useRef<string | null>(null);
+  useEffect(() => {
+    currentIdRef.current = current?.id ?? null;
+  }, [current]);
 
   /** Sirve una pregunta nueva que no esté en el historial (reinicia si se agotaron). */
   const serveFrom = (p: Question[], hist: string[]) => {
@@ -44,14 +52,23 @@ export default function RandomQuestion({ certId }: { certId: string }) {
   };
 
   useEffect(() => {
+    if (!mounted) return; // espera a conocer el idioma para no recargar dos veces
     let active = true;
     (async () => {
       try {
-        const all = await loadQuestionsById(certId);
+        const all = await loadQuestionsById(certId, lang);
         const p = getPool(all);
         if (!active) return;
         setPool(p);
-        serveFrom(p, loadRandomHistory(certId));
+        // Al cambiar de idioma mantenemos la misma pregunta (mismo id) con su
+        // respuesta/estado; solo cambia el texto. Si no hay actual, servimos una.
+        const keepId = currentIdRef.current;
+        const same = keepId ? p.find((q) => q.id === keepId) : undefined;
+        if (same) {
+          setCurrent(same);
+        } else {
+          serveFrom(p, loadRandomHistory(certId));
+        }
       } catch (e) {
         if (active) setError((e as Error).message);
       } finally {
@@ -62,7 +79,7 @@ export default function RandomQuestion({ certId }: { certId: string }) {
       active = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [certId]);
+  }, [certId, lang, mounted]);
 
   if (loading) {
     return (

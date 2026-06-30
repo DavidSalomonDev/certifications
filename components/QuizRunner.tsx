@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { Question, QuizSession } from "@/lib/types";
 import { loadQuestionsById } from "@/lib/questions";
+import { useLanguage } from "@/lib/language";
 import { loadSession, saveSession, clearSession } from "@/lib/storage";
 import { computeResults } from "@/lib/quiz";
 import { formatDuration } from "@/lib/time";
@@ -16,6 +17,7 @@ import QuestionReviewList from "./QuestionReviewList";
 /** Orquesta la sesión de práctica: navegación, cronómetro, guardado y resultados. */
 export default function QuizRunner({ certId }: { certId: string }) {
   const router = useRouter();
+  const { lang, mounted } = useLanguage();
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [session, setSession] = useState<QuizSession | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -37,6 +39,7 @@ export default function QuizRunner({ certId }: { certId: string }) {
   };
 
   useEffect(() => {
+    if (!mounted) return; // espera a conocer el idioma para no recargar dos veces
     let active = true;
     (async () => {
       const s = loadSession(certId);
@@ -45,7 +48,8 @@ export default function QuizRunner({ certId }: { certId: string }) {
         return;
       }
       try {
-        const all = await loadQuestionsById(certId);
+        // Recarga al cambiar de idioma: ids/respuestas/orden no cambian, solo el texto.
+        const all = await loadQuestionsById(certId, lang);
         if (!active) return;
         setSession(s);
         setQuestions(all);
@@ -58,7 +62,7 @@ export default function QuizRunner({ certId }: { certId: string }) {
     return () => {
       active = false;
     };
-  }, [certId, router]);
+  }, [certId, router, lang, mounted]);
 
   // Cronómetro activo solo mientras el quiz está en progreso.
   const status = session?.status;

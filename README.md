@@ -39,6 +39,9 @@ Ver [Agregar una certificación nueva](#agregar-una-certificación-nueva) para s
   continúa al retomar); el total aparece en los resultados.
 - **Modo oscuro**: botón 🌙/☀️ en la cabecera; recuerda tu preferencia y respeta la del
   sistema en la primera visita.
+- **Bilingüe (inglés / español)**: botón EN/ES en la cabecera que cambia el idioma del
+  **contenido de las preguntas** (enunciado, opciones y explicación). Por defecto en inglés;
+  recuerda tu preferencia. La interfaz sigue en español. Ver [Traducciones](#traducciones-inglés--español).
 - **Multi‑certificación**: agregar un examen nuevo no requiere tocar código (ver abajo).
 
 ---
@@ -82,6 +85,7 @@ lib/                       # tipos y lógica
 public/data/
   certifications.json    # registro de certificaciones
   <cert>.json             # preguntas de cada cert (generado), p. ej. az104.json, az-700.json
+  <cert>.es.json          # traducciones al español (overlay opcional, ver "Traducciones")
 public/images/<cert>/    # imágenes de preguntas, por certificación (generado)
 scripts/
   convert.mjs              # convierte source/<cert>.md → public/data/<cert>.json
@@ -254,6 +258,88 @@ cuantas preguntas con imagen para validar el resultado.
 > Nota: las preguntas `complex` (HOTSPOT/DRAG/case‑study) reciben imágenes pero **siguen fuera del
 > pool jugable** porque no se responden con opción múltiple. Las imágenes benefician hoy a las
 > preguntas `single`/`multiple` que referencian un exhibit.
+
+---
+
+## Traducciones (inglés / español)
+
+El contenido original de las preguntas está en inglés. Las traducciones al español viven en un
+archivo **overlay** por certificación, `public/data/<cert>.es.json`, que se aplica encima del JSON
+base en tiempo de carga (ver `lib/questions.ts`).
+
+### Estado del progreso (para retomar en próximas sesiones)
+
+Las traducciones se hacen por partes. Esta tabla indica hasta dónde se avanzó; **para continuar,
+agregar al final del `.es.json` correspondiente desde el siguiente id.**
+
+| Cert | Traducidas | Total | Siguiente | Estado |
+| --- | --- | --- | --- | --- |
+| AZ‑104 | q1–q83 | 634 | `az104-84` | 🟡 En progreso |
+| AZ‑700 | — | 388 | `az-700-1` | ⬜ Pendiente |
+| Google PCA | — | 385 | `pca-1` | ⬜ Pendiente |
+| ITIL 4 | — | 365 | `itilv4-1` | ⬜ Pendiente |
+| GCP ACE | — | 197 | `gcp-ace-1` | ⬜ Pendiente |
+
+> Los ids son consecutivos (`<cert>-1`, `<cert>-2`, …). Para ver el texto base de un rango:
+> `node -e 'require("./public/data/az104.json").slice(33,60).forEach(q=>console.log(q.id, q.question))'`
+> (el `slice` usa índices 0-based: `slice(33, …)` empieza en `az104-34`).
+
+### Cómo funciona
+
+- El JSON base `<cert>.json` es la **fuente canónica** (inglés) y la única que tiene `answer`,
+  `images`, `type` y `references`. Esos campos **no** se traducen.
+- `<cert>.es.json` es un **mapa por id** que solo lleva los campos de texto traducidos. No hace
+  falta traducir todas las preguntas: lo que falte cae a inglés (**fallback por campo**). Por eso
+  se puede traducir "por partes".
+- El botón EN/ES (componente `LanguageToggle`, estado en `lib/language.tsx`) cambia el idioma del
+  contenido y recuerda la preferencia en `localStorage`. **Default: inglés.**
+
+### Formato de `<cert>.es.json`
+
+```jsonc
+{
+  "az104-1": {
+    "question": "Su empresa tiene varios departamentos…",
+    "options": [
+      "Crear Azure Management Groups para cada departamento.",
+      "Crear un resource group para cada departamento.",
+      "Asignar tags a las máquinas virtuales.",
+      "Modificar la configuración de las máquinas virtuales."
+    ],
+    "explanation": "C. Asignar tags a las máquinas virtuales…"
+  }
+}
+```
+
+Reglas:
+
+- **La clave es el `id`** exacto de la pregunta en el JSON base (`<cert>-<n>`).
+- **`options` debe conservar el mismo orden y cantidad** que el inglés: los índices de `answer`
+  apuntan a esas posiciones. Si la cantidad no coincide, el overlay **ignora** las opciones
+  traducidas y usa las inglesas (salvaguarda en `applyTranslations`).
+- Cualquier campo (`question`, `options`, `explanation`) es opcional; lo omitido queda en inglés.
+
+### Regla de traducción: conservar nombres propios en inglés
+
+Al traducir, se **mantienen en inglés** los nombres comerciales de productos y los términos de
+arquitectura, porque así aparecen en el examen real y en la documentación oficial. Solo se traduce
+la prosa que los rodea. Ejemplos de lo que se deja en inglés:
+
+- Productos/servicios: `Azure Active Directory (Azure AD)`, `Multi-Factor Authentication`,
+  `Conditional Access`, `Azure Management Groups`, `App Engine`, `Compute Engine`, `BigQuery`…
+- Arquitectura/recursos: `resource group`, `subnet`, `load balancer`, `backend pool`, `peering`,
+  `tags`, `Site-to-Site VPN`, `Global Administrators`…
+- Comandos, cmdlets, nombres de recursos y código: **verbatim** (`az vm create`, `New-AzVM`, `RG1`…).
+
+### Generar las traducciones
+
+Son texto, no código: se escriben directamente en `public/data/<cert>.es.json`. Por volumen
+(~1.969 preguntas entre todas las certs) se traduce **por partes / por certificación**. No hace
+falta correr ningún script ni `convert` después: la app lee el `.es.json` directamente.
+
+> Si en el futuro quisieras traducir todo de forma desatendida, lo escalable es un script que llame
+> a la API de Claude con la "regla de traducción" de arriba como instrucción; requiere
+> `ANTHROPIC_API_KEY` y tiene costo por uso.
 
 ---
 
