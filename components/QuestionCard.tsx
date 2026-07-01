@@ -19,6 +19,20 @@ export default function QuestionCard({ question, heading }: Props) {
           {heading}
         </p>
       )}
+      {(question.topic || question.topicSecondary) && (
+        <div className="mb-3 flex flex-wrap items-center gap-2">
+          {question.topic && (
+            <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700 dark:bg-blue-900/60 dark:text-blue-200">
+              {question.topic}
+            </span>
+          )}
+          {question.topicSecondary && (
+            <span className="rounded-full border border-slate-300 px-2.5 py-0.5 text-xs font-medium text-slate-500 dark:border-slate-600 dark:text-slate-400">
+              {question.topicSecondary}
+            </span>
+          )}
+        </div>
+      )}
       <div className="space-y-2.5">
         {lines.map((line, i) => (
           <p
