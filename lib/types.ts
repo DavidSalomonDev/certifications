@@ -19,8 +19,10 @@ export interface Question {
    */
   images: string[];
   type: QuestionType;
-  /** Tema/categoría. Reservado para clasificación futura. */
+  /** Producto/servicio principal de la pregunta (p. ej. "Azure Virtual Machines"). */
   topic: string | null;
+  /** Producto/servicio secundario relacionado, si la pregunta abarca dos. */
+  topicSecondary: string | null;
 }
 
 /** Una certificación registrada en public/data/certifications.json */

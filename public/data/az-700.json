@@ -19,7 +19,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-2",
@@ -40,7 +41,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-3",
@@ -60,7 +62,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-4",
@@ -81,7 +84,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-5",
@@ -103,7 +107,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-6",
@@ -119,7 +124,8 @@
       "/images/az-700/q6-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-7",
@@ -142,7 +148,8 @@
       "/images/az-700/q7-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-8",
@@ -160,7 +167,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-9",
@@ -176,7 +184,8 @@
       "/images/az-700/q9-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-10",
@@ -195,7 +204,8 @@
       "/images/az-700/q10-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-11",
@@ -211,7 +221,8 @@
       "/images/az-700/q11-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-12",
@@ -228,7 +239,8 @@
       "/images/az-700/q12-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-13",
@@ -250,7 +262,8 @@
       "/images/az-700/q13-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-14",
@@ -264,7 +277,8 @@
       "/images/az-700/q14-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-15",
@@ -278,7 +292,8 @@
       "/images/az-700/q15-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-16",
@@ -298,7 +313,8 @@
       "/images/az-700/q16-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-17",
@@ -318,7 +334,8 @@
       "/images/az-700/q17-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-18",
@@ -336,7 +353,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-19",
@@ -356,7 +374,8 @@
       "/images/az-700/q19-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-20",
@@ -370,7 +389,8 @@
       "/images/az-700/q20-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-21",
@@ -383,7 +403,8 @@
       "/images/az-700/q21-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-22",
@@ -396,7 +417,8 @@
       "/images/az-700/q22-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-23",
@@ -410,7 +432,8 @@
       "/images/az-700/q23-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-24",
@@ -424,7 +447,8 @@
       "/images/az-700/q24-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-25",
@@ -444,7 +468,8 @@
       "/images/az-700/q25-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-26",
@@ -467,7 +492,8 @@
       "/images/az-700/q26-2.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-27",
@@ -481,7 +507,8 @@
       "/images/az-700/q27-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-28",
@@ -498,7 +525,8 @@
       "/images/az-700/q28-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-29",
@@ -516,7 +544,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual WAN"
   },
   {
     "id": "az-700-30",
@@ -537,7 +566,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-31",
@@ -552,7 +582,8 @@
       "/images/az-700/q31-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-32",
@@ -571,7 +602,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-33",
@@ -586,7 +618,8 @@
       "/images/az-700/q33-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-34",
@@ -608,7 +641,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-35",
@@ -622,7 +656,8 @@
       "/images/az-700/q35-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-36",
@@ -635,7 +670,8 @@
       "/images/az-700/q36-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": null
   },
   {
     "id": "az-700-37",
@@ -649,7 +685,8 @@
       "/images/az-700/q37-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-38",
@@ -663,7 +700,8 @@
       "/images/az-700/q38-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-39",
@@ -683,7 +721,8 @@
       "/images/az-700/q39-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-40",
@@ -696,7 +735,8 @@
       "/images/az-700/q40-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-41",
@@ -710,7 +750,8 @@
       "/images/az-700/q41-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-42",
@@ -723,7 +764,8 @@
       "/images/az-700/q42-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Firewall"
   },
   {
     "id": "az-700-43",
@@ -738,7 +780,8 @@
       "/images/az-700/q43-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Backup"
   },
   {
     "id": "az-700-44",
@@ -752,7 +795,8 @@
       "/images/az-700/q44-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-45",
@@ -765,7 +809,8 @@
       "/images/az-700/q45-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-46",
@@ -785,7 +830,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-47",
@@ -806,7 +852,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-48",
@@ -822,7 +869,8 @@
       "/images/az-700/q48-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-49",
@@ -844,7 +892,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-50",
@@ -859,7 +908,8 @@
       "/images/az-700/q50-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-51",
@@ -881,7 +931,8 @@
       "/images/az-700/q51-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-52",
@@ -898,7 +949,8 @@
       "/images/az-700/q52-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-53",
@@ -919,7 +971,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-54",
@@ -933,7 +986,8 @@
       "/images/az-700/q54-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-55",
@@ -954,7 +1008,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-56",
@@ -967,7 +1022,8 @@
       "/images/az-700/q56-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-57",
@@ -983,7 +1039,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-58",
@@ -999,7 +1056,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-59",
@@ -1014,7 +1072,8 @@
       "/images/az-700/q59-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-60",
@@ -1039,7 +1098,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-61",
@@ -1057,7 +1117,8 @@
       "/images/az-700/q61-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private DNS",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-62",
@@ -1076,7 +1137,8 @@
       "/images/az-700/q62-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-63",
@@ -1090,7 +1152,8 @@
       "/images/az-700/q63-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-64",
@@ -1106,7 +1169,8 @@
       "/images/az-700/q64-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-65",
@@ -1122,7 +1186,8 @@
       "/images/az-700/q65-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-66",
@@ -1136,7 +1201,8 @@
       "/images/az-700/q66-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual WAN"
   },
   {
     "id": "az-700-67",
@@ -1150,7 +1216,8 @@
       "/images/az-700/q67-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-68",
@@ -1169,7 +1236,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-69",
@@ -1193,7 +1261,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Firewall"
   },
   {
     "id": "az-700-70",
@@ -1215,7 +1284,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-71",
@@ -1232,7 +1302,8 @@
       "/images/az-700/q71-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": null
   },
   {
     "id": "az-700-72",
@@ -1249,7 +1320,8 @@
       "/images/az-700/q72-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private DNS",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-73",
@@ -1263,7 +1335,8 @@
       "/images/az-700/q73-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-74",
@@ -1280,7 +1353,8 @@
       "/images/az-700/q74-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-75",
@@ -1299,7 +1373,8 @@
       "/images/az-700/q75-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-76",
@@ -1321,7 +1396,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual WAN"
   },
   {
     "id": "az-700-77",
@@ -1339,7 +1415,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-78",
@@ -1355,7 +1432,8 @@
       "/images/az-700/q78-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": null
   },
   {
     "id": "az-700-79",
@@ -1375,7 +1453,8 @@
       "/images/az-700/q79-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-80",
@@ -1395,7 +1474,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-81",
@@ -1418,7 +1498,8 @@
       "/images/az-700/q81-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-82",
@@ -1433,7 +1514,8 @@
       "/images/az-700/q82-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-83",
@@ -1455,7 +1537,8 @@
       "/images/az-700/q83-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-84",
@@ -1469,7 +1552,8 @@
       "/images/az-700/q84-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-85",
@@ -1491,7 +1575,8 @@
       "/images/az-700/q85-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-86",
@@ -1508,7 +1593,8 @@
       "/images/az-700/q86-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private DNS",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-87",
@@ -1530,7 +1616,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual WAN"
   },
   {
     "id": "az-700-88",
@@ -1553,7 +1640,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-89",
@@ -1571,7 +1659,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Route Server"
   },
   {
     "id": "az-700-90",
@@ -1588,7 +1677,8 @@
       "/images/az-700/q90-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-91",
@@ -1601,7 +1691,8 @@
       "/images/az-700/q91-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-92",
@@ -1614,7 +1705,8 @@
       "/images/az-700/q92-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-93",
@@ -1636,7 +1728,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-94",
@@ -1649,7 +1742,8 @@
       "/images/az-700/q94-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-95",
@@ -1662,7 +1756,8 @@
       "/images/az-700/q95-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-96",
@@ -1675,7 +1770,8 @@
       "/images/az-700/q96-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-97",
@@ -1688,7 +1784,8 @@
       "/images/az-700/q97-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-98",
@@ -1701,7 +1798,8 @@
       "/images/az-700/q98-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Storage",
+    "topicSecondary": null
   },
   {
     "id": "az-700-99",
@@ -1714,7 +1812,8 @@
       "/images/az-700/q99-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-100",
@@ -1727,7 +1826,8 @@
       "/images/az-700/q100-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-101",
@@ -1740,7 +1840,8 @@
       "/images/az-700/q101-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-102",
@@ -1753,7 +1854,8 @@
       "/images/az-700/q102-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-103",
@@ -1766,7 +1868,8 @@
       "/images/az-700/q103-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Storage",
+    "topicSecondary": null
   },
   {
     "id": "az-700-104",
@@ -1781,7 +1884,8 @@
       "/images/az-700/q104-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-105",
@@ -1796,7 +1900,8 @@
       "/images/az-700/q105-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-106",
@@ -1810,7 +1915,8 @@
       "/images/az-700/q106-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-107",
@@ -1831,7 +1937,8 @@
       "/images/az-700/q107-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-108",
@@ -1845,7 +1952,8 @@
       "/images/az-700/q108-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-109",
@@ -1859,7 +1967,8 @@
       "/images/az-700/q109-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": null
   },
   {
     "id": "az-700-110",
@@ -1876,7 +1985,8 @@
       "/images/az-700/q110-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-111",
@@ -1898,7 +2008,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-112",
@@ -1918,7 +2029,8 @@
       "/images/az-700/q112-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-113",
@@ -1940,7 +2052,8 @@
       "/images/az-700/q113-10.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-114",
@@ -1961,7 +2074,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-115",
@@ -1979,7 +2093,8 @@
       "/images/az-700/q115-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Storage"
   },
   {
     "id": "az-700-116",
@@ -1997,7 +2112,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-117",
@@ -2017,7 +2133,8 @@
       "/images/az-700/q117-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-118",
@@ -2038,7 +2155,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-119",
@@ -2052,7 +2170,8 @@
       "/images/az-700/q119-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-120",
@@ -2075,7 +2194,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-121",
@@ -2089,7 +2209,8 @@
       "/images/az-700/q121-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-122",
@@ -2111,7 +2232,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-123",
@@ -2126,7 +2248,8 @@
       "/images/az-700/q123-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-124",
@@ -2141,7 +2264,8 @@
       "/images/az-700/q124-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-125",
@@ -2157,7 +2281,8 @@
       "/images/az-700/q125-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-126",
@@ -2179,7 +2304,8 @@
       "/images/az-700/q126-10.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-127",
@@ -2192,7 +2318,8 @@
       "/images/az-700/q127-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-128",
@@ -2205,7 +2332,8 @@
       "/images/az-700/q128-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": null
   },
   {
     "id": "az-700-129",
@@ -2218,7 +2346,8 @@
       "/images/az-700/q129-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-130",
@@ -2231,7 +2360,8 @@
       "/images/az-700/q130-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-131",
@@ -2249,7 +2379,8 @@
       "/images/az-700/q131-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-132",
@@ -2271,7 +2402,8 @@
       "/images/az-700/q132-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-133",
@@ -2284,7 +2416,8 @@
       "/images/az-700/q133-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-134",
@@ -2307,7 +2440,8 @@
       "/images/az-700/q134-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-135",
@@ -2321,7 +2455,8 @@
       "/images/az-700/q135-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-136",
@@ -2335,7 +2470,8 @@
       "/images/az-700/q136-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-137",
@@ -2353,7 +2489,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Storage"
   },
   {
     "id": "az-700-138",
@@ -2366,7 +2503,8 @@
       "/images/az-700/q138-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-139",
@@ -2381,7 +2519,8 @@
       "/images/az-700/q139-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-140",
@@ -2395,7 +2534,8 @@
       "/images/az-700/q140-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-141",
@@ -2409,7 +2549,8 @@
       "/images/az-700/q141-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-142",
@@ -2422,7 +2563,8 @@
       "/images/az-700/q142-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Network Watcher"
   },
   {
     "id": "az-700-143",
@@ -2442,7 +2584,8 @@
       "/images/az-700/q143-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure DDoS Protection",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-144",
@@ -2456,7 +2599,8 @@
       "/images/az-700/q144-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Bastion",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-145",
@@ -2477,7 +2621,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": null
   },
   {
     "id": "az-700-146",
@@ -2490,7 +2635,8 @@
       "/images/az-700/q146-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-147",
@@ -2503,7 +2649,8 @@
       "/images/az-700/q147-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-148",
@@ -2523,7 +2670,8 @@
       "/images/az-700/q148-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-149",
@@ -2536,7 +2684,8 @@
       "/images/az-700/q149-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Bastion",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-150",
@@ -2552,7 +2701,8 @@
       "/images/az-700/q150-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-151",
@@ -2568,7 +2718,8 @@
       "/images/az-700/q151-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-152",
@@ -2589,7 +2740,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": null
   },
   {
     "id": "az-700-153",
@@ -2607,7 +2759,8 @@
       "/images/az-700/q153-6.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-154",
@@ -2629,7 +2782,8 @@
       "/images/az-700/q154-3.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-155",
@@ -2642,7 +2796,8 @@
       "/images/az-700/q155-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-156",
@@ -2662,7 +2817,8 @@
       "/images/az-700/q156-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-157",
@@ -2679,7 +2835,8 @@
       "/images/az-700/q157-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-158",
@@ -2697,7 +2854,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-159",
@@ -2717,7 +2875,8 @@
       "/images/az-700/q159-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure DDoS Protection",
+    "topicSecondary": null
   },
   {
     "id": "az-700-160",
@@ -2731,7 +2890,8 @@
       "/images/az-700/q160-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Network Watcher"
   },
   {
     "id": "az-700-161",
@@ -2745,7 +2905,8 @@
       "/images/az-700/q161-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Bastion",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-162",
@@ -2759,7 +2920,8 @@
       "/images/az-700/q162-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Bastion",
+    "topicSecondary": null
   },
   {
     "id": "az-700-163",
@@ -2774,7 +2936,8 @@
       "/images/az-700/q163-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-164",
@@ -2788,7 +2951,8 @@
       "/images/az-700/q164-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-165",
@@ -2802,7 +2966,8 @@
       "/images/az-700/q165-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-166",
@@ -2822,7 +2987,8 @@
       "/images/az-700/q166-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": null
   },
   {
     "id": "az-700-167",
@@ -2840,7 +3006,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-168",
@@ -2853,7 +3020,8 @@
       "/images/az-700/q168-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Policy"
   },
   {
     "id": "az-700-169",
@@ -2873,7 +3041,8 @@
       "/images/az-700/q169-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-170",
@@ -2887,7 +3056,8 @@
       "/images/az-700/q170-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-171",
@@ -2900,7 +3070,8 @@
       "/images/az-700/q171-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-172",
@@ -2920,7 +3091,8 @@
       "/images/az-700/q172-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-173",
@@ -2940,7 +3112,8 @@
       "/images/az-700/q173-6.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-174",
@@ -2961,7 +3134,8 @@
       "/images/az-700/q174-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-175",
@@ -2989,7 +3163,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Virtual Machine Scale Sets"
   },
   {
     "id": "az-700-176",
@@ -3008,7 +3183,8 @@
       "/images/az-700/q176-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": null
   },
   {
     "id": "az-700-177",
@@ -3028,7 +3204,8 @@
       "/images/az-700/q177-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-178",
@@ -3045,7 +3222,8 @@
       "/images/az-700/q178-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-179",
@@ -3065,7 +3243,8 @@
       "/images/az-700/q179-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-180",
@@ -3083,7 +3262,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-181",
@@ -3104,7 +3284,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-182",
@@ -3121,7 +3302,8 @@
       "/images/az-700/q182-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-183",
@@ -3139,7 +3321,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-184",
@@ -3156,7 +3339,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Azure Monitor"
   },
   {
     "id": "az-700-185",
@@ -3178,7 +3362,8 @@
       "/images/az-700/q185-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": null
   },
   {
     "id": "az-700-186",
@@ -3198,7 +3383,8 @@
       "/images/az-700/q186-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure NAT Gateway"
   },
   {
     "id": "az-700-187",
@@ -3219,7 +3405,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-188",
@@ -3240,7 +3427,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-189",
@@ -3263,7 +3451,8 @@
       "/images/az-700/q189-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-190",
@@ -3283,7 +3472,8 @@
       "/images/az-700/q190-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-191",
@@ -3297,7 +3487,8 @@
       "/images/az-700/q191-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": null
   },
   {
     "id": "az-700-192",
@@ -3314,7 +3505,8 @@
       "/images/az-700/q192-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-193",
@@ -3334,7 +3526,8 @@
       "/images/az-700/q193-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-194",
@@ -3358,7 +3551,8 @@
       "/images/az-700/q194-2.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": null
   },
   {
     "id": "az-700-195",
@@ -3380,7 +3574,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-196",
@@ -3406,7 +3601,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-197",
@@ -3424,7 +3620,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-198",
@@ -3447,7 +3644,8 @@
       "/images/az-700/q198-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-199",
@@ -3464,7 +3662,8 @@
       "/images/az-700/q199-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-200",
@@ -3483,7 +3682,8 @@
       "/images/az-700/q200-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-201",
@@ -3505,7 +3705,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-202",
@@ -3523,7 +3724,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-203",
@@ -3543,7 +3745,8 @@
       "/images/az-700/q203-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": null
   },
   {
     "id": "az-700-204",
@@ -3565,7 +3768,8 @@
       "/images/az-700/q204-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-205",
@@ -3583,7 +3787,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Route Server"
   },
   {
     "id": "az-700-206",
@@ -3599,7 +3804,8 @@
       "/images/az-700/q206-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-207",
@@ -3618,7 +3824,8 @@
       "/images/az-700/q207-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure Storage"
   },
   {
     "id": "az-700-208",
@@ -3636,7 +3843,8 @@
       "/images/az-700/q208-6.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-209",
@@ -3656,7 +3864,8 @@
       "/images/az-700/q209-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure App Service",
+    "topicSecondary": null
   },
   {
     "id": "az-700-210",
@@ -3669,7 +3878,8 @@
       "/images/az-700/q210-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-211",
@@ -3691,7 +3901,8 @@
       "/images/az-700/q211-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-212",
@@ -3713,7 +3924,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-213",
@@ -3733,7 +3945,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-214",
@@ -3748,7 +3961,8 @@
       "/images/az-700/q214-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-215",
@@ -3763,7 +3977,8 @@
       "/images/az-700/q215-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-216",
@@ -3785,7 +4000,8 @@
       "/images/az-700/q216-1.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-217",
@@ -3802,7 +4018,8 @@
       "/images/az-700/q217-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-218",
@@ -3820,7 +4037,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-219",
@@ -3841,7 +4059,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-220",
@@ -3863,7 +4082,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-221",
@@ -3885,7 +4105,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-222",
@@ -3901,7 +4122,8 @@
       "/images/az-700/q222-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-223",
@@ -3915,7 +4137,8 @@
       "/images/az-700/q223-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-224",
@@ -3936,7 +4159,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-225",
@@ -3954,7 +4178,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-226",
@@ -3968,7 +4193,8 @@
       "/images/az-700/q226-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-227",
@@ -3982,7 +4208,8 @@
       "/images/az-700/q227-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-228",
@@ -4004,7 +4231,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-229",
@@ -4017,7 +4245,8 @@
       "/images/az-700/q229-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Traffic Manager",
+    "topicSecondary": null
   },
   {
     "id": "az-700-230",
@@ -4030,7 +4259,8 @@
       "/images/az-700/q230-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-231",
@@ -4044,7 +4274,8 @@
       "/images/az-700/q231-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-232",
@@ -4058,7 +4289,8 @@
       "/images/az-700/q232-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-233",
@@ -4076,7 +4308,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": null
   },
   {
     "id": "az-700-234",
@@ -4096,7 +4329,8 @@
       "/images/az-700/q234-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-235",
@@ -4111,7 +4345,8 @@
       "/images/az-700/q235-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-236",
@@ -4131,7 +4366,8 @@
       "/images/az-700/q236-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": null
   },
   {
     "id": "az-700-237",
@@ -4145,7 +4381,8 @@
       "/images/az-700/q237-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machine Scale Sets"
   },
   {
     "id": "az-700-238",
@@ -4159,7 +4396,8 @@
       "/images/az-700/q238-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-239",
@@ -4177,7 +4415,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-240",
@@ -4191,7 +4430,8 @@
       "/images/az-700/q240-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-241",
@@ -4205,7 +4445,8 @@
       "/images/az-700/q241-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-242",
@@ -4219,7 +4460,8 @@
       "/images/az-700/q242-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-243",
@@ -4233,7 +4475,8 @@
       "/images/az-700/q243-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-244",
@@ -4247,7 +4490,8 @@
       "/images/az-700/q244-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-245",
@@ -4264,7 +4508,8 @@
       "/images/az-700/q245-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-246",
@@ -4277,7 +4522,8 @@
       "/images/az-700/q246-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-247",
@@ -4298,7 +4544,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-248",
@@ -4316,7 +4563,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-249",
@@ -4336,7 +4584,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-250",
@@ -4359,7 +4608,8 @@
       "/images/az-700/q250-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-251",
@@ -4377,7 +4627,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-252",
@@ -4397,7 +4648,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": "Azure Storage"
   },
   {
     "id": "az-700-253",
@@ -4414,7 +4666,8 @@
       "/images/az-700/q253-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-254",
@@ -4429,7 +4682,8 @@
       "/images/az-700/q254-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-255",
@@ -4452,7 +4706,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-256",
@@ -4474,7 +4729,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-257",
@@ -4492,7 +4748,8 @@
       "/images/az-700/q257-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-258",
@@ -4510,7 +4767,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-259",
@@ -4532,7 +4790,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-260",
@@ -4554,7 +4813,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-261",
@@ -4570,7 +4830,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-262",
@@ -4590,7 +4851,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-263",
@@ -4606,7 +4868,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-264",
@@ -4627,7 +4890,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-265",
@@ -4644,7 +4908,8 @@
       "/images/az-700/q265-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-266",
@@ -4661,7 +4926,8 @@
       "/images/az-700/q266-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-267",
@@ -4685,7 +4951,8 @@
       "/images/az-700/q267-2.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-268",
@@ -4707,7 +4974,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": null
   },
   {
     "id": "az-700-269",
@@ -4725,7 +4993,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Storage"
   },
   {
     "id": "az-700-270",
@@ -4747,7 +5016,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-271",
@@ -4767,7 +5037,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-272",
@@ -4781,7 +5052,8 @@
       "/images/az-700/q272-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-273",
@@ -4804,7 +5076,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-274",
@@ -4817,7 +5090,8 @@
       "/images/az-700/q274-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-275",
@@ -4830,7 +5104,8 @@
       "/images/az-700/q275-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-276",
@@ -4843,7 +5118,8 @@
       "/images/az-700/q276-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Log Analytics",
+    "topicSecondary": null
   },
   {
     "id": "az-700-277",
@@ -4865,7 +5141,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-278",
@@ -4883,7 +5160,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-279",
@@ -4905,7 +5183,8 @@
       "/images/az-700/q279-1.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Key Vault"
   },
   {
     "id": "az-700-280",
@@ -4927,7 +5206,8 @@
       "/images/az-700/q280-10.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-281",
@@ -4942,7 +5222,8 @@
       "/images/az-700/q281-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-282",
@@ -4957,7 +5238,8 @@
       "/images/az-700/q282-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-283",
@@ -4971,7 +5253,8 @@
       "/images/az-700/q283-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-284",
@@ -4986,7 +5269,8 @@
       "/images/az-700/q284-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-285",
@@ -5004,7 +5288,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-286",
@@ -5020,7 +5305,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-287",
@@ -5036,7 +5322,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-288",
@@ -5055,7 +5342,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-289",
@@ -5069,7 +5357,8 @@
       "/images/az-700/q289-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-290",
@@ -5082,7 +5371,8 @@
       "/images/az-700/q290-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": null
   },
   {
     "id": "az-700-291",
@@ -5095,7 +5385,8 @@
       "/images/az-700/q291-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Storage",
+    "topicSecondary": null
   },
   {
     "id": "az-700-292",
@@ -5108,7 +5399,8 @@
       "/images/az-700/q292-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": null
   },
   {
     "id": "az-700-293",
@@ -5121,7 +5413,8 @@
       "/images/az-700/q293-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": null
   },
   {
     "id": "az-700-294",
@@ -5141,7 +5434,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-295",
@@ -5159,7 +5453,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure Firewall"
   },
   {
     "id": "az-700-296",
@@ -5179,7 +5474,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Azure NAT Gateway"
   },
   {
     "id": "az-700-297",
@@ -5197,7 +5493,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-298",
@@ -5217,7 +5514,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual WAN",
+    "topicSecondary": "Web Application Firewall"
   },
   {
     "id": "az-700-299",
@@ -5241,7 +5539,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-300",
@@ -5256,7 +5555,8 @@
       "/images/az-700/q300-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Firewall"
   },
   {
     "id": "az-700-301",
@@ -5276,7 +5576,8 @@
       "/images/az-700/q301-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": null
   },
   {
     "id": "az-700-302",
@@ -5294,7 +5595,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-303",
@@ -5307,7 +5609,8 @@
       "/images/az-700/q303-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-304",
@@ -5328,7 +5631,8 @@
       "/images/az-700/q304-2.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-305",
@@ -5341,7 +5645,8 @@
       "/images/az-700/q305-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-306",
@@ -5356,7 +5661,8 @@
       "/images/az-700/q306-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-307",
@@ -5376,7 +5682,8 @@
       "/images/az-700/q307-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-308",
@@ -5399,7 +5706,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-309",
@@ -5412,7 +5720,8 @@
       "/images/az-700/q309-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-310",
@@ -5430,7 +5739,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-311",
@@ -5443,7 +5753,8 @@
       "/images/az-700/q311-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-312",
@@ -5456,7 +5767,8 @@
       "/images/az-700/q312-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-313",
@@ -5469,7 +5781,8 @@
       "/images/az-700/q313-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-314",
@@ -5493,7 +5806,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-315",
@@ -5513,7 +5827,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-316",
@@ -5535,7 +5850,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-317",
@@ -5549,7 +5865,8 @@
       "/images/az-700/q317-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Watcher",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-318",
@@ -5564,7 +5881,8 @@
       "/images/az-700/q318-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": null
   },
   {
     "id": "az-700-319",
@@ -5586,7 +5904,8 @@
       "/images/az-700/q319-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-320",
@@ -5607,7 +5926,8 @@
       "/images/az-700/q320-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-321",
@@ -5623,7 +5943,8 @@
       "/images/az-700/q321-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-322",
@@ -5644,7 +5965,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-323",
@@ -5662,7 +5984,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-324",
@@ -5685,7 +6008,8 @@
       "/images/az-700/q324-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-325",
@@ -5702,7 +6026,8 @@
       "/images/az-700/q325-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-326",
@@ -5719,7 +6044,8 @@
       "/images/az-700/q326-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-327",
@@ -5742,7 +6068,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Private DNS",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-328",
@@ -5764,7 +6091,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Front Door"
   },
   {
     "id": "az-700-329",
@@ -5782,7 +6110,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-330",
@@ -5802,7 +6131,8 @@
       "/images/az-700/q330-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-331",
@@ -5824,7 +6154,8 @@
       "/images/az-700/q331-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Storage",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-332",
@@ -5837,7 +6168,8 @@
       "/images/az-700/q332-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Blob Storage",
+    "topicSecondary": null
   },
   {
     "id": "az-700-333",
@@ -5850,7 +6182,8 @@
       "/images/az-700/q333-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-334",
@@ -5863,7 +6196,8 @@
       "/images/az-700/q334-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Storage",
+    "topicSecondary": null
   },
   {
     "id": "az-700-335",
@@ -5880,7 +6214,8 @@
       "/images/az-700/q335-5.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-336",
@@ -5902,7 +6237,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure App Service"
   },
   {
     "id": "az-700-337",
@@ -5919,7 +6255,8 @@
       "/images/az-700/q337-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": null
   },
   {
     "id": "az-700-338",
@@ -5939,7 +6276,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-339",
@@ -5960,7 +6298,8 @@
       "/images/az-700/q339-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Web Application Firewall",
+    "topicSecondary": "Azure Application Gateway"
   },
   {
     "id": "az-700-340",
@@ -5983,7 +6322,8 @@
       "/images/az-700/q340-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Application Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-341",
@@ -5997,7 +6337,8 @@
       "/images/az-700/q341-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Front Door",
+    "topicSecondary": "Azure Load Balancer"
   },
   {
     "id": "az-700-342",
@@ -6021,7 +6362,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-343",
@@ -6036,7 +6378,8 @@
       "/images/az-700/q343-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": null
   },
   {
     "id": "az-700-344",
@@ -6058,7 +6401,8 @@
       "/images/az-700/q344-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure DNS"
   },
   {
     "id": "az-700-345",
@@ -6079,7 +6423,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-346",
@@ -6100,7 +6445,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-347",
@@ -6115,7 +6461,8 @@
       "/images/az-700/q347-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-348",
@@ -6136,7 +6483,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Firewall",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-349",
@@ -6150,7 +6498,8 @@
       "/images/az-700/q349-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-350",
@@ -6168,7 +6517,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-351",
@@ -6188,7 +6538,8 @@
       "/images/az-700/q351-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-352",
@@ -6209,7 +6560,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-353",
@@ -6224,7 +6576,8 @@
       "/images/az-700/q353-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-354",
@@ -6244,7 +6597,8 @@
       "/images/az-700/q354-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-355",
@@ -6264,7 +6618,8 @@
       "/images/az-700/q355-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-356",
@@ -6279,7 +6634,8 @@
       "/images/az-700/q356-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": null
   },
   {
     "id": "az-700-357",
@@ -6297,7 +6653,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-358",
@@ -6311,7 +6668,8 @@
       "/images/az-700/q358-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-359",
@@ -6331,7 +6689,8 @@
       "/images/az-700/q359-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-360",
@@ -6351,7 +6710,8 @@
       "/images/az-700/q360-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure DDoS Protection",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-361",
@@ -6373,7 +6733,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-362",
@@ -6390,7 +6751,8 @@
       "/images/az-700/q362-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-363",
@@ -6406,7 +6768,8 @@
       "/images/az-700/q363-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Private Link"
   },
   {
     "id": "az-700-364",
@@ -6420,7 +6783,8 @@
       "/images/az-700/q364-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Microsoft Entra ID"
   },
   {
     "id": "az-700-365",
@@ -6434,7 +6798,8 @@
       "/images/az-700/q365-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-366",
@@ -6449,7 +6814,8 @@
       "/images/az-700/q366-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-367",
@@ -6463,7 +6829,8 @@
       "/images/az-700/q367-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Load Balancer",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-368",
@@ -6478,7 +6845,8 @@
       "/images/az-700/q368-3.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure NAT Gateway",
+    "topicSecondary": "Network Security Group"
   },
   {
     "id": "az-700-369",
@@ -6492,7 +6860,8 @@
       "/images/az-700/q369-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-370",
@@ -6505,7 +6874,8 @@
       "/images/az-700/q370-1.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": "Azure Virtual Network"
   },
   {
     "id": "az-700-371",
@@ -6521,7 +6891,8 @@
       "/images/az-700/q371-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-372",
@@ -6542,7 +6913,8 @@
       "/images/az-700/q372-2.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-373",
@@ -6563,7 +6935,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Private Link",
+    "topicSecondary": null
   },
   {
     "id": "az-700-374",
@@ -6580,7 +6953,8 @@
       "/images/az-700/q374-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure DNS",
+    "topicSecondary": null
   },
   {
     "id": "az-700-375",
@@ -6602,7 +6976,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-376",
@@ -6623,7 +6998,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-377",
@@ -6640,7 +7016,8 @@
       "/images/az-700/q377-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": null
   },
   {
     "id": "az-700-378",
@@ -6663,7 +7040,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-379",
@@ -6679,7 +7057,8 @@
       "/images/az-700/q379-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": null
   },
   {
     "id": "az-700-380",
@@ -6701,7 +7080,8 @@
       "/images/az-700/q380-10.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure VPN Gateway",
+    "topicSecondary": "Azure Private DNS"
   },
   {
     "id": "az-700-381",
@@ -6715,7 +7095,8 @@
       "/images/az-700/q381-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Machines",
+    "topicSecondary": null
   },
   {
     "id": "az-700-382",
@@ -6736,7 +7117,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-383",
@@ -6758,7 +7140,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-384",
@@ -6775,7 +7158,8 @@
       "/images/az-700/q384-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-385",
@@ -6791,7 +7175,8 @@
       "/images/az-700/q385-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": "Azure Virtual Machines"
   },
   {
     "id": "az-700-386",
@@ -6805,7 +7190,8 @@
       "/images/az-700/q386-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure Virtual Network",
+    "topicSecondary": null
   },
   {
     "id": "az-700-387",
@@ -6821,7 +7207,8 @@
       "/images/az-700/q387-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Azure ExpressRoute",
+    "topicSecondary": "Azure VPN Gateway"
   },
   {
     "id": "az-700-388",
@@ -6838,6 +7225,7 @@
       "/images/az-700/q388-2.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Network Security Group",
+    "topicSecondary": "Azure Virtual Machines"
   }
 ]

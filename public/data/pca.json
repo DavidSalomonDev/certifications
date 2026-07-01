@@ -19,7 +19,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": null
   },
   {
     "id": "pca-2",
@@ -42,7 +43,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-3",
@@ -68,7 +70,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-4",
@@ -88,7 +91,8 @@
       "/images/pca/q4-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-5",
@@ -109,7 +113,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": null
   },
   {
     "id": "pca-6",
@@ -132,7 +137,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-7",
@@ -157,7 +163,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "BigQuery"
   },
   {
     "id": "pca-8",
@@ -179,7 +186,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Solution Architecture",
+    "topicSecondary": null
   },
   {
     "id": "pca-9",
@@ -201,7 +209,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-10",
@@ -224,7 +233,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "BigQuery"
   },
   {
     "id": "pca-11",
@@ -246,7 +256,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": null
   },
   {
     "id": "pca-12",
@@ -268,7 +279,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Dataflow",
+    "topicSecondary": null
   },
   {
     "id": "pca-13",
@@ -290,7 +302,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-14",
@@ -312,7 +325,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-15",
@@ -335,7 +349,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compliance",
+    "topicSecondary": "Security"
   },
   {
     "id": "pca-16",
@@ -357,7 +372,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Bigtable",
+    "topicSecondary": null
   },
   {
     "id": "pca-17",
@@ -379,7 +395,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-18",
@@ -400,7 +417,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Dataproc",
+    "topicSecondary": null
   },
   {
     "id": "pca-19",
@@ -422,7 +440,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-20",
@@ -444,7 +463,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Bigtable",
+    "topicSecondary": null
   },
   {
     "id": "pca-21",
@@ -465,7 +485,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-22",
@@ -490,7 +511,8 @@
       "/images/pca/q22-1.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-23",
@@ -512,7 +534,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Testing",
+    "topicSecondary": null
   },
   {
     "id": "pca-24",
@@ -533,7 +556,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-25",
@@ -555,7 +579,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-26",
@@ -578,7 +603,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-27",
@@ -599,7 +625,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Interconnect",
+    "topicSecondary": null
   },
   {
     "id": "pca-28",
@@ -621,7 +648,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-29",
@@ -643,7 +671,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Secret Manager",
+    "topicSecondary": null
   },
   {
     "id": "pca-30",
@@ -667,7 +696,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Deployment Manager"
   },
   {
     "id": "pca-31",
@@ -690,7 +720,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-32",
@@ -711,7 +742,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-33",
@@ -733,7 +765,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": null
   },
   {
     "id": "pca-34",
@@ -760,7 +793,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-35",
@@ -783,7 +817,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-36",
@@ -805,7 +840,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-37",
@@ -827,7 +863,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Resource Manager"
   },
   {
     "id": "pca-38",
@@ -846,7 +883,8 @@
       "/images/pca/q38-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-39",
@@ -868,7 +906,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Security",
+    "topicSecondary": null
   },
   {
     "id": "pca-40",
@@ -890,7 +929,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": "Cloud Interconnect"
   },
   {
     "id": "pca-41",
@@ -911,7 +951,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Bigtable",
+    "topicSecondary": null
   },
   {
     "id": "pca-42",
@@ -932,7 +973,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SDK",
+    "topicSecondary": null
   },
   {
     "id": "pca-43",
@@ -955,7 +997,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Interconnect"
   },
   {
     "id": "pca-44",
@@ -977,7 +1020,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Billing",
+    "topicSecondary": null
   },
   {
     "id": "pca-45",
@@ -999,7 +1043,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Source Repositories",
+    "topicSecondary": null
   },
   {
     "id": "pca-46",
@@ -1020,7 +1065,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-47",
@@ -1041,7 +1087,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-48",
@@ -1064,7 +1111,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Dataprep"
   },
   {
     "id": "pca-49",
@@ -1082,7 +1130,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-50",
@@ -1104,7 +1153,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": null
   },
   {
     "id": "pca-51",
@@ -1122,7 +1172,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Firestore"
   },
   {
     "id": "pca-52",
@@ -1143,7 +1194,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-53",
@@ -1166,7 +1218,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud VPN"
   },
   {
     "id": "pca-54",
@@ -1188,7 +1241,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-55",
@@ -1211,7 +1265,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-56",
@@ -1233,7 +1288,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-57",
@@ -1255,7 +1311,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-58",
@@ -1277,7 +1334,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Vertex AI",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-59",
@@ -1299,7 +1357,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compliance",
+    "topicSecondary": null
   },
   {
     "id": "pca-60",
@@ -1321,7 +1380,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-61",
@@ -1345,7 +1405,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud SDK"
   },
   {
     "id": "pca-62",
@@ -1367,7 +1428,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Billing",
+    "topicSecondary": null
   },
   {
     "id": "pca-63",
@@ -1389,7 +1451,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Functions",
+    "topicSecondary": null
   },
   {
     "id": "pca-64",
@@ -1409,7 +1472,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Firestore"
   },
   {
     "id": "pca-65",
@@ -1431,7 +1495,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud KMS"
   },
   {
     "id": "pca-66",
@@ -1453,7 +1518,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-67",
@@ -1477,7 +1543,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-68",
@@ -1498,7 +1565,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-69",
@@ -1520,7 +1588,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-70",
@@ -1538,7 +1607,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-71",
@@ -1561,7 +1631,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-72",
@@ -1582,7 +1653,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-73",
@@ -1605,7 +1677,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-74",
@@ -1627,7 +1700,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-75",
@@ -1649,7 +1723,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-76",
@@ -1672,7 +1747,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Pub/Sub",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-77",
@@ -1693,7 +1769,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-78",
@@ -1711,7 +1788,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-79",
@@ -1733,7 +1811,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-80",
@@ -1756,7 +1835,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": "Cloud Interconnect"
   },
   {
     "id": "pca-81",
@@ -1779,7 +1859,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-82",
@@ -1800,7 +1881,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-83",
@@ -1822,7 +1904,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-84",
@@ -1844,7 +1927,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Deployment Manager"
   },
   {
     "id": "pca-85",
@@ -1866,7 +1950,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-86",
@@ -1890,7 +1975,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-87",
@@ -1911,7 +1997,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-88",
@@ -1934,7 +2021,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud CDN"
   },
   {
     "id": "pca-89",
@@ -1956,7 +2044,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-90",
@@ -1978,7 +2067,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-91",
@@ -2000,7 +2090,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-92",
@@ -2022,7 +2113,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-93",
@@ -2045,7 +2137,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-94",
@@ -2067,7 +2160,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": null
   },
   {
     "id": "pca-95",
@@ -2089,7 +2183,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-96",
@@ -2111,7 +2206,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": "Deployment Manager"
   },
   {
     "id": "pca-97",
@@ -2129,7 +2225,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-98",
@@ -2152,7 +2249,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-99",
@@ -2174,7 +2272,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-100",
@@ -2196,7 +2295,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-101",
@@ -2217,7 +2317,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-102",
@@ -2239,7 +2340,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Pub/Sub",
+    "topicSecondary": "Dataflow"
   },
   {
     "id": "pca-103",
@@ -2261,7 +2363,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-104",
@@ -2284,7 +2387,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-105",
@@ -2306,7 +2410,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Interconnect"
   },
   {
     "id": "pca-106",
@@ -2324,7 +2429,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Run"
   },
   {
     "id": "pca-107",
@@ -2346,7 +2452,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-108",
@@ -2370,7 +2477,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-109",
@@ -2388,7 +2496,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-110",
@@ -2410,7 +2519,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-111",
@@ -2432,7 +2542,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Functions"
   },
   {
     "id": "pca-112",
@@ -2455,7 +2566,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-113",
@@ -2475,7 +2587,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Resource Manager",
+    "topicSecondary": null
   },
   {
     "id": "pca-114",
@@ -2496,7 +2609,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-115",
@@ -2517,7 +2631,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-116",
@@ -2537,7 +2652,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-117",
@@ -2559,7 +2675,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-118",
@@ -2581,7 +2698,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": "Cloud VPN"
   },
   {
     "id": "pca-119",
@@ -2603,7 +2721,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Dataproc"
   },
   {
     "id": "pca-120",
@@ -2623,7 +2742,8 @@
       "/images/pca/q120-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-121",
@@ -2644,7 +2764,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-122",
@@ -2665,7 +2786,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-123",
@@ -2683,7 +2805,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Filestore",
+    "topicSecondary": null
   },
   {
     "id": "pca-124",
@@ -2705,7 +2828,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Traffic Director"
   },
   {
     "id": "pca-125",
@@ -2726,7 +2850,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-126",
@@ -2748,7 +2873,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Build"
   },
   {
     "id": "pca-127",
@@ -2770,7 +2896,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-128",
@@ -2791,7 +2918,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Cloud Bigtable"
   },
   {
     "id": "pca-129",
@@ -2813,7 +2941,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-130",
@@ -2836,7 +2965,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-131",
@@ -2863,7 +2993,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": "Cloud Functions"
   },
   {
     "id": "pca-132",
@@ -2886,7 +3017,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": "Cloud Functions"
   },
   {
     "id": "pca-133",
@@ -2908,7 +3040,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Identity-Aware Proxy"
   },
   {
     "id": "pca-134",
@@ -2931,7 +3064,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Resource Manager",
+    "topicSecondary": null
   },
   {
     "id": "pca-135",
@@ -2953,7 +3087,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-136",
@@ -2971,7 +3106,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-137",
@@ -2993,7 +3129,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "API Management",
+    "topicSecondary": null
   },
   {
     "id": "pca-138",
@@ -3015,7 +3152,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-139",
@@ -3038,7 +3176,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-140",
@@ -3060,7 +3199,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Filestore"
   },
   {
     "id": "pca-141",
@@ -3078,7 +3218,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "CI/CD",
+    "topicSecondary": null
   },
   {
     "id": "pca-142",
@@ -3100,7 +3241,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-143",
@@ -3122,7 +3264,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-144",
@@ -3145,7 +3288,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Resource Manager"
   },
   {
     "id": "pca-145",
@@ -3167,7 +3311,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-146",
@@ -3189,7 +3334,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-147",
@@ -3210,7 +3356,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-148",
@@ -3232,7 +3379,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud KMS"
   },
   {
     "id": "pca-149",
@@ -3255,7 +3403,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Dataproc"
   },
   {
     "id": "pca-150",
@@ -3277,7 +3426,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-151",
@@ -3298,7 +3448,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud VPN"
   },
   {
     "id": "pca-152",
@@ -3321,7 +3472,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-153",
@@ -3346,7 +3498,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Traffic Director"
   },
   {
     "id": "pca-154",
@@ -3368,7 +3521,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-155",
@@ -3390,7 +3544,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-156",
@@ -3411,7 +3566,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud VPN"
   },
   {
     "id": "pca-157",
@@ -3433,7 +3589,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-158",
@@ -3454,7 +3611,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-159",
@@ -3475,7 +3633,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": null
   },
   {
     "id": "pca-160",
@@ -3497,7 +3656,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-161",
@@ -3519,7 +3679,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-162",
@@ -3541,7 +3702,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-163",
@@ -3564,7 +3726,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-164",
@@ -3589,7 +3752,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Bigtable"
   },
   {
     "id": "pca-165",
@@ -3611,7 +3775,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-166",
@@ -3635,7 +3800,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "CI/CD",
+    "topicSecondary": "Security"
   },
   {
     "id": "pca-167",
@@ -3657,7 +3823,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud SDK"
   },
   {
     "id": "pca-168",
@@ -3681,7 +3848,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-169",
@@ -3704,7 +3872,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Google Kubernetes Engine"
   },
   {
     "id": "pca-170",
@@ -3726,7 +3895,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Security",
+    "topicSecondary": null
   },
   {
     "id": "pca-171",
@@ -3749,7 +3919,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-172",
@@ -3771,7 +3942,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-173",
@@ -3794,7 +3966,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-174",
@@ -3817,7 +3990,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Dataflow"
   },
   {
     "id": "pca-175",
@@ -3837,7 +4011,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Resource Manager",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-176",
@@ -3861,7 +4036,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-177",
@@ -3879,7 +4055,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-178",
@@ -3901,7 +4078,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Bigtable",
+    "topicSecondary": "Pub/Sub"
   },
   {
     "id": "pca-179",
@@ -3919,7 +4097,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-180",
@@ -3937,7 +4116,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-181",
@@ -3960,7 +4140,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Functions",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-182",
@@ -3981,7 +4162,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "BigQuery"
   },
   {
     "id": "pca-183",
@@ -4003,7 +4185,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": "Cloud VPN"
   },
   {
     "id": "pca-184",
@@ -4025,7 +4208,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-185",
@@ -4046,7 +4230,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-186",
@@ -4068,7 +4253,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-187",
@@ -4089,7 +4275,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-188",
@@ -4111,7 +4298,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": null
   },
   {
     "id": "pca-189",
@@ -4132,7 +4320,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-190",
@@ -4154,7 +4343,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-191",
@@ -4176,7 +4366,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": null
   },
   {
     "id": "pca-192",
@@ -4198,7 +4389,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-193",
@@ -4220,7 +4412,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-194",
@@ -4242,7 +4435,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-195",
@@ -4262,7 +4456,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": null
   },
   {
     "id": "pca-196",
@@ -4283,7 +4478,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud SDK"
   },
   {
     "id": "pca-197",
@@ -4305,7 +4501,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-198",
@@ -4327,7 +4524,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": null
   },
   {
     "id": "pca-199",
@@ -4347,7 +4545,8 @@
       "/images/pca/q199-1.jpeg"
     ],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-200",
@@ -4368,7 +4567,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-201",
@@ -4386,7 +4586,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-202",
@@ -4404,7 +4605,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-203",
@@ -4424,7 +4626,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": "Cloud CDN"
   },
   {
     "id": "pca-204",
@@ -4442,7 +4645,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-205",
@@ -4460,7 +4664,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Build",
+    "topicSecondary": "Container Registry"
   },
   {
     "id": "pca-206",
@@ -4478,7 +4683,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Build"
   },
   {
     "id": "pca-207",
@@ -4496,7 +4702,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Migration",
+    "topicSecondary": null
   },
   {
     "id": "pca-208",
@@ -4514,7 +4721,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": "BigQuery"
   },
   {
     "id": "pca-209",
@@ -4532,7 +4740,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-210",
@@ -4543,7 +4752,8 @@
     "references": [],
     "images": [],
     "type": "complex",
-    "topic": null
+    "topic": "Vertex AI",
+    "topicSecondary": null
   },
   {
     "id": "pca-211",
@@ -4561,7 +4771,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Apigee",
+    "topicSecondary": null
   },
   {
     "id": "pca-212",
@@ -4579,7 +4790,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Container Registry"
   },
   {
     "id": "pca-213",
@@ -4597,7 +4809,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-214",
@@ -4615,7 +4828,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Resource Manager"
   },
   {
     "id": "pca-215",
@@ -4633,7 +4847,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-216",
@@ -4651,7 +4866,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Spanner"
   },
   {
     "id": "pca-217",
@@ -4669,7 +4885,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-218",
@@ -4691,7 +4908,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": null
   },
   {
     "id": "pca-219",
@@ -4713,7 +4931,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": null
   },
   {
     "id": "pca-220",
@@ -4731,7 +4950,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Firestore"
   },
   {
     "id": "pca-221",
@@ -4754,7 +4974,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Solution Architecture",
+    "topicSecondary": null
   },
   {
     "id": "pca-222",
@@ -4778,7 +4999,8 @@
       "/images/pca/q222-1.jpeg"
     ],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": null
   },
   {
     "id": "pca-223",
@@ -4798,7 +5020,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": null
   },
   {
     "id": "pca-224",
@@ -4820,7 +5043,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": null
   },
   {
     "id": "pca-225",
@@ -4838,7 +5062,8 @@
       "/images/pca/q225-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Cloud Load Balancing",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-226",
@@ -4861,7 +5086,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Functions",
+    "topicSecondary": "Pub/Sub"
   },
   {
     "id": "pca-227",
@@ -4882,7 +5108,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Vertex AI",
+    "topicSecondary": null
   },
   {
     "id": "pca-228",
@@ -4904,7 +5131,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-229",
@@ -4926,7 +5154,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SDK"
   },
   {
     "id": "pca-230",
@@ -4950,7 +5179,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-231",
@@ -4972,7 +5202,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Container Registry"
   },
   {
     "id": "pca-232",
@@ -4992,7 +5223,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Interconnect",
+    "topicSecondary": null
   },
   {
     "id": "pca-233",
@@ -5014,7 +5246,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Interconnect",
+    "topicSecondary": null
   },
   {
     "id": "pca-234",
@@ -5035,7 +5268,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Pub/Sub",
+    "topicSecondary": null
   },
   {
     "id": "pca-235",
@@ -5057,7 +5291,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-236",
@@ -5079,7 +5314,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-237",
@@ -5101,7 +5337,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Testing",
+    "topicSecondary": null
   },
   {
     "id": "pca-238",
@@ -5123,7 +5360,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Testing",
+    "topicSecondary": null
   },
   {
     "id": "pca-239",
@@ -5145,7 +5383,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-240",
@@ -5167,7 +5406,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-241",
@@ -5188,7 +5428,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-242",
@@ -5212,7 +5453,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-243",
@@ -5238,7 +5480,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Dataflow"
   },
   {
     "id": "pca-244",
@@ -5261,7 +5504,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-245",
@@ -5285,7 +5529,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-246",
@@ -5306,7 +5551,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Testing",
+    "topicSecondary": null
   },
   {
     "id": "pca-247",
@@ -5328,7 +5574,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Spanner"
   },
   {
     "id": "pca-248",
@@ -5350,7 +5597,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Bigtable",
+    "topicSecondary": null
   },
   {
     "id": "pca-249",
@@ -5373,7 +5621,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-250",
@@ -5391,7 +5640,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-251",
@@ -5414,7 +5664,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": "Firebase"
   },
   {
     "id": "pca-252",
@@ -5435,7 +5686,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-253",
@@ -5457,7 +5709,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-254",
@@ -5479,7 +5732,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-255",
@@ -5499,7 +5753,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-256",
@@ -5520,7 +5775,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firebase",
+    "topicSecondary": null
   },
   {
     "id": "pca-257",
@@ -5542,7 +5798,8 @@
       "/images/pca/q257-4.jpeg"
     ],
     "type": "complex",
-    "topic": null
+    "topic": "Pub/Sub",
+    "topicSecondary": null
   },
   {
     "id": "pca-258",
@@ -5565,7 +5822,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": "Cloud Endpoints"
   },
   {
     "id": "pca-259",
@@ -5587,7 +5845,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "API Management",
+    "topicSecondary": "Security"
   },
   {
     "id": "pca-260",
@@ -5609,7 +5868,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Pub/Sub",
+    "topicSecondary": null
   },
   {
     "id": "pca-261",
@@ -5631,7 +5891,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-262",
@@ -5654,7 +5915,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Solution Architecture",
+    "topicSecondary": null
   },
   {
     "id": "pca-263",
@@ -5676,7 +5938,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-264",
@@ -5694,7 +5957,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Dataproc"
   },
   {
     "id": "pca-265",
@@ -5715,7 +5979,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-266",
@@ -5740,7 +6005,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Security",
+    "topicSecondary": null
   },
   {
     "id": "pca-267",
@@ -5761,7 +6027,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Dataflow",
+    "topicSecondary": null
   },
   {
     "id": "pca-268",
@@ -5784,7 +6051,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-269",
@@ -5805,7 +6073,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-270",
@@ -5828,7 +6097,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-271",
@@ -5849,7 +6119,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Dataprep"
   },
   {
     "id": "pca-272",
@@ -5872,7 +6143,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Pub/Sub"
   },
   {
     "id": "pca-273",
@@ -5894,7 +6166,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-274",
@@ -5915,7 +6188,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-275",
@@ -5938,7 +6212,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": null
   },
   {
     "id": "pca-276",
@@ -5960,7 +6235,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-277",
@@ -5983,7 +6259,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-278",
@@ -6004,7 +6281,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-279",
@@ -6026,7 +6304,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-280",
@@ -6047,7 +6326,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Source Repositories",
+    "topicSecondary": null
   },
   {
     "id": "pca-281",
@@ -6070,7 +6350,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": null
   },
   {
     "id": "pca-282",
@@ -6088,7 +6369,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-283",
@@ -6111,7 +6393,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-284",
@@ -6133,7 +6416,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": null
   },
   {
     "id": "pca-285",
@@ -6154,7 +6438,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Identity",
+    "topicSecondary": null
   },
   {
     "id": "pca-286",
@@ -6175,7 +6460,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-287",
@@ -6196,7 +6482,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-288",
@@ -6217,7 +6504,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-289",
@@ -6238,7 +6526,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Virtual Private Cloud",
+    "topicSecondary": null
   },
   {
     "id": "pca-290",
@@ -6260,7 +6549,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-291",
@@ -6284,7 +6574,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-292",
@@ -6305,7 +6596,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-293",
@@ -6323,7 +6615,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-294",
@@ -6341,7 +6634,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-295",
@@ -6363,7 +6657,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-296",
@@ -6385,7 +6680,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-297",
@@ -6406,7 +6702,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-298",
@@ -6428,7 +6725,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Disaster Recovery",
+    "topicSecondary": null
   },
   {
     "id": "pca-299",
@@ -6451,7 +6749,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Router",
+    "topicSecondary": null
   },
   {
     "id": "pca-300",
@@ -6474,7 +6773,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-301",
@@ -6495,7 +6795,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-302",
@@ -6518,7 +6819,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": "Cloud Spanner"
   },
   {
     "id": "pca-303",
@@ -6539,7 +6841,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-304",
@@ -6562,7 +6865,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "App Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-305",
@@ -6584,7 +6888,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-306",
@@ -6606,7 +6911,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-307",
@@ -6628,7 +6934,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud VPN",
+    "topicSecondary": "Cloud Router"
   },
   {
     "id": "pca-308",
@@ -6650,7 +6957,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud KMS"
   },
   {
     "id": "pca-309",
@@ -6673,7 +6981,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-310",
@@ -6695,7 +7004,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-311",
@@ -6718,7 +7028,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-312",
@@ -6740,7 +7051,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-313",
@@ -6763,7 +7075,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-314",
@@ -6786,7 +7099,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-315",
@@ -6809,7 +7123,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-316",
@@ -6831,7 +7146,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-317",
@@ -6854,7 +7170,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Testing",
+    "topicSecondary": null
   },
   {
     "id": "pca-318",
@@ -6877,7 +7194,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-319",
@@ -6895,7 +7213,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-320",
@@ -6917,7 +7236,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "BigQuery",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-321",
@@ -6939,7 +7259,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-322",
@@ -6964,7 +7285,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud KMS"
   },
   {
     "id": "pca-323",
@@ -6984,7 +7306,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Virtual Private Cloud"
   },
   {
     "id": "pca-324",
@@ -7008,7 +7331,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Security",
+    "topicSecondary": null
   },
   {
     "id": "pca-325",
@@ -7031,7 +7355,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-326",
@@ -7053,7 +7378,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-327",
@@ -7077,7 +7403,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": "App Engine"
   },
   {
     "id": "pca-328",
@@ -7100,7 +7427,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Functions",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-329",
@@ -7123,7 +7451,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-330",
@@ -7146,7 +7475,8 @@
     ],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Security",
+    "topicSecondary": "Migration"
   },
   {
     "id": "pca-331",
@@ -7169,7 +7499,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Functions",
+    "topicSecondary": "Pub/Sub"
   },
   {
     "id": "pca-332",
@@ -7192,7 +7523,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Build",
+    "topicSecondary": "Container Registry"
   },
   {
     "id": "pca-333",
@@ -7213,7 +7545,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud Interconnect"
   },
   {
     "id": "pca-334",
@@ -7231,7 +7564,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-335",
@@ -7251,7 +7585,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-336",
@@ -7273,7 +7608,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-337",
@@ -7296,7 +7632,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-338",
@@ -7317,7 +7654,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Migration",
+    "topicSecondary": null
   },
   {
     "id": "pca-339",
@@ -7338,7 +7676,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Firestore",
+    "topicSecondary": null
   },
   {
     "id": "pca-340",
@@ -7359,7 +7698,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-341",
@@ -7379,7 +7719,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Firestore"
   },
   {
     "id": "pca-342",
@@ -7397,7 +7738,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": null
   },
   {
     "id": "pca-343",
@@ -7417,7 +7759,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-344",
@@ -7435,7 +7778,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-345",
@@ -7459,7 +7803,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud IAM",
+    "topicSecondary": "Compute Engine"
   },
   {
     "id": "pca-346",
@@ -7482,7 +7827,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-347",
@@ -7505,7 +7851,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Dataproc",
+    "topicSecondary": null
   },
   {
     "id": "pca-348",
@@ -7527,7 +7874,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-349",
@@ -7549,7 +7897,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-350",
@@ -7572,7 +7921,8 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-351",
@@ -7590,7 +7940,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Terraform",
+    "topicSecondary": null
   },
   {
     "id": "pca-352",
@@ -7608,7 +7959,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-353",
@@ -7626,7 +7978,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": "Database Migration Service"
   },
   {
     "id": "pca-354",
@@ -7644,7 +7997,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-355",
@@ -7662,7 +8016,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-356",
@@ -7680,7 +8035,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-357",
@@ -7698,7 +8054,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-358",
@@ -7716,7 +8073,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-359",
@@ -7734,7 +8092,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-360",
@@ -7754,7 +8113,8 @@
     "references": [],
     "images": [],
     "type": "multiple",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-361",
@@ -7772,7 +8132,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Storage Transfer"
   },
   {
     "id": "pca-362",
@@ -7790,7 +8151,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Storage"
   },
   {
     "id": "pca-363",
@@ -7808,7 +8170,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Resource Manager",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-364",
@@ -7826,7 +8189,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-365",
@@ -7844,7 +8208,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Load Balancing"
   },
   {
     "id": "pca-366",
@@ -7862,7 +8227,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-367",
@@ -7880,7 +8246,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-368",
@@ -7898,7 +8265,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": null
   },
   {
     "id": "pca-369",
@@ -7916,7 +8284,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Interconnect",
+    "topicSecondary": null
   },
   {
     "id": "pca-370",
@@ -7934,7 +8303,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Resource Manager"
   },
   {
     "id": "pca-371",
@@ -7952,7 +8322,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Filestore"
   },
   {
     "id": "pca-372",
@@ -7970,7 +8341,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": null
   },
   {
     "id": "pca-373",
@@ -7988,7 +8360,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Storage",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-374",
@@ -8006,7 +8379,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud KMS",
+    "topicSecondary": null
   },
   {
     "id": "pca-375",
@@ -8024,7 +8398,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Logging"
   },
   {
     "id": "pca-376",
@@ -8042,7 +8417,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Build",
+    "topicSecondary": "Container Registry"
   },
   {
     "id": "pca-377",
@@ -8060,7 +8436,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud SQL",
+    "topicSecondary": null
   },
   {
     "id": "pca-378",
@@ -8078,7 +8455,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Compute Engine",
+    "topicSecondary": "Cloud Spanner"
   },
   {
     "id": "pca-379",
@@ -8096,7 +8474,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Build",
+    "topicSecondary": null
   },
   {
     "id": "pca-380",
@@ -8114,7 +8493,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Billing",
+    "topicSecondary": null
   },
   {
     "id": "pca-381",
@@ -8132,7 +8512,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Run",
+    "topicSecondary": "Cloud SQL"
   },
   {
     "id": "pca-382",
@@ -8150,7 +8531,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Build",
+    "topicSecondary": "Cloud IAM"
   },
   {
     "id": "pca-383",
@@ -8168,7 +8550,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Monitoring",
+    "topicSecondary": null
   },
   {
     "id": "pca-384",
@@ -8186,7 +8569,8 @@
     "references": [],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Google Kubernetes Engine",
+    "topicSecondary": "Cloud Monitoring"
   },
   {
     "id": "pca-385",
@@ -8206,6 +8590,7 @@
     ],
     "images": [],
     "type": "single",
-    "topic": null
+    "topic": "Cloud Logging",
+    "topicSecondary": "BigQuery"
   }
 ]
