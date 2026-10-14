@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Question } from "@/lib/types";
-import { loadQuestionsById, getPool } from "@/lib/questions";
+import {
+  loadQuestionsById,
+  getStudyPool,
+  splitComplexImages,
+} from "@/lib/questions";
 import { useLanguage } from "@/lib/language";
 import { loadRandomHistory, saveRandomHistory } from "@/lib/storage";
 import { isCorrect } from "@/lib/quiz";
@@ -11,6 +15,7 @@ import { pickOne } from "@/lib/random";
 import QuestionCard from "./QuestionCard";
 import AnswersList from "./AnswersList";
 import ExplanationBox from "./ExplanationBox";
+import ComplexAnswer, { ComplexBadge } from "./ComplexAnswer";
 
 /** Modo "pregunta random": una pregunta a la vez con feedback inmediato. */
 export default function RandomQuestion({ certId }: { certId: string }) {
@@ -57,7 +62,7 @@ export default function RandomQuestion({ certId }: { certId: string }) {
     (async () => {
       try {
         const all = await loadQuestionsById(certId, lang);
-        const p = getPool(all);
+        const p = getStudyPool(all);
         if (!active) return;
         setPool(p);
         // Al cambiar de idioma mantenemos la misma pregunta (mismo id) con su
@@ -101,6 +106,7 @@ export default function RandomQuestion({ certId }: { certId: string }) {
     );
   }
 
+  const isComplex = current.type === "complex";
   const correct = revealed && isCorrect(current.answer, selected);
 
   return (
@@ -124,25 +130,38 @@ export default function RandomQuestion({ certId }: { certId: string }) {
       )}
 
       <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
-        <QuestionCard question={current} />
+        <QuestionCard
+          question={current}
+          images={splitComplexImages(current).prompt}
+        />
+        {isComplex && !revealed && <ComplexBadge />}
         {current.type === "multiple" && !revealed && (
           <p className="mt-3 text-xs font-medium text-amber-600 dark:text-amber-400">
             Selecciona todas las que correspondan.
           </p>
         )}
 
-        <div className="mt-5">
-          <AnswersList
-            options={current.options}
-            multiple={current.type === "multiple"}
-            selected={selected}
-            onSelect={revealed ? undefined : setSelected}
-            reveal={revealed}
-            correct={current.answer}
-          />
-        </div>
+        {!isComplex && (
+          <div className="mt-5">
+            <AnswersList
+              options={current.options}
+              multiple={current.type === "multiple"}
+              selected={selected}
+              onSelect={revealed ? undefined : setSelected}
+              reveal={revealed}
+              correct={current.answer}
+            />
+          </div>
+        )}
 
-        {revealed && (
+        {revealed && isComplex && (
+          <>
+            <ComplexAnswer question={current} />
+            <ExplanationBox question={current} />
+          </>
+        )}
+
+        {revealed && !isComplex && (
           <>
             <div
               className={
@@ -164,10 +183,10 @@ export default function RandomQuestion({ certId }: { certId: string }) {
           <button
             type="button"
             onClick={() => setRevealed(true)}
-            disabled={selected.length === 0}
+            disabled={!isComplex && selected.length === 0}
             className="rounded-lg bg-blue-600 px-6 py-2.5 font-semibold text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Responder
+            {isComplex ? "Ver respuesta" : "Responder"}
           </button>
         ) : (
           <span />

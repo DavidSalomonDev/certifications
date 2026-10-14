@@ -87,3 +87,30 @@ export async function loadQuestionsById(
 export function getPool(questions: Question[]): Question[] {
   return questions.filter((q) => q.type === "single" || q.type === "multiple");
 }
+
+/**
+ * Pool de estudio/repaso: TODAS las preguntas, incluidas las "complex"
+ * (HOTSPOT/DRAG-DROP/simulación/case study). No se puntúan, pero se pueden
+ * leer con sus imágenes y explicación (modo estudio y modo random).
+ */
+export function getStudyPool(questions: Question[]): Question[] {
+  return questions;
+}
+
+/**
+ * Separa las imágenes de una pregunta "complex" en enunciado vs. respuesta.
+ * En los volcados de CertyIQ, las HOTSPOT/DRAG-DROP con 2+ imágenes terminan
+ * con el "Answer Area" ya resuelto (resaltado en verde): esa última imagen es
+ * la respuesta y se oculta hasta revelar. Case study y simulaciones conservan
+ * todas sus imágenes como enunciado (son exhibits, no la respuesta).
+ */
+export function splitComplexImages(q: Question): {
+  prompt: string[];
+  answer: string[];
+} {
+  const isCaseOrSim = /case study|SIMULATION/i.test(q.question);
+  if (q.type !== "complex" || isCaseOrSim || q.images.length < 2) {
+    return { prompt: q.images, answer: [] };
+  }
+  return { prompt: q.images.slice(0, -1), answer: q.images.slice(-1) };
+}

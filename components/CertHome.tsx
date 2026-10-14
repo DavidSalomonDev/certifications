@@ -19,6 +19,7 @@ export default function CertHome({ certId }: { certId: string }) {
   const router = useRouter();
   const [cert, setCert] = useState<Certification | null>(null);
   const [pool, setPool] = useState<Question[]>([]);
+  const [totalCount, setTotalCount] = useState(0); // incluye las "complex"
   const [count, setCount] = useState(10);
   const [topic, setTopic] = useState<string | null>(null); // null = todas las categorías
   const [canResume, setCanResume] = useState(false);
@@ -39,6 +40,7 @@ export default function CertHome({ certId }: { certId: string }) {
       if (!active) return;
       setCert(c);
       setPool(getPool(all));
+      setTotalCount(all.length);
       setCanResume(hasInProgressSession(certId));
       setLoading(false);
     })();
@@ -128,7 +130,10 @@ export default function CertHome({ certId }: { certId: string }) {
           {cert?.name}
         </h1>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          {pool.length} preguntas disponibles para practicar.
+          {pool.length} preguntas de opción múltiple para el quiz
+          {totalCount > pool.length &&
+            ` · ${totalCount} en total en modo estudio y random (incluye HOTSPOT / DRAG-DROP)`}
+          .
         </p>
       </div>
 

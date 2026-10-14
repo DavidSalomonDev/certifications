@@ -3,11 +3,16 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { Question } from "@/lib/types";
-import { loadQuestionsById, getPool } from "@/lib/questions";
+import {
+  loadQuestionsById,
+  getStudyPool,
+  splitComplexImages,
+} from "@/lib/questions";
 import { useLanguage } from "@/lib/language";
 import QuestionCard from "./QuestionCard";
 import AnswersList from "./AnswersList";
 import ExplanationBox from "./ExplanationBox";
+import ComplexAnswer from "./ComplexAnswer";
 
 const PAGE_SIZE = 20;
 
@@ -31,7 +36,7 @@ export default function StudyMode({ certId }: { certId: string }) {
       try {
         const all = await loadQuestionsById(certId, lang);
         if (!active) return;
-        setPool(getPool(all));
+        setPool(getStudyPool(all));
       } catch (e) {
         if (active) setError((e as Error).message);
       } finally {
@@ -167,16 +172,21 @@ export default function StudyMode({ certId }: { certId: string }) {
             <QuestionCard
               question={q}
               heading={`Pregunta ${start + i + 1} de ${filtered.length}`}
+              images={splitComplexImages(q).prompt}
             />
-            <div className="mt-4">
-              <AnswersList
-                options={q.options}
-                multiple={q.type === "multiple"}
-                selected={[]}
-                reveal
-                correct={q.answer}
-              />
-            </div>
+            {q.type === "complex" ? (
+              <ComplexAnswer question={q} />
+            ) : (
+              <div className="mt-4">
+                <AnswersList
+                  options={q.options}
+                  multiple={q.type === "multiple"}
+                  selected={[]}
+                  reveal
+                  correct={q.answer}
+                />
+              </div>
+            )}
             <ExplanationBox question={q} />
           </div>
         ))}

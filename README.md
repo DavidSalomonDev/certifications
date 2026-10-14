@@ -143,8 +143,10 @@ Notas:
   - `single` — una sola respuesta correcta (radio buttons).
   - `multiple` — varias respuestas correctas (checkboxes).
   - `complex` — preguntas HOTSPOT/DRAG‑DROP/case‑study que no se pueden responder con opción
-    múltiple. **Se excluyen del pool jugable**, aunque tengan imágenes. Quedan guardadas en el
-    JSON para no perderlas.
+    múltiple. **Se excluyen del quiz puntuado**, pero **sí aparecen en el modo estudio y en el
+    modo random** (`getStudyPool()`): se muestran con sus imágenes y un botón "Ver respuesta".
+    Si tienen 2+ imágenes (y no son case study/simulación), la última es el "Answer Area"
+    resuelto y se oculta hasta revelar (`splitComplexImages()`).
 - El **pool jugable** = preguntas con `type` `single` o `multiple` (ver `getPool()` en
   `lib/questions.ts`).
 
@@ -274,7 +276,7 @@ agregar al final del `.es.json` correspondiente desde el siguiente id.**
 
 | Cert | Traducidas | Total | Siguiente | Estado |
 | --- | --- | --- | --- | --- |
-| AZ‑104 | q1–q83 | 634 | `az104-84` | 🟡 En progreso |
+| AZ‑104 | q1–q350 | 634 | `az104-351` | 🟡 En progreso |
 | AZ‑700 | — | 388 | `az-700-1` | ⬜ Pendiente |
 | Google PCA | — | 385 | `pca-1` | ⬜ Pendiente |
 | ITIL 4 | — | 365 | `itilv4-1` | ⬜ Pendiente |

@@ -4,10 +4,13 @@ interface Props {
   question: Question;
   /** Encabezado opcional, p. ej. "Pregunta 3 de 10". */
   heading?: string;
+  /** Imágenes a mostrar (por defecto, todas las de la pregunta). */
+  images?: string[];
 }
 
 /** Muestra el enunciado de una pregunta y sus imágenes (si existen). */
-export default function QuestionCard({ question, heading }: Props) {
+export default function QuestionCard({ question, heading, images }: Props) {
+  const shownImages = images ?? question.images;
   // Cada línea es una oración (ver reflow en scripts/convert.mjs): la mostramos
   // como párrafo independiente para un espaciado cómodo.
   const lines = question.question.split("\n").filter((l) => l.trim());
@@ -43,9 +46,9 @@ export default function QuestionCard({ question, heading }: Props) {
           </p>
         ))}
       </div>
-      {question.images.length > 0 && (
+      {shownImages.length > 0 && (
         <div className="mt-4 space-y-3">
-          {question.images.map((src, i) => (
+          {shownImages.map((src, i) => (
             // Imágenes locales estáticas de aspecto variado: <img> simple con
             // altura automática para no deformarlas. (no next/image: sin dims).
             // eslint-disable-next-line @next/next/no-img-element
