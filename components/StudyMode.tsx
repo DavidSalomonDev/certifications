@@ -7,6 +7,7 @@ import {
   loadQuestionsById,
   getStudyPool,
   splitComplexImages,
+  questionNumber,
 } from "@/lib/questions";
 import { useLanguage } from "@/lib/language";
 import QuestionCard from "./QuestionCard";
@@ -25,6 +26,9 @@ export default function StudyMode({ certId }: { certId: string }) {
   const { lang, mounted } = useLanguage();
   const [pool, setPool] = useState<Question[]>([]);
   const [topic, setTopic] = useState<string | null>(null); // null = todas
+  // Orden de lectura. Por defecto, las más recientes primero (las últimas del
+  // banco son las más actualizadas).
+  const [order, setOrder] = useState<"desc" | "asc">("desc");
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -62,18 +66,18 @@ export default function StudyMode({ certId }: { certId: string }) {
     );
   }, [pool]);
 
-  const filtered = useMemo(
-    () =>
-      topic
-        ? pool.filter((q) => q.topic === topic || q.topicSecondary === topic)
-        : pool,
-    [pool, topic],
-  );
+  const filtered = useMemo(() => {
+    const list = topic
+      ? pool.filter((q) => q.topic === topic || q.topicSecondary === topic)
+      : [...pool];
+    const dir = order === "desc" ? -1 : 1;
+    return list.sort((a, b) => dir * (questionNumber(a) - questionNumber(b)));
+  }, [pool, topic, order]);
 
-  // Al cambiar de categoría volvemos a la primera página.
+  // Al cambiar de categoría u orden volvemos a la primera página.
   useEffect(() => {
     setPage(0);
-  }, [topic]);
+  }, [topic, order]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages - 1);
@@ -135,6 +139,26 @@ export default function StudyMode({ certId }: { certId: string }) {
         <span>{filtered.length} preguntas</span>
       </div>
 
+      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+      {/* Orden */}
+      <div>
+        <label
+          htmlFor="study-order"
+          className="mb-2 block text-sm font-medium text-slate-600 dark:text-slate-300"
+        >
+          Orden
+        </label>
+        <select
+          id="study-order"
+          value={order}
+          onChange={(e) => setOrder(e.target.value as "desc" | "asc")}
+          className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
+        >
+          <option value="desc">Más recientes primero (de la última a la primera)</option>
+          <option value="asc">Desde la primera</option>
+        </select>
+      </div>
+
       {/* Filtro por categoría */}
       {topics.length > 0 && (
         <div>
@@ -159,6 +183,7 @@ export default function StudyMode({ certId }: { certId: string }) {
           </select>
         </div>
       )}
+      </div>
 
       <Pagination />
 
@@ -171,7 +196,7 @@ export default function StudyMode({ certId }: { certId: string }) {
           >
             <QuestionCard
               question={q}
-              heading={`Pregunta ${start + i + 1} de ${filtered.length}`}
+              heading={`Pregunta #${questionNumber(q)} · ${start + i + 1} de ${filtered.length}`}
               images={splitComplexImages(q).prompt}
             />
             {q.type === "complex" ? (

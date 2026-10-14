@@ -4,6 +4,7 @@
     "name": "AZ-104: Microsoft Azure Administrator",
     "file": "az104.json",
     "questionCount": 425,
+    "totalCount": 634,
     "enabled": true
   },
   {
@@ -11,6 +12,7 @@
     "name": "Google Cloud Associate Cloud Engineer",
     "file": "gcp-ace.json",
     "questionCount": 197,
+    "totalCount": 197,
     "enabled": true
   },
   {
@@ -18,6 +20,7 @@
     "name": "ITIL 4 Foundation",
     "file": "itilv4.json",
     "questionCount": 365,
+    "totalCount": 365,
     "enabled": true
   },
   {
@@ -25,6 +28,7 @@
     "name": "AZ-700: Designing and Implementing Microsoft Azure Networking Solutions",
     "file": "az-700.json",
     "questionCount": 181,
+    "totalCount": 388,
     "enabled": true
   },
   {
@@ -32,6 +36,7 @@
     "name": "Google Professional Cloud Architect",
     "file": "pca.json",
     "questionCount": 382,
+    "totalCount": 385,
     "enabled": true
   }
 ]

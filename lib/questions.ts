@@ -114,3 +114,23 @@ export function splitComplexImages(q: Question): {
   }
   return { prompt: q.images.slice(0, -1), answer: q.images.slice(-1) };
 }
+
+/** Número de la pregunta en el banco original (sufijo del id: "az-700-388" → 388). */
+export function questionNumber(q: Pick<Question, "id">): number {
+  return Number(q.id.split("-").pop()) || 0;
+}
+
+/** Cuántas preguntas del final del banco cuentan como "recientes" (las más actualizadas). */
+export const RECENT_COUNT = 150;
+
+/**
+ * Ids de las últimas `n` preguntas del banco completo (incluye las "complex"),
+ * según el número de pregunta. En los volcados, las últimas son las más nuevas.
+ */
+export function getRecentIds(
+  questions: Question[],
+  n: number = RECENT_COUNT,
+): Set<string> {
+  const sorted = [...questions].sort((a, b) => questionNumber(a) - questionNumber(b));
+  return new Set(sorted.slice(-n).map((q) => q.id));
+}

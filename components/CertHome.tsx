@@ -5,7 +5,13 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { Certification, Question, QuizSession } from "@/lib/types";
 import { getCertification } from "@/lib/certifications";
-import { loadQuestions, getPool } from "@/lib/questions";
+import {
+  loadQuestions,
+  getPool,
+  getRecentIds,
+  questionNumber,
+  RECENT_COUNT,
+} from "@/lib/questions";
 import {
   hasInProgressSession,
   loadSession,
@@ -20,6 +26,9 @@ export default function CertHome({ certId }: { certId: string }) {
   const [cert, setCert] = useState<Certification | null>(null);
   const [pool, setPool] = useState<Question[]>([]);
   const [totalCount, setTotalCount] = useState(0); // incluye las "complex"
+  // Ids de las últimas RECENT_COUNT preguntas del banco (las más actualizadas).
+  const [recentIds, setRecentIds] = useState<Set<string>>(new Set());
+  const [recentOnly, setRecentOnly] = useState(false);
   const [count, setCount] = useState(10);
   const [topic, setTopic] = useState<string | null>(null); // null = todas las categorías
   const [canResume, setCanResume] = useState(false);
@@ -41,6 +50,7 @@ export default function CertHome({ certId }: { certId: string }) {
       setCert(c);
       setPool(getPool(all));
       setTotalCount(all.length);
+      setRecentIds(getRecentIds(all));
       setCanResume(hasInProgressSession(certId));
       setLoading(false);
     })();
@@ -49,10 +59,22 @@ export default function CertHome({ certId }: { certId: string }) {
     };
   }, [certId]);
 
+  // Pool base según el rango elegido: todo el banco o solo las más recientes.
+  const recentPool = useMemo(
+    () => pool.filter((q) => recentIds.has(q.id)),
+    [pool, recentIds],
+  );
+  const basePool = recentOnly ? recentPool : pool;
+
+  // Rango de números de las recientes (p. ej. #239–#388) para el selector.
+  const recentNums = [...recentIds].map((id) => questionNumber({ id }));
+  const recentFrom = recentNums.length ? Math.min(...recentNums) : 0;
+  const recentTo = recentNums.length ? Math.max(...recentNums) : 0;
+
   // Categorías disponibles (topic + topicSecondary) con su nº de preguntas.
   const topics = useMemo(() => {
     const counts = new Map<string, number>();
-    for (const q of pool) {
+    for (const q of basePool) {
       const set = new Set<string>();
       if (q.topic) set.add(q.topic);
       if (q.topicSecondary) set.add(q.topicSecondary);
@@ -61,16 +83,16 @@ export default function CertHome({ certId }: { certId: string }) {
     return [...counts.entries()].sort(
       (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
     );
-  }, [pool]);
+  }, [basePool]);
 
   // Pool efectivo según la categoría elegida (una pregunta cuenta si su topic
   // principal O secundario coincide). null = todas.
   const filteredPool = useMemo(
     () =>
       topic
-        ? pool.filter((q) => q.topic === topic || q.topicSecondary === topic)
-        : pool,
-    [pool, topic],
+        ? basePool.filter((q) => q.topic === topic || q.topicSecondary === topic)
+        : basePool,
+    [basePool, topic],
   );
 
   const startQuiz = () => {
@@ -164,6 +186,31 @@ export default function CertHome({ certId }: { certId: string }) {
           Responde todas las preguntas y revisa tus resultados al final.
         </p>
 
+        {totalCount > RECENT_COUNT && (
+          <>
+            <label
+              htmlFor="range-filter"
+              className="mt-5 mb-2 block text-sm font-medium text-slate-600 dark:text-slate-300"
+            >
+              Preguntas
+            </label>
+            <select
+              id="range-filter"
+              value={recentOnly ? "recent" : "all"}
+              onChange={(e) => {
+                setRecentOnly(e.target.value === "recent");
+                setTopic(null); // la categoría elegida puede no existir en el nuevo rango
+              }}
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
+            >
+              <option value="all">Todo el banco ({pool.length})</option>
+              <option value="recent">
+                {`Solo las últimas ${RECENT_COUNT}: #${recentFrom}–#${recentTo} (${recentPool.length} de opción múltiple)`}
+              </option>
+            </select>
+          </>
+        )}
+
         {topics.length > 0 && (
           <>
             <label
@@ -178,7 +225,7 @@ export default function CertHome({ certId }: { certId: string }) {
               onChange={(e) => setTopic(e.target.value || null)}
               className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
             >
-              <option value="">Todas las categorías ({pool.length})</option>
+              <option value="">Todas las categorías ({basePool.length})</option>
               {topics.map(([t, n]) => (
                 <option key={t} value={t}>
                   {t} ({n})

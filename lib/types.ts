@@ -33,6 +33,8 @@ export interface Certification {
   file: string;
   /** Cantidad de preguntas jugables (single + multiple). */
   questionCount: number;
+  /** Total de preguntas, incluidas las "complex" (modo estudio y random). */
+  totalCount?: number;
   enabled: boolean;
 }
 

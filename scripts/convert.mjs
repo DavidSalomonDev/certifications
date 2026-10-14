@@ -440,7 +440,7 @@ function parseBlockExamTopics(certId, block) {
 }
 
 /** Actualiza (o crea) public/data/certifications.json con el conteo jugable. */
-function updateRegistry(certId, name, playableCount) {
+function updateRegistry(certId, name, playableCount, totalCount) {
   const registryPath = join(DATA_DIR, "certifications.json");
   let registry = [];
   if (existsSync(registryPath)) {
@@ -455,6 +455,7 @@ function updateRegistry(certId, name, playableCount) {
     name,
     file: `${certId}.json`,
     questionCount: playableCount,
+    totalCount,
     enabled: playableCount > 0,
   };
   const idx = registry.findIndex((c) => c.id === certId);
@@ -528,7 +529,7 @@ function main() {
 
   const outPath = join(DATA_DIR, `${certId}.json`);
   writeFileSync(outPath, JSON.stringify(questions, null, 2) + "\n");
-  updateRegistry(certId, cfg.name, playable);
+  updateRegistry(certId, cfg.name, playable, questions.length);
 
   console.log(`\n✅ ${certId}: ${questions.length} preguntas procesadas`);
   console.log(`   • single   : ${counts.single}`);

@@ -75,7 +75,9 @@ export default function CertPicker() {
               {c.name}
             </p>
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-              {c.questionCount} preguntas
+              {c.totalCount && c.totalCount > c.questionCount
+                ? `${c.totalCount} preguntas (${c.questionCount} de opción múltiple)`
+                : `${c.questionCount} preguntas`}
             </p>
           </Link>
         ))}
