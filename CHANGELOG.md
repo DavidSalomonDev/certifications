@@ -10,8 +10,11 @@ Este proyecto no sigue versionado semántico estricto (es una app interna sin pu
   colores (azul, verde, rojo), goma y un bloc de apuntes por certificación. Se puede resaltar
   el enunciado, las opciones y la explicación, y una misma selección puede abarcar varias
   líneas. Todo se guarda en `localStorage`. Los resaltados se guardan por idioma y los
-  apuntes son los mismos en ambos idiomas. En pantallas pequeñas la barra es una tira
-  vertical que abre un cajón.
+  apuntes son los mismos en ambos idiomas. La barra es una tira fina a toda la altura, pegada
+  al borde derecho, que se puede extender para ver los apuntes (se recuerda si estaba abierta).
+
+### Corregido
+- Las opciones de respuesta con URLs largas desbordaban la página en móvil.
 
 ## [0.2.0] - 2026-06-29
 

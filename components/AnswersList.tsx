@@ -94,7 +94,8 @@ export default function AnswersList({
             >
               {reveal && isCorrect ? "✓" : reveal && isSelected ? "✗" : badge}
             </span>
-            <span className="flex-1 whitespace-pre-line">
+            {/* min-w-0 + break-words: las URLs largas no desbordan la página */}
+            <span className="min-w-0 flex-1 whitespace-pre-line break-words">
               <HighlightedText questionId={questionId} field={`opt:${i}`} text={opt} />
             </span>
           </>
