@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageToggle from "@/components/LanguageToggle";
 import ExplanationsToggle from "@/components/ExplanationsToggle";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { LanguageProvider } from "@/lib/language";
 import { ExplanationsProvider } from "@/lib/explanations";
 import "./globals.css";
@@ -10,6 +11,19 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Práctica de Certificaciones",
   description: "App local de práctica de exámenes de certificación (AZ-104 y más).",
+  // iOS/iPadOS: "Agregar a pantalla de inicio" abre la app a pantalla completa.
+  appleWebApp: {
+    capable: true,
+    title: "Certificaciones",
+    statusBarStyle: "default",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e293b" },
+  ],
 };
 
 // Aplica el tema guardado antes de pintar para evitar el "flash" de tema claro.
@@ -34,6 +48,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-screen">
+        <ServiceWorkerRegister />
         <LanguageProvider>
         <ExplanationsProvider>
           <header className="sticky top-0 z-20 border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">

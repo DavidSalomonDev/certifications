@@ -43,6 +43,10 @@ Ver [Agregar una certificación nueva](#agregar-una-certificación-nueva) para s
   **contenido de las preguntas** (enunciado, opciones y explicación). Por defecto en inglés;
   recuerda tu preferencia. La interfaz sigue en español. Ver [Traducciones](#traducciones-inglés--español).
 - **Multi‑certificación**: agregar un examen nuevo no requiere tocar código (ver abajo).
+- **Instalable (PWA)**: en iPad/iPhone, abre la web en Safari → Compartir → "Agregar a
+  pantalla de inicio". Se abre a pantalla completa y un service worker (`public/sw.js`,
+  solo en producción) guarda las páginas, preguntas e imágenes ya visitadas para usarlas
+  sin conexión.
 
 ---
 
