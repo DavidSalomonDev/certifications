@@ -10,6 +10,7 @@ import {
   questionNumber,
 } from "@/lib/questions";
 import { useLanguage } from "@/lib/language";
+import { loadPrefs, savePrefs } from "@/lib/storage";
 import { HighlighterProvider, useHighlighter } from "@/lib/highlighter";
 import QuestionCard from "./QuestionCard";
 import AnswersList from "./AnswersList";
@@ -18,6 +19,10 @@ import ComplexAnswer from "./ComplexAnswer";
 import StudySidebar from "./StudySidebar";
 
 const PAGE_SIZE = 20;
+
+type Order = "desc" | "asc";
+type Kind = "all" | "choice" | "complex";
+type StudyPrefs = { topic: string | null; order: Order; kind: Kind; page: number };
 
 /**
  * Modo estudio: solo lectura. Muestra cada pregunta con su(s) respuesta(s)
@@ -40,12 +45,28 @@ function StudyModeContent({ certId }: { certId: string }) {
   const [topic, setTopic] = useState<string | null>(null); // null = todas
   // Orden de lectura. Por defecto, las más recientes primero (las últimas del
   // banco son las más actualizadas).
-  const [order, setOrder] = useState<"desc" | "asc">("desc");
+  const [order, setOrder] = useState<Order>("desc");
   // Tipo: todas, solo opción múltiple (single/multiple) o solo "complex".
-  const [kind, setKind] = useState<"all" | "choice" | "complex">("all");
+  const [kind, setKind] = useState<Kind>("all");
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // true una vez restauradas las preferencias guardadas (antes no guardamos
+  // para no pisarlas con los valores por defecto).
+  const [prefsReady, setPrefsReady] = useState(false);
+
+  useEffect(() => {
+    const p = loadPrefs<StudyPrefs>(certId, "study");
+    if (p.topic !== undefined) setTopic(p.topic);
+    if (p.order === "asc" || p.order === "desc") setOrder(p.order);
+    if (p.kind === "all" || p.kind === "choice" || p.kind === "complex") setKind(p.kind);
+    if (typeof p.page === "number") setPage(p.page);
+    setPrefsReady(true);
+  }, [certId]);
+
+  useEffect(() => {
+    if (prefsReady) savePrefs(certId, "study", { topic, order, kind, page });
+  }, [certId, prefsReady, topic, order, kind, page]);
 
   useEffect(() => {
     if (!mounted) return; // espera a conocer el idioma para no recargar dos veces
@@ -93,18 +114,19 @@ function StudyModeContent({ certId }: { certId: string }) {
     );
   }, [typedPool]);
 
+  // La categoría guardada puede no existir ya (otro tipo, banco actualizado…).
+  const activeTopic =
+    topic && topics.some(([t]) => t === topic) ? topic : null;
+
   const filtered = useMemo(() => {
-    const list = topic
-      ? typedPool.filter((q) => q.topic === topic || q.topicSecondary === topic)
+    const list = activeTopic
+      ? typedPool.filter(
+          (q) => q.topic === activeTopic || q.topicSecondary === activeTopic,
+        )
       : [...typedPool];
     const dir = order === "desc" ? -1 : 1;
     return list.sort((a, b) => dir * (questionNumber(a) - questionNumber(b)));
-  }, [typedPool, topic, order]);
-
-  // Al cambiar de categoría, orden o tipo volvemos a la primera página.
-  useEffect(() => {
-    setPage(0);
-  }, [topic, order, kind]);
+  }, [typedPool, activeTopic, order]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages - 1);
@@ -180,7 +202,10 @@ function StudyModeContent({ certId }: { certId: string }) {
         <select
           id="study-order"
           value={order}
-          onChange={(e) => setOrder(e.target.value as "desc" | "asc")}
+          onChange={(e) => {
+            setOrder(e.target.value as Order);
+            setPage(0);
+          }}
           className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
         >
           <option value="desc">Más recientes primero (de la última a la primera)</option>
@@ -201,8 +226,9 @@ function StudyModeContent({ certId }: { certId: string }) {
             id="study-kind"
             value={kind}
             onChange={(e) => {
-              setKind(e.target.value as "all" | "choice" | "complex");
+              setKind(e.target.value as Kind);
               setTopic(null); // la categoría elegida puede no existir con este tipo
+              setPage(0);
             }}
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
           >
@@ -228,8 +254,11 @@ function StudyModeContent({ certId }: { certId: string }) {
           </label>
           <select
             id="study-topic-filter"
-            value={topic ?? ""}
-            onChange={(e) => setTopic(e.target.value || null)}
+            value={activeTopic ?? ""}
+            onChange={(e) => {
+              setTopic(e.target.value || null);
+              setPage(0);
+            }}
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
           >
             <option value="">Todas las categorías ({typedPool.length})</option>

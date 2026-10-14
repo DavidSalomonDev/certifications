@@ -16,9 +16,13 @@ import {
   hasInProgressSession,
   loadSession,
   saveSession,
+  loadPrefs,
+  savePrefs,
 } from "@/lib/storage";
 import { sampleWithoutReplacement } from "@/lib/random";
 import NumberSelector from "./NumberSelector";
+
+type HomePrefs = { recentOnly: boolean; topic: string | null; count: number };
 
 /** Home de una certificación: elegir N e iniciar quiz, retomar, o modo random. */
 export default function CertHome({ certId }: { certId: string }) {
@@ -34,6 +38,21 @@ export default function CertHome({ certId }: { certId: string }) {
   const [canResume, setCanResume] = useState(false);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  // true una vez restauradas las preferencias guardadas (antes no guardamos
+  // para no pisarlas con los valores por defecto).
+  const [prefsReady, setPrefsReady] = useState(false);
+
+  useEffect(() => {
+    const p = loadPrefs<HomePrefs>(certId, "home");
+    if (typeof p.recentOnly === "boolean") setRecentOnly(p.recentOnly);
+    if (p.topic !== undefined) setTopic(p.topic);
+    if (typeof p.count === "number" && p.count > 0) setCount(p.count);
+    setPrefsReady(true);
+  }, [certId]);
+
+  useEffect(() => {
+    if (prefsReady) savePrefs(certId, "home", { recentOnly, topic, count });
+  }, [certId, prefsReady, recentOnly, topic, count]);
 
   useEffect(() => {
     let active = true;
@@ -85,14 +104,20 @@ export default function CertHome({ certId }: { certId: string }) {
     );
   }, [basePool]);
 
+  // La categoría guardada puede no existir ya (otro rango, banco actualizado…).
+  const activeTopic =
+    topic && topics.some(([t]) => t === topic) ? topic : null;
+
   // Pool efectivo según la categoría elegida (una pregunta cuenta si su topic
   // principal O secundario coincide). null = todas.
   const filteredPool = useMemo(
     () =>
-      topic
-        ? basePool.filter((q) => q.topic === topic || q.topicSecondary === topic)
+      activeTopic
+        ? basePool.filter(
+            (q) => q.topic === activeTopic || q.topicSecondary === activeTopic,
+          )
         : basePool,
-    [basePool, topic],
+    [basePool, activeTopic],
   );
 
   const startQuiz = () => {
@@ -221,7 +246,7 @@ export default function CertHome({ certId }: { certId: string }) {
             </label>
             <select
               id="topic-filter"
-              value={topic ?? ""}
+              value={activeTopic ?? ""}
               onChange={(e) => setTopic(e.target.value || null)}
               className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
             >

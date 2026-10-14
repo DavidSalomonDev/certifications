@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <LanguageProvider>
-          <header className="border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+          <header className="sticky top-0 z-20 border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
             <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
               <Link
                 href="/"

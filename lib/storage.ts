@@ -9,6 +9,7 @@ const randomKey = (certId: string) => `${certId}:random-history:v1`;
 const highlightsKey = (certId: string, lang: string) =>
   `${certId}:highlights:${lang}:v1`;
 const notesKey = (certId: string) => `${certId}:study-notes:v1`;
+const prefsKey = (certId: string, view: string) => `${certId}:prefs:${view}:v1`;
 
 const hasWindow = () => typeof window !== "undefined";
 
@@ -96,4 +97,17 @@ export function loadStudyNotes(certId: string): string {
 export function saveStudyNotes(certId: string, text: string): void {
   if (!text) remove(notesKey(certId));
   else writeJSON(notesKey(certId), text);
+}
+
+// ---- Preferencias de filtros (orden, tipo, categoría…) por vista ----
+
+export function loadPrefs<T extends object>(
+  certId: string,
+  view: string,
+): Partial<T> {
+  return readJSON<Partial<T>>(prefsKey(certId, view)) ?? {};
+}
+
+export function savePrefs(certId: string, view: string, prefs: object): void {
+  writeJSON(prefsKey(certId, view), prefs);
 }
