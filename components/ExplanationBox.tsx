@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Question } from "@/lib/types";
+import HighlightedText from "./HighlightedText";
 
 /** Altura máxima de la explicación colapsada (~4 líneas de texto). */
 const COLLAPSED_REM = 6;
@@ -56,7 +57,11 @@ export default function ExplanationBox({ question }: { question: Question }) {
               : undefined
           }
         >
-          {question.explanation}
+          <HighlightedText
+            questionId={question.id}
+            field="exp"
+            text={question.explanation}
+          />
         </p>
       )}
       {overflows && (

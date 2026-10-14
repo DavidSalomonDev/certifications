@@ -1,5 +1,7 @@
 "use client";
 
+import HighlightedText from "./HighlightedText";
+
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 interface Props {
@@ -14,6 +16,8 @@ interface Props {
   reveal?: boolean;
   /** Índices correctos. Requerido cuando reveal = true. */
   correct?: number[];
+  /** Id de la pregunta, para los resaltados del modo estudio. */
+  questionId?: string;
 }
 
 /**
@@ -28,6 +32,7 @@ export default function AnswersList({
   onSelect,
   reveal = false,
   correct = [],
+  questionId,
 }: Props) {
   const toggle = (i: number) => {
     if (!onSelect || reveal) return;
@@ -71,33 +76,47 @@ export default function AnswersList({
             " border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 cursor-pointer dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-700";
         }
 
+        const content = (
+          <>
+            <span
+              className={
+                "mt-0.5 flex h-6 w-6 flex-none items-center justify-center text-xs font-bold " +
+                (multiple ? "rounded-md" : "rounded-full") +
+                " border " +
+                (reveal && isCorrect
+                  ? "border-green-600 bg-green-600 text-white"
+                  : reveal && isSelected
+                    ? "border-red-600 bg-red-600 text-white"
+                    : isSelected
+                      ? "border-blue-600 bg-blue-600 text-white"
+                      : "border-slate-300 bg-white text-slate-500 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-400")
+              }
+            >
+              {reveal && isCorrect ? "✓" : reveal && isSelected ? "✗" : badge}
+            </span>
+            <span className="flex-1 whitespace-pre-line">
+              <HighlightedText questionId={questionId} field={`opt:${i}`} text={opt} />
+            </span>
+          </>
+        );
+
         return (
           <li key={i}>
-            <button
-              type="button"
-              onClick={() => toggle(i)}
-              disabled={reveal || !onSelect}
-              className={cls + " w-full text-left"}
-              aria-pressed={isSelected}
-            >
-              <span
-                className={
-                  "mt-0.5 flex h-6 w-6 flex-none items-center justify-center text-xs font-bold " +
-                  (multiple ? "rounded-md" : "rounded-full") +
-                  " border " +
-                  (reveal && isCorrect
-                    ? "border-green-600 bg-green-600 text-white"
-                    : reveal && isSelected
-                      ? "border-red-600 bg-red-600 text-white"
-                      : isSelected
-                        ? "border-blue-600 bg-blue-600 text-white"
-                        : "border-slate-300 bg-white text-slate-500 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-400")
-                }
+            {onSelect ? (
+              <button
+                type="button"
+                onClick={() => toggle(i)}
+                disabled={reveal}
+                className={cls + " w-full text-left"}
+                aria-pressed={isSelected}
               >
-                {reveal && isCorrect ? "✓" : reveal && isSelected ? "✗" : badge}
-              </span>
-              <span className="flex-1 whitespace-pre-line">{opt}</span>
-            </button>
+                {content}
+              </button>
+            ) : (
+              // Solo lectura: <div> para que el texto se pueda seleccionar
+              // (en un <button disabled> el navegador no deja).
+              <div className={cls + " w-full text-left"}>{content}</div>
+            )}
           </li>
         );
       })}

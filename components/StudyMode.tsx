@@ -10,20 +10,32 @@ import {
   questionNumber,
 } from "@/lib/questions";
 import { useLanguage } from "@/lib/language";
+import { HighlighterProvider, useHighlighter } from "@/lib/highlighter";
 import QuestionCard from "./QuestionCard";
 import AnswersList from "./AnswersList";
 import ExplanationBox from "./ExplanationBox";
 import ComplexAnswer from "./ComplexAnswer";
+import StudySidebar from "./StudySidebar";
 
 const PAGE_SIZE = 20;
 
 /**
  * Modo estudio: solo lectura. Muestra cada pregunta con su(s) respuesta(s)
  * correcta(s) reveladas y la explicación, filtrable por categoría. No se
- * responde nada; es para leer y repasar.
+ * responde nada; es para leer y repasar. Incluye un resaltador y un bloc de
+ * apuntes (barra lateral derecha) que se guardan en el navegador.
  */
 export default function StudyMode({ certId }: { certId: string }) {
+  return (
+    <HighlighterProvider certId={certId}>
+      <StudyModeContent certId={certId} />
+    </HighlighterProvider>
+  );
+}
+
+function StudyModeContent({ certId }: { certId: string }) {
   const { lang, mounted } = useLanguage();
+  const { tool, highlights, clearQuestion } = useHighlighter();
   const [pool, setPool] = useState<Question[]>([]);
   const [topic, setTopic] = useState<string | null>(null); // null = todas
   // Orden de lectura. Por defecto, las más recientes primero (las últimas del
@@ -143,7 +155,9 @@ export default function StudyMode({ certId }: { certId: string }) {
     ) : null;
 
   return (
-    <div className="space-y-6">
+    // pr-10: deja sitio a la tira del resaltador en pantallas pequeñas.
+    <div className="space-y-6 pr-10 lg:pr-0">
+      <StudySidebar certId={certId} />
       <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
         <Link
           href={`/${certId}`}
@@ -232,7 +246,10 @@ export default function StudyMode({ certId }: { certId: string }) {
       <Pagination />
 
       {/* Lista de preguntas (solo lectura) */}
-      <div className="space-y-4">
+      <div
+        data-hl-tool={tool ?? undefined}
+        className={"space-y-4" + (tool ? " cursor-text" : "")}
+      >
         {pageItems.map((q, i) => (
           <div
             key={q.id}
@@ -253,10 +270,20 @@ export default function StudyMode({ certId }: { certId: string }) {
                   selected={[]}
                   reveal
                   correct={q.answer}
+                  questionId={q.id}
                 />
               </div>
             )}
             <ExplanationBox question={q} />
+            {highlights[q.id] && (
+              <button
+                type="button"
+                onClick={() => clearQuestion(q.id)}
+                className="mt-3 text-xs font-semibold text-slate-400 hover:text-rose-600 hover:underline dark:text-slate-500 dark:hover:text-rose-400"
+              >
+                Quitar resaltados de esta pregunta
+              </button>
+            )}
           </div>
         ))}
       </div>

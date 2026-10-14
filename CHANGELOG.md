@@ -3,6 +3,16 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 Este proyecto no sigue versionado semántico estricto (es una app interna sin publicar).
 
+## [Sin publicar]
+
+### Añadido
+- **Resaltador y apuntes en el modo estudio**: barra lateral derecha con resaltador de tres
+  colores (azul, verde, rojo), goma y un bloc de apuntes por certificación. Se puede resaltar
+  el enunciado, las opciones y la explicación, y una misma selección puede abarcar varias
+  líneas. Todo se guarda en `localStorage`. Los resaltados se guardan por idioma y los
+  apuntes son los mismos en ambos idiomas. En pantallas pequeñas la barra es una tira
+  vertical que abre un cajón.
+
 ## [0.2.0] - 2026-06-29
 
 ### Añadido

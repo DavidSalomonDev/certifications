@@ -1,10 +1,14 @@
 // Persistencia local (sin login). Todo vive en localStorage del navegador.
 // Las claves se prefijan con el certId para que cada certificación sea independiente.
 
-import type { QuizSession } from "./types";
+import type { HighlightMap, QuizSession } from "./types";
 
 const sessionKey = (certId: string) => `${certId}:practice-session:v1`;
 const randomKey = (certId: string) => `${certId}:random-history:v1`;
+// Los resaltados dependen del idioma (el texto EN y ES es distinto).
+const highlightsKey = (certId: string, lang: string) =>
+  `${certId}:highlights:${lang}:v1`;
+const notesKey = (certId: string) => `${certId}:study-notes:v1`;
 
 const hasWindow = () => typeof window !== "undefined";
 
@@ -68,4 +72,28 @@ export function saveRandomHistory(certId: string, ids: string[]): void {
 
 export function clearRandomHistory(certId: string): void {
   remove(randomKey(certId));
+}
+
+// ---- Resaltados y apuntes del modo estudio ----
+
+export function loadHighlights(certId: string, lang: string): HighlightMap {
+  return readJSON<HighlightMap>(highlightsKey(certId, lang)) ?? {};
+}
+
+export function saveHighlights(
+  certId: string,
+  lang: string,
+  map: HighlightMap,
+): void {
+  if (Object.keys(map).length === 0) remove(highlightsKey(certId, lang));
+  else writeJSON(highlightsKey(certId, lang), map);
+}
+
+export function loadStudyNotes(certId: string): string {
+  return readJSON<string>(notesKey(certId)) ?? "";
+}
+
+export function saveStudyNotes(certId: string, text: string): void {
+  if (!text) remove(notesKey(certId));
+  else writeJSON(notesKey(certId), text);
 }

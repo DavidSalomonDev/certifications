@@ -54,6 +54,23 @@ export interface QuizSession {
   status: "in-progress" | "finished";
 }
 
+// ---- Resaltador del modo estudio ----
+
+export type HighlightColor = "blue" | "green" | "red";
+
+/** Tramo resaltado [start, end) dentro del texto de un "field". */
+export interface HighlightRange {
+  start: number;
+  end: number;
+  color: HighlightColor;
+}
+
+/**
+ * questionId -> field -> tramos (ordenados, sin solaparse). Un field es un
+ * fragmento fijo del texto: "q:<línea>", "opt:<i>" o "exp:<línea>".
+ */
+export type HighlightMap = Record<string, Record<string, HighlightRange[]>>;
+
 /** Resultado calculado al finalizar un quiz. */
 export interface QuizResults {
   total: number;

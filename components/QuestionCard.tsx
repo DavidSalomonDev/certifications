@@ -1,4 +1,5 @@
 import type { Question } from "@/lib/types";
+import HighlightedText from "./HighlightedText";
 
 interface Props {
   question: Question;
@@ -42,7 +43,11 @@ export default function QuestionCard({ question, heading, images }: Props) {
             key={i}
             className="text-[15px] leading-relaxed text-slate-800 dark:text-slate-100"
           >
-            {line}
+            <HighlightedText
+              questionId={question.id}
+              field={`q:${i}`}
+              text={line}
+            />
           </p>
         ))}
       </div>

@@ -26,3 +26,17 @@ body {
   background-color: #0f172a; /* slate-900 */
   color: #f1f5f9; /* slate-100 */
 }
+
+/* Modo estudio: la selección toma el color del resaltador activo. */
+[data-hl-tool="blue"] ::selection {
+  background-color: rgb(125 211 252 / 0.6); /* sky-300 */
+}
+[data-hl-tool="green"] ::selection {
+  background-color: rgb(110 231 183 / 0.6); /* emerald-300 */
+}
+[data-hl-tool="red"] ::selection {
+  background-color: rgb(253 164 175 / 0.6); /* rose-300 */
+}
+[data-hl-tool="erase"] ::selection {
+  background-color: rgb(148 163 184 / 0.4); /* slate-400 */
+}
