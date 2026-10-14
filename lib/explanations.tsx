@@ -1,7 +1,7 @@
 "use client";
 
-// Mostrar u ocultar TODAS las explicaciones (toggle global de la cabecera).
-// Se persiste en localStorage. Por defecto: visibles.
+// Explicaciones largas completas o resumidas, en TODAS las preguntas (toggle
+// global de la cabecera). Se persiste en localStorage. Por defecto: resumidas.
 
 import {
   createContext,
@@ -11,47 +11,47 @@ import {
   type ReactNode,
 } from "react";
 
-const STORAGE_KEY = "explanations";
+const STORAGE_KEY = "explanations-expanded";
 
 interface ExplanationsContextValue {
-  /** true = explicaciones desplegadas; false = ocultas. */
-  show: boolean;
-  setShow: (v: boolean) => void;
+  /** true = explicaciones completas; false = resumidas a unas líneas. */
+  expanded: boolean;
+  setExpanded: (v: boolean) => void;
   /** true una vez leída la preferencia de localStorage (evita parpadeos). */
   mounted: boolean;
 }
 
 const ExplanationsContext = createContext<ExplanationsContextValue>({
-  show: true,
-  setShow: () => {},
+  expanded: false,
+  setExpanded: () => {},
   mounted: false,
 });
 
 export function ExplanationsProvider({ children }: { children: ReactNode }) {
-  const [show, setShowState] = useState(true);
+  const [expanded, setExpandedState] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved === "show" || saved === "hide") setShowState(saved === "show");
+      if (saved === "1" || saved === "0") setExpandedState(saved === "1");
     } catch {
       /* noop */
     }
     setMounted(true);
   }, []);
 
-  const setShow = (v: boolean) => {
-    setShowState(v);
+  const setExpanded = (v: boolean) => {
+    setExpandedState(v);
     try {
-      localStorage.setItem(STORAGE_KEY, v ? "show" : "hide");
+      localStorage.setItem(STORAGE_KEY, v ? "1" : "0");
     } catch {
       /* noop */
     }
   };
 
   return (
-    <ExplanationsContext.Provider value={{ show, setShow, mounted }}>
+    <ExplanationsContext.Provider value={{ expanded, setExpanded, mounted }}>
       {children}
     </ExplanationsContext.Provider>
   );

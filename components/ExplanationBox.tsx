@@ -11,29 +11,26 @@ const COLLAPSED_REM = 6;
 /** Desvanecido al final del texto colapsado (funciona en claro y oscuro). */
 const FADE_MASK = "linear-gradient(to bottom, black 55%, transparent)";
 
-type View = "hidden" | "collapsed" | "expanded";
-
 /**
  * Bloque de explicación + referencias de una pregunta. El toggle global de la
- * cabecera decide si arranca desplegada u oculta; cada pregunta puede
- * cambiarlo localmente hasta que se vuelva a pulsar el toggle global.
+ * cabecera decide si las explicaciones largas arrancan completas o resumidas;
+ * cada pregunta puede cambiarlo localmente hasta que se vuelva a pulsar el
+ * toggle global.
  */
 export default function ExplanationBox({ question }: { question: Question }) {
-  const { show } = useExplanations();
+  const { expanded: expandedAll } = useExplanations();
   // El cambio local solo vale para esta pregunta y este estado del toggle
   // global: al pasar a otra pregunta (modo random) o pulsar el toggle, se
   // vuelve al estado por defecto.
-  const [local, setLocal] = useState<{ id: string; show: boolean; view: View } | null>(null);
+  const [local, setLocal] = useState<
+    { id: string; all: boolean; expanded: boolean } | null
+  >(null);
   const [overflows, setOverflows] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
-  const view: View =
-    local && local.id === question.id && local.show === show
-      ? local.view
-      : show
-        ? "expanded"
-        : "hidden";
-  const setView = (v: View) => setLocal({ id: question.id, show, view: v });
-  const hidden = view === "hidden";
+  const expanded =
+    local && local.id === question.id && local.all === expandedAll
+      ? local.expanded
+      : expandedAll;
 
   // El corte es por altura en pantalla, no por nº de líneas: medimos si el
   // texto completo supera el alto colapsado (y re-medimos al cambiar el ancho).
@@ -48,31 +45,21 @@ export default function ExplanationBox({ question }: { question: Question }) {
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [question.id, question.explanation, hidden]);
+  }, [question.id, question.explanation]);
 
   if (!question.explanation && question.references.length === 0) return null;
 
-  const collapsed = overflows && view === "collapsed";
+  const collapsed = overflows && !expanded;
 
   return (
     <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-900/50">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
-          Explicación
-        </p>
-        <button
-          type="button"
-          onClick={() => setView(hidden ? "expanded" : "hidden")}
-          aria-expanded={!hidden}
-          className="text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400"
-        >
-          {hidden ? "Mostrar ▼" : "Ocultar ▲"}
-        </button>
-      </div>
-      {!hidden && question.explanation && (
+      <p className="mb-1 text-sm font-semibold text-slate-700 dark:text-slate-200">
+        Explicación
+      </p>
+      {question.explanation && (
         <p
           ref={textRef}
-          className="mt-1 overflow-hidden whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-slate-300"
+          className="overflow-hidden whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-slate-300"
           style={
             collapsed
               ? {
@@ -90,16 +77,19 @@ export default function ExplanationBox({ question }: { question: Question }) {
           />
         </p>
       )}
-      {!hidden && overflows && (
+      {overflows && (
         <button
           type="button"
-          onClick={() => setView(collapsed ? "expanded" : "collapsed")}
+          onClick={() =>
+            setLocal({ id: question.id, all: expandedAll, expanded: !expanded })
+          }
+          aria-expanded={expanded}
           className="mt-1 text-sm font-semibold text-blue-600 hover:underline dark:text-blue-400"
         >
           {collapsed ? "Ver explicación completa ▼" : "Ver menos ▲"}
         </button>
       )}
-      {!hidden && question.references.length > 0 && (
+      {question.references.length > 0 && (
         <div className="mt-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
             Referencias

@@ -18,11 +18,19 @@ import ExplanationBox from "./ExplanationBox";
 import ComplexAnswer from "./ComplexAnswer";
 import StudySidebar from "./StudySidebar";
 
-const PAGE_SIZE = 20;
+/** Opciones de "preguntas por página". */
+const PAGE_SIZES = [5, 10, 20] as const;
+const DEFAULT_PAGE_SIZE = 20;
 
 type Order = "desc" | "asc";
 type Kind = "all" | "choice" | "complex";
-type StudyPrefs = { topic: string | null; order: Order; kind: Kind; page: number };
+type StudyPrefs = {
+  topic: string | null;
+  order: Order;
+  kind: Kind;
+  page: number;
+  pageSize: number;
+};
 
 /**
  * Modo estudio: solo lectura. Muestra cada pregunta con su(s) respuesta(s)
@@ -49,6 +57,7 @@ function StudyModeContent({ certId }: { certId: string }) {
   // Tipo: todas, solo opción múltiple (single/multiple) o solo "complex".
   const [kind, setKind] = useState<Kind>("all");
   const [page, setPage] = useState(0);
+  const [pageSize, setPageSize] = useState<number>(DEFAULT_PAGE_SIZE);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   // true una vez restauradas las preferencias guardadas (antes no guardamos
@@ -61,12 +70,14 @@ function StudyModeContent({ certId }: { certId: string }) {
     if (p.order === "asc" || p.order === "desc") setOrder(p.order);
     if (p.kind === "all" || p.kind === "choice" || p.kind === "complex") setKind(p.kind);
     if (typeof p.page === "number") setPage(p.page);
+    if (PAGE_SIZES.some((n) => n === p.pageSize)) setPageSize(p.pageSize!);
     setPrefsReady(true);
   }, [certId]);
 
   useEffect(() => {
-    if (prefsReady) savePrefs(certId, "study", { topic, order, kind, page });
-  }, [certId, prefsReady, topic, order, kind, page]);
+    if (prefsReady)
+      savePrefs(certId, "study", { topic, order, kind, page, pageSize });
+  }, [certId, prefsReady, topic, order, kind, page, pageSize]);
 
   useEffect(() => {
     if (!mounted) return; // espera a conocer el idioma para no recargar dos veces
@@ -128,10 +139,10 @@ function StudyModeContent({ certId }: { certId: string }) {
     return list.sort((a, b) => dir * (questionNumber(a) - questionNumber(b)));
   }, [typedPool, activeTopic, order]);
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const safePage = Math.min(page, totalPages - 1);
-  const start = safePage * PAGE_SIZE;
-  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+  const start = safePage * pageSize;
+  const pageItems = filtered.slice(start, start + pageSize);
 
   const goToPage = (p: number) => {
     setPage(p);
@@ -210,6 +221,33 @@ function StudyModeContent({ certId }: { certId: string }) {
         >
           <option value="desc">Más recientes primero (de la última a la primera)</option>
           <option value="asc">Desde la primera</option>
+        </select>
+      </div>
+
+      {/* Preguntas por página */}
+      <div>
+        <label
+          htmlFor="study-page-size"
+          className="mb-2 block text-sm font-medium text-slate-600 dark:text-slate-300"
+        >
+          Por página
+        </label>
+        <select
+          id="study-page-size"
+          value={pageSize}
+          onChange={(e) => {
+            const size = Number(e.target.value);
+            setPageSize(size);
+            // Mantiene a la vista la primera pregunta de la página actual.
+            setPage(Math.floor(start / size));
+          }}
+          className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
+        >
+          {PAGE_SIZES.map((n) => (
+            <option key={n} value={n}>
+              {n} preguntas
+            </option>
+          ))}
         </select>
       </div>
 
