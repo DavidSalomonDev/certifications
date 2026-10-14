@@ -29,6 +29,8 @@ export default function StudyMode({ certId }: { certId: string }) {
   // Orden de lectura. Por defecto, las más recientes primero (las últimas del
   // banco son las más actualizadas).
   const [order, setOrder] = useState<"desc" | "asc">("desc");
+  // Tipo: todas, solo opción múltiple (single/multiple) o solo "complex".
+  const [kind, setKind] = useState<"all" | "choice" | "complex">("all");
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -52,10 +54,23 @@ export default function StudyMode({ certId }: { certId: string }) {
     };
   }, [certId, lang, mounted]);
 
+  // Conteos por tipo (para el selector) y pool según el tipo elegido.
+  const complexCount = useMemo(
+    () => pool.filter((q) => q.type === "complex").length,
+    [pool],
+  );
+  const typedPool = useMemo(
+    () =>
+      kind === "all"
+        ? pool
+        : pool.filter((q) => (q.type === "complex") === (kind === "complex")),
+    [pool, kind],
+  );
+
   // Categorías disponibles (topic + topicSecondary) con su nº de preguntas.
   const topics = useMemo(() => {
     const counts = new Map<string, number>();
-    for (const q of pool) {
+    for (const q of typedPool) {
       const set = new Set<string>();
       if (q.topic) set.add(q.topic);
       if (q.topicSecondary) set.add(q.topicSecondary);
@@ -64,20 +79,20 @@ export default function StudyMode({ certId }: { certId: string }) {
     return [...counts.entries()].sort(
       (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
     );
-  }, [pool]);
+  }, [typedPool]);
 
   const filtered = useMemo(() => {
     const list = topic
-      ? pool.filter((q) => q.topic === topic || q.topicSecondary === topic)
-      : [...pool];
+      ? typedPool.filter((q) => q.topic === topic || q.topicSecondary === topic)
+      : [...typedPool];
     const dir = order === "desc" ? -1 : 1;
     return list.sort((a, b) => dir * (questionNumber(a) - questionNumber(b)));
-  }, [pool, topic, order]);
+  }, [typedPool, topic, order]);
 
-  // Al cambiar de categoría u orden volvemos a la primera página.
+  // Al cambiar de categoría, orden o tipo volvemos a la primera página.
   useEffect(() => {
     setPage(0);
-  }, [topic, order]);
+  }, [topic, order, kind]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages - 1);
@@ -159,6 +174,35 @@ export default function StudyMode({ certId }: { certId: string }) {
         </select>
       </div>
 
+      {/* Filtro por tipo (solo si hay preguntas "complex") */}
+      {complexCount > 0 && (
+        <div>
+          <label
+            htmlFor="study-kind"
+            className="mb-2 block text-sm font-medium text-slate-600 dark:text-slate-300"
+          >
+            Tipo
+          </label>
+          <select
+            id="study-kind"
+            value={kind}
+            onChange={(e) => {
+              setKind(e.target.value as "all" | "choice" | "complex");
+              setTopic(null); // la categoría elegida puede no existir con este tipo
+            }}
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
+          >
+            <option value="all">Todas ({pool.length})</option>
+            <option value="choice">
+              Solo opción múltiple ({pool.length - complexCount})
+            </option>
+            <option value="complex">
+              Solo HOTSPOT / DRAG-DROP / simulación ({complexCount})
+            </option>
+          </select>
+        </div>
+      )}
+
       {/* Filtro por categoría */}
       {topics.length > 0 && (
         <div>
@@ -174,7 +218,7 @@ export default function StudyMode({ certId }: { certId: string }) {
             onChange={(e) => setTopic(e.target.value || null)}
             className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-700 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 sm:w-auto"
           >
-            <option value="">Todas las categorías ({pool.length})</option>
+            <option value="">Todas las categorías ({typedPool.length})</option>
             {topics.map(([t, n]) => (
               <option key={t} value={t}>
                 {t} ({n})
