@@ -4394,7 +4394,7 @@
   },
   {
     "id": "pca-193",
-    "question": "You are configuring the cloud network architecture for a newly created project in Google Cloud that will host applications in Compute Engine. Compute Engine virtual machine instances will be created in two different subnets (sub-a and sub-b) within a single region:\n•Instances in sub-a will have public IP addresses.\n•Instances in sub-b will have only private IP addresses.\nTo download updated packages, instances must connect to a public repository outside the boundaries of Google Cloud. You need to allow sub-b to access the external repository. What should you do?",
+    "question": "You are configuring the cloud network architecture for a newly created project in Google Cloud that will host applications in Compute Engine. Compute Engine virtual machine instances will be created in two different subnets (sub-a and sub-b) within a single region:\n• Instances in sub-a will have public IP addresses.\n• Instances in sub-b will have only private IP addresses.\nTo download updated packages, instances must connect to a public repository outside the boundaries of Google Cloud. You need to allow sub-b to access the external repository. What should you do?",
     "options": [
       "Enable Private Google Access on sub-b.",
       "Configure Cloud NAT and select sub-b in the NAT mapping section.",
@@ -4440,7 +4440,7 @@
   },
   {
     "id": "pca-195",
-    "question": "You are deploying an application to Google Cloud. The application is part of a system. The application in Google Cloud must communicate over a private network with applications in a non-Google Cloud environment. The expected average throughput is 200 kbps. The business requires:\n•99.99% system availability •cost optimization You need to design the connectivity between the locations to meet the business requirements. What should you provision?",
+    "question": "You are deploying an application to Google Cloud. The application is part of a system. The application in Google Cloud must communicate over a private network with applications in a non-Google Cloud environment. The expected average throughput is 200 kbps. The business requires:\n• 99.99% system availability\n• cost optimization\nYou need to design the connectivity between the locations to meet the business requirements. What should you provision?",
     "options": [
       "An HA Cloud VPN gateway connected with two tunnels to an on-premises VPN gateway.",
       "A Classic Cloud VPN gateway connected with two tunnels to an on-premises VPN gateway.",
@@ -4650,7 +4650,7 @@
   },
   {
     "id": "pca-205",
-    "question": "Your company is building containerized applications as part of their CI/CD pipeline. To improve the security and maintainability of the build process, you need to:\n•Identify potential vulnerabilities within your container images.\n•Generate verifiable metadata about the builds for auditing and compliance.\n•Create a comprehensive inventory of your application’s dependencies What should you do?",
+    "question": "Your company is building containerized applications as part of their CI/CD pipeline. To improve the security and maintainability of the build process, you need to:\n• Identify potential vulnerabilities within your container images.\n• Generate verifiable metadata about the builds for auditing and compliance.\n• Create a comprehensive inventory of your application’s dependencies\nWhat should you do?",
     "options": [
       "Use Cloud Build to build container images, and then trigger Artifact Analysis on images pushed to Artifact Registry.",
       "Use Cloud Build to build container images, trigger Binary Authorization, and use Cloud Asset Inventory for tracking and analysis.",
@@ -4776,7 +4776,7 @@
   },
   {
     "id": "pca-212",
-    "question": "Your organization uses separate Google Cloud projects for shared services, development, testing, and production.\n•The shared services project hosts your private CI/CD runners and a central Artifact Registry •The development, testing, and production projects host the GKE clusters where applications are deployed.\nYou need to design an architecture that allows the CI/CD runners to connect to the GKE clusters and the clusters to pull images from Artifact Registry, all using private IP addresses. However, direct network traffic between the development, testing, and production environments must be strictly prohibited. What should you do?",
+    "question": "Your organization uses separate Google Cloud projects for shared services, development, testing, and production.\n• The shared services project hosts your private CI/CD runners and a central Artifact Registry\n• The development, testing, and production projects host the GKE clusters where applications are deployed.\nYou need to design an architecture that allows the CI/CD runners to connect to the GKE clusters and the clusters to pull images from Artifact Registry, all using private IP addresses. However, direct network traffic between the development, testing, and production environments must be strictly prohibited. What should you do?",
     "options": [
       "Create a separate VPC in each of the four projects. Connect each environment's VPC to the shared services VPC through VPC Network Peering.",
       "Expose the resources in the shared services project using an external load balancer. Implement a firewall rule to limit access.",
@@ -4814,7 +4814,7 @@
   },
   {
     "id": "pca-214",
-    "question": "To improve governance and security, your organization has structured the Google Cloud environment using folders for different business units. Each business unit folder has subfolders for development, staging, and production environments, which must comply with internal security controls:\n•Production workloads must be protected from direct internet ingress by default unless explicitly tagged.\n•The application must be accessible to customers over HTTPS.\nYou need to design a scalable and enforceable model that blocks internet ingress traffic to the production folders while selectively allowing direct HTTPS traffic to the necessary virtual machines. You must also ensure that individual project teams cannot overwrite these controls once they are implemented for all current and future production projects. What should you do?",
+    "question": "To improve governance and security, your organization has structured the Google Cloud environment using folders for different business units. Each business unit folder has subfolders for development, staging, and production environments, which must comply with internal security controls:\n• Production workloads must be protected from direct internet ingress by default unless explicitly tagged.\n• The application must be accessible to customers over HTTPS.\nYou need to design a scalable and enforceable model that blocks internet ingress traffic to the production folders while selectively allowing direct HTTPS traffic to the necessary virtual machines. You must also ensure that individual project teams cannot overwrite these controls once they are implemented for all current and future production projects. What should you do?",
     "options": [
       "At each production folder, apply a hierarchical firewall policy to deny all ingress except for HTTPS to tagged VMs.",
       "Mandate the application teams to deploy a Terraform module to create VPC firewall rules in each project that deny ingress and allow HTTPS.",

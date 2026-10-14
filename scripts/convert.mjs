@@ -91,21 +91,31 @@ function parseAnswerLetters(raw) {
   return [...new Set(letters)]; // sin duplicados
 }
 
+/** Inicios típicos de la oración que sigue a una lista de bullets. */
+const BULLET_FOLLOWUP =
+  /^(You (need|must|plan|want|have|are|discover|analyze|assign)\b|After |Which |What |How |In which |To (answer|what|complete)\b|The solution|For each|NOTE:)/;
+
 /**
  * Reflujo del texto: el Markdown fuente viene con saltos de línea a mitad de
  * oración (envoltura del PDF). Unimos esas líneas y dejamos un salto solo cuando
  * la línea anterior terminó una oración (., ?, !, :). Así cada oración queda en
- * su propia línea y desaparecen los cortes feos a media frase.
+ * su propia línea y desaparecen los cortes feos a media frase. Los bullets "•"
+ * también van en su propia línea, aunque no terminen en puntuación.
  */
 function reflow(lines) {
   const out = [];
   for (const raw of lines) {
-    const l = raw.trim();
+    const l = raw.trim().replace(/^•\s*/, "• ");
     if (!l) continue;
+    const prev = out[out.length - 1];
     if (out.length === 0) {
       out.push(l);
-    } else if (/[.?!:]$/.test(out[out.length - 1])) {
+    } else if (/[.?!:]$/.test(prev)) {
       out.push(l); // la anterior cerró oración → nueva línea
+    } else if (l.startsWith("• ")) {
+      out.push(l); // cada bullet en su propia línea aunque no cierre oración
+    } else if (prev.startsWith("• ") && BULLET_FOLLOWUP.test(l)) {
+      out.push(l); // oración que sigue a una lista (el bullet no lleva punto)
     } else {
       out[out.length - 1] += " " + l; // envoltura a media frase → unir
     }

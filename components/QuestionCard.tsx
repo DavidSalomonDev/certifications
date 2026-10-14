@@ -9,6 +9,18 @@ interface Props {
   images?: string[];
 }
 
+const isBullet = (line?: string) => !!line && /^[•◦] /.test(line);
+
+/**
+ * Líneas "• ..." / "◦ ..." (sub-bullet) con sangría francesa, y pegadas entre sí
+ * cuando forman una lista para que no se separen como párrafos.
+ */
+function bulletClass(line: string, prev?: string): string {
+  if (!isBullet(line)) return "";
+  const indent = line.startsWith("◦") ? "ml-7 pl-3 -indent-3" : "ml-2 pl-3 -indent-3";
+  return isBullet(prev) ? `${indent} !mt-1` : indent;
+}
+
 /** Muestra el enunciado de una pregunta y sus imágenes (si existen). */
 export default function QuestionCard({ question, heading, images }: Props) {
   const shownImages = images ?? question.images;
@@ -41,7 +53,7 @@ export default function QuestionCard({ question, heading, images }: Props) {
         {lines.map((line, i) => (
           <p
             key={i}
-            className="text-[15px] leading-relaxed text-slate-800 dark:text-slate-100"
+            className={`text-[15px] leading-relaxed text-slate-800 dark:text-slate-100 ${bulletClass(line, lines[i - 1])}`}
           >
             <HighlightedText
               questionId={question.id}

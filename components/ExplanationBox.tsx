@@ -12,25 +12,20 @@ const COLLAPSED_REM = 6;
 const FADE_MASK = "linear-gradient(to bottom, black 55%, transparent)";
 
 /**
- * Bloque de explicación + referencias de una pregunta. El toggle global de la
- * cabecera decide si las explicaciones largas arrancan completas o resumidas;
- * cada pregunta puede cambiarlo localmente hasta que se vuelva a pulsar el
- * toggle global.
+ * Bloque de explicación + referencias de una pregunta. Si la explicación es
+ * larga, se muestra completa o resumida según el estado global (toggle de la
+ * cabecera), que cada pregunta puede cambiar a mano.
  */
 export default function ExplanationBox({ question }: { question: Question }) {
-  const { expanded: expandedAll } = useExplanations();
-  // El cambio local solo vale para esta pregunta y este estado del toggle
-  // global: al pasar a otra pregunta (modo random) o pulsar el toggle, se
-  // vuelve al estado por defecto.
-  const [local, setLocal] = useState<
-    { id: string; all: boolean; expanded: boolean } | null
-  >(null);
+  const { isExpanded, setExpandedOne, register } = useExplanations();
   const [overflows, setOverflows] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
-  const expanded =
-    local && local.id === question.id && local.all === expandedAll
-      ? local.expanded
-      : expandedAll;
+  const expanded = isExpanded(question.id);
+
+  // Solo las explicaciones largas cuentan para el toggle de la cabecera.
+  useEffect(() => {
+    if (overflows) return register(question.id);
+  }, [overflows, question.id, register]);
 
   // El corte es por altura en pantalla, no por nº de líneas: medimos si el
   // texto completo supera el alto colapsado (y re-medimos al cambiar el ancho).
@@ -80,9 +75,7 @@ export default function ExplanationBox({ question }: { question: Question }) {
       {overflows && (
         <button
           type="button"
-          onClick={() =>
-            setLocal({ id: question.id, all: expandedAll, expanded: !expanded })
-          }
+          onClick={() => setExpandedOne(question.id, !expanded)}
           aria-expanded={expanded}
           className="mt-1 text-sm font-semibold text-blue-600 hover:underline dark:text-blue-400"
         >

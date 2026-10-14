@@ -1,10 +1,13 @@
 "use client";
 
-// Explicaciones largas completas o resumidas, en TODAS las preguntas (toggle
-// global de la cabecera). Se persiste en localStorage. Por defecto: resumidas.
+// Explicaciones largas completas o resumidas (toggle global de la cabecera).
+// El estado por defecto se persiste en localStorage (por defecto: resumidas);
+// cada pregunta puede abrirse o cerrarse a mano, y el toggle refleja lo que
+// hay en pantalla: si alguna explicación larga está completa, ofrece resumir.
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useState,
@@ -14,35 +17,55 @@ import {
 const STORAGE_KEY = "explanations-expanded";
 
 interface ExplanationsContextValue {
-  /** true = explicaciones completas; false = resumidas a unas líneas. */
-  expanded: boolean;
-  setExpanded: (v: boolean) => void;
+  /** ¿Está completa la explicación de esta pregunta? */
+  isExpanded: (id: string) => boolean;
+  /** Abre o cierra la explicación de una sola pregunta. */
+  setExpandedOne: (id: string, v: boolean) => void;
+  /** true si alguna explicación larga en pantalla está completa. */
+  anyExpanded: boolean;
+  /** Abre o cierra todas (y lo recuerda como estado por defecto). */
+  setExpandedAll: (v: boolean) => void;
+  /** Las cajas con explicación larga se registran mientras están montadas. */
+  register: (id: string) => () => void;
   /** true una vez leída la preferencia de localStorage (evita parpadeos). */
   mounted: boolean;
 }
 
 const ExplanationsContext = createContext<ExplanationsContextValue>({
-  expanded: false,
-  setExpanded: () => {},
+  isExpanded: () => false,
+  setExpandedOne: () => {},
+  anyExpanded: false,
+  setExpandedAll: () => {},
+  register: () => () => {},
   mounted: false,
 });
 
 export function ExplanationsProvider({ children }: { children: ReactNode }) {
-  const [expanded, setExpandedState] = useState(false);
+  const [byDefault, setByDefault] = useState(false);
+  // Cambios manuales por pregunta; se borran al pulsar el toggle global.
+  const [overrides, setOverrides] = useState<Record<string, boolean>>({});
+  // Nº de cajas largas montadas por id (una pregunta puede salir dos veces).
+  const [visible, setVisible] = useState<Record<string, number>>({});
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved === "1" || saved === "0") setExpandedState(saved === "1");
+      if (saved === "1" || saved === "0") setByDefault(saved === "1");
     } catch {
       /* noop */
     }
     setMounted(true);
   }, []);
 
-  const setExpanded = (v: boolean) => {
-    setExpandedState(v);
+  const isExpanded = (id: string) => overrides[id] ?? byDefault;
+
+  const setExpandedOne = (id: string, v: boolean) =>
+    setOverrides((o) => ({ ...o, [id]: v }));
+
+  const setExpandedAll = (v: boolean) => {
+    setByDefault(v);
+    setOverrides({});
     try {
       localStorage.setItem(STORAGE_KEY, v ? "1" : "0");
     } catch {
@@ -50,8 +73,30 @@ export function ExplanationsProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const register = useCallback((id: string) => {
+    setVisible((m) => ({ ...m, [id]: (m[id] ?? 0) + 1 }));
+    return () =>
+      setVisible((m) => {
+        const { [id]: n = 0, ...rest } = m;
+        return n > 1 ? { ...rest, [id]: n - 1 } : rest;
+      });
+  }, []);
+
+  const ids = Object.keys(visible);
+  // Sin explicaciones largas en pantalla, el toggle muestra el estado por defecto.
+  const anyExpanded = ids.length ? ids.some(isExpanded) : byDefault;
+
   return (
-    <ExplanationsContext.Provider value={{ expanded, setExpanded, mounted }}>
+    <ExplanationsContext.Provider
+      value={{
+        isExpanded,
+        setExpandedOne,
+        anyExpanded,
+        setExpandedAll,
+        register,
+        mounted,
+      }}
+    >
       {children}
     </ExplanationsContext.Provider>
   );

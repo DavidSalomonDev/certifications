@@ -8,7 +8,8 @@ const VIEWS = new Set(["study", "random", "quiz"]);
 
 /** Botón de la cabecera para ver todas las explicaciones completas o resumidas. */
 export default function ExplanationsToggle() {
-  const { expanded, setExpanded, mounted } = useExplanations();
+  // "expanded" refleja la pantalla: true si alguna explicación larga está completa.
+  const { anyExpanded: expanded, setExpandedAll, mounted } = useExplanations();
   const pathname = usePathname();
   const parts = pathname.split("/").filter(Boolean);
   if (parts.length !== 2 || !VIEWS.has(parts[1])) return null;
@@ -18,7 +19,7 @@ export default function ExplanationsToggle() {
   return (
     <button
       type="button"
-      onClick={() => setExpanded(!expanded)}
+      onClick={() => setExpandedAll(!expanded)}
       aria-pressed={expanded}
       aria-label={label}
       title={label}
