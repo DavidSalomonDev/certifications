@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageToggle from "@/components/LanguageToggle";
+import ExplanationsToggle from "@/components/ExplanationsToggle";
 import { LanguageProvider } from "@/lib/language";
+import { ExplanationsProvider } from "@/lib/explanations";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,6 +35,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen">
         <LanguageProvider>
+        <ExplanationsProvider>
           <header className="sticky top-0 z-20 border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
             <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
               <Link
@@ -42,6 +45,7 @@ export default function RootLayout({
                 📘 Práctica de Certificaciones
               </Link>
               <div className="flex items-center gap-2">
+                <ExplanationsToggle />
                 <LanguageToggle />
                 <ThemeToggle />
               </div>
@@ -51,6 +55,7 @@ export default function RootLayout({
           <footer className="mx-auto max-w-3xl px-4 py-8 text-center text-xs text-slate-400 dark:text-slate-500">
             App local de práctica · Tus respuestas se guardan solo en este navegador.
           </footer>
+        </ExplanationsProvider>
         </LanguageProvider>
       </body>
     </html>
